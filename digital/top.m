@@ -1,9 +1,14 @@
 M                                           = 16;
-SNR                                         = 40;
+SNR                                         = 20;
 subChannels                                 = 64;
-prefix_length                               = 16;
+prefix_length                               = 32;
 bitsNumber                                  = 1024*256;
 OFDMsymbol                                  = (bitsNumber/log2(M))/subChannels;
+
+numberPreamble                              = 2;
+preambleBoostFactor                         = 1.5;
+preambleLength                              = numberPreamble*subChannels+prefix_length;
+
 
 bits=round(rand(bitsNumber, 1));
 bandwidth = 20e6;
@@ -14,6 +19,33 @@ step_20mhz = (length(channel)-1)*bandwidth/bandwidth_measure;
 channel_20mhz = channel(100-step_20mhz/2:100+step_20mhz/2);
 impChannel_20mhz = ifft(channel_20mhz);
 impChannel_20mhz = impChannel_20mhz().';
+
+%% Preamble
+
+preambleBits=round(rand(subChannels*log2(M), 1));
+
+%Replicate preamble
+preambleBits = repmat(preambleBits,numberPreamble,1);
+
+%Modulate preamble bits
+preambleSignal = modulation(preambleBits,M);
+preambleSignalFFT = preambleSignal(1:subChannels);
+
+%S/P
+preambleSignal = imux(preambleSignal,subChannels);
+
+%iFFT
+preambleSignal = ifft(preambleSignal,[],1);
+
+%P/S
+preambleSignal = mux(preambleSignal);
+
+%insert preamble cyclic prefix
+preambleSignal = insertCyclicPrefix(preambleSignal,prefix_length);
+
+%increase signal power
+preambleSignal = preambleSignal*preambleBoostFactor;
+
 
 %% TX
 
@@ -32,12 +64,45 @@ signal = insertCyclicPrefix(signal,prefix_length);
 %P/S
 signal = mux(signal);
 
+%Add preamble signal
+signal = [preambleSignal; signal];
+
 %% Channel
 
 %Convolution
 signal = convChannel(signal,impChannel_20mhz);
 
+
+%Add noise
+signal = addAWGN(signal,SNR);
+
 %% RX
+
+%remove preamble
+receivedPreamble = signal(1:preambleLength);
+signal = signal(preambleLength+1:end);
+
+%% Preamble operation
+
+%Remove cyclic prefix
+receivedPreamble = removeCyclicPrefix(receivedPreamble,prefix_length);
+
+%S/P
+receivedPreamble = imux(receivedPreamble,subChannels);
+
+%decrease preamble boost
+receivedPreamble = receivedPreamble./preambleBoostFactor;
+
+%FFT
+receivedPreamble = fft(receivedPreamble,[],1);
+
+%Mean received preamble
+receivedPreamble = mean(receivedPreamble,2);
+
+%Channel estimation
+channel_estimation = receivedPreamble./preambleSignalFFT;
+
+%% Next RX
 
 %S/P
 signal = imux(signal,subChannels+prefix_length);
@@ -53,6 +118,7 @@ channelFFT = fft(impChannel_20mhz,subChannels);
 
 for i=1:OFDMsymbol
     signal(:,i) = signal(:,i)./channelFFT;
+    %signal(:,i) = signal(:,i)./channel_estimation;
 end
 
 %P/S
@@ -60,5 +126,7 @@ signal = mux(signal);
 
 %Demodulation
 receivedBits = demodulation(signal,M);
+
+plot(signal,'*');
 
 errorRate(bits,receivedBits);
