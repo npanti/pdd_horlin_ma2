@@ -4,7 +4,7 @@ function out = convChannel( in,channel)
 
 %impulseResponse = ifft(channel);
 
-out = conv(in,channel,'same');
+out = conv(in,channel);
 out = out(1:end-abs(length(out)-length(in)));
 
 end

@@ -1,7 +1,7 @@
 M                                           = 16;
 SNR                                         = 40;
 subChannels                                 = 64;
-prefix_length                               = 16;
+prefix_length                               = 32;
 bitsNumber                                  = 1024*256;
 OFDMsymbol                                  = (bitsNumber/log2(M))/subChannels;
 
@@ -13,7 +13,7 @@ channel = [-2.79763444268610e-05 + 0.000231108468142338i -0.000152236607391387 +
 step_20mhz = (length(channel)-1)*bandwidth/bandwidth_measure;
 channel_20mhz = channel(100-step_20mhz/2:100+step_20mhz/2);
 impChannel_20mhz = ifft(channel_20mhz);
-impChannel_20mhz = impChannel_20mhz().';
+impChannel_20mhz = impChannel_20mhz();
 
 %% TX
 
@@ -23,10 +23,10 @@ signal = modulation(bits,M);
 %S/P
 signal = imux(signal,subChannels);
 
-%iFFT
+%IFFT
 signal = ifft(signal,[],1);
 
-%insert cyclic prefix
+%Cyclic prefix insertion
 signal = insertCyclicPrefix(signal,prefix_length);
 
 %P/S
@@ -34,31 +34,52 @@ signal = mux(signal);
 
 %% Channel
 
-%Convolution
-signal = convChannel(signal,impChannel_20mhz);
+%Channel
+%size(signal)
+%signal = conv(signal,impChannel_20mhz,'same');
+convChannel(signal,impChannel_20mhz);
+
+%Add noise
+%signal = addAWGN(signal,SNR);
 
 %% RX
 
 %S/P
 signal = imux(signal,subChannels+prefix_length);
 
-%remove cyclic prefix
+%Remove cyclic prefix
 signal = removeCyclicPrefix(signal,prefix_length);
 
 %FFT
-signal = fft(signal,[],1);
+% for idxTest = 1:OFDMsymbol
+%     signal(:,idxTest) = fft(signal(:,idxTest));
+% end
+signal = fft(signal(:,:),[],1);
+%signal = ifftshift(signal,2);
 
-%Equalisation
-channelFFT = fft(impChannel_20mhz,subChannels);
+%Equalization
+
+invChannel = fft(impChannel_20mhz,subChannels).';
+%invChannel = invChannel./sqrt(subChannels);
+
+%figure;
+%plot(abs(invChannel));
 
 for i=1:OFDMsymbol
-    signal(:,i) = signal(:,i)./channelFFT;
+    signal(:,i) = signal(:,i)./invChannel;
 end
+
+% for i=1:subChannels
+%     signal(i,:) = signal(i,:)./invChannel(i);
+% end
 
 %P/S
 signal = mux(signal);
 
 %Demodulation
 receivedBits = demodulation(signal,M);
+figure;
+plot(signal,'*'); 
 
-errorRate(bits,receivedBits);
+%BER calculating
+errorRate(bits,receivedBits)
