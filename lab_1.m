@@ -15,7 +15,6 @@ data_20mhz = data{1,1}{1,1}{1,1}{1,1}{1,1}{1,1}(100-step_20mhz/2:100+step_20mhz/
 data_ifft_20mhz = ifft(data_20mhz);
 
 
-
 % figure(1);
 % subplot(2,2,1:2);
 % plot(abs(data_20mhz));

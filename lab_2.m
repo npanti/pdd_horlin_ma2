@@ -1,9 +1,13 @@
 load('Loc1.mat');
 frequencyResponse = [];
 
-for x=1:6
-   for y=1:6
-       for z=1:6
+max_x = length(data);
+max_y = length(data{1});
+max_z = length(data{1}{1});
+
+for x=1:max_x
+   for y=1:max_y
+       for z=1:max_z
            frequencyResponse = [frequencyResponse abs(mean(data{x}{y}{z}{1}{1}{1}))];
        end
    end
@@ -11,12 +15,13 @@ end
 
 
 %Fit distribution
-[s, sigma] = mle(frequencyResponse,'distribution','rician');
+[param, ~] = mle(frequencyResponse,'distribution','rician');
 %cf Wikipedia http://en.wikipedia.org/wiki/
-s 
-sigma
-A = s^2 + 2*sigma^2;
-K = s^2/(2*sigma^2);
+%param(1) = s
+%param(2) = sigma
+
+A = param(1)^2 + 2*param(2)^2;
+K = param(1)^2/(2*param(2)^2);
 
 
 %% Rice factor variation in function of delay
@@ -24,9 +29,9 @@ B = [];
 for i=1:20:200
     
     impulseResponse = [];
-    for x=1:6
-       for y=1:6
-           for z=1:6
+    for x=1:max_x
+       for y=1:max_y
+           for z=1:max_z
                ifft_tmp = ifft(abs(data{x}{y}{z}{1}{1}{1}(i)));
                impulseResponse = [impulseResponse ifft_tmp];
            end
@@ -47,19 +52,26 @@ for i=1:1:length(B)
    if i_tmp > length(color)
        i_tmp = i_tmp - floor((i_tmp-1)/length(color))*length(color);
    end
-   plot(x,ray,'Color',color(i_tmp,:));
-   hold all;
+   %plot(x,ray,'Color',color(i_tmp,:),'DisplayName',num2str(i));
+   %hold all;
 
 end
 
 %% Power Delay Profile (PDP)
-frequency = zeros(1,length(data{x}{y}{z}{1}{1}{1}));
-for x=1:6
-   for y=1:6
-       for z=1:6
-           frequencyResponse = frequencyResponse + abs(data{x}{y}{z}{1}{1}{1}.^2);
+%frequency = zeros(1,length(data{max_x}{max_y}{max_z}{1}{1}{1}));
+PDP = zeros(1,length(data{max_x}{max_y}{max_z}{1}{1}{1}));
+
+for x=1:max_x
+   for y=1:max_y
+       for z=1:max_z
+           impulseResponse = ifft(data{x}{y}{z}{1}{1}{1});
+           PDP = PDP + abs(impulseResponse.^2);
+           %frequencyResponse = frequencyResponse + abs(data{x}{y}{z}{1}{1}{1}.^2);
        end
    end
 end
-frequencyResponse = frequencyResponse/(6*6*6);
+PDP = PDP/(max_x*max_y*max_z);
+
+stem(PDP);
+%Convert in time domain
 
