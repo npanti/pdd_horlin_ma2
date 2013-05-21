@@ -1,4 +1,8 @@
-clear all;clc;close all; format short; 
+clear all
+clc
+close all
+
+
 load('Loc1.mat');
 
 bandwidth = 20e6;
@@ -8,7 +12,6 @@ start_freq = 2.6e6;
 stop_freq = 2.8e6;
 
 pos_step=0.03;
-
 
 step_20mhz = (step-1)*bandwidth/bandwidth_measure;
 %data_20mhz = data{1}{1}{1}{1,1}{1,1}{1,1}(100-step_20mhz/2:100+step_20mhz/2);
@@ -35,7 +38,7 @@ for x=1:6
                     t = theta/theta_step*pi;
                     p = 2*pi*phi/phi_step;
                     
-                    B(i,theta,phi) = exp(1i*2*pi/lambda*(x*pos_step*sin(t)*cos(p)+y*pos_step*sin(t)*sin(p)+z*pos_step*cos(t)));
+                    B(i,theta,phi) = exp(1i*2*pi/lambda*(pos_step*x*sin(t)*cos(p)+pos_step*y*sin(t)*sin(p)+pos_step*z*cos(t)));
                 end
             end
             
@@ -54,9 +57,9 @@ end
 
 a = a/(6*6*6);
 
-for k=1:201;
-
-c=reshape(a(k,:,:),theta_step,phi_step);
-imagesc(abs(c));
-pause(1/3);
+for k=1:201
+    c=reshape(a(k,:,:),theta_step,phi_step);
+    imagesc(abs(c));
+    pause(1/3);
+    
 end

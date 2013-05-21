@@ -1,4 +1,3 @@
-clear all;clc;close all; format short; 
 load('Loc1.mat');
 
 bandwidth = 20e6;
@@ -6,9 +5,6 @@ bandwidth_measure = 200e6;
 step = 201;
 start_freq = 2.6e6;
 stop_freq = 2.8e6;
-
-pos_step=0.03;
-
 
 step_20mhz = (step-1)*bandwidth/bandwidth_measure;
 %data_20mhz = data{1}{1}{1}{1,1}{1,1}{1,1}(100-step_20mhz/2:100+step_20mhz/2);
@@ -22,7 +18,7 @@ theta_step=30;
 phi_step=60;
 
 %Calcul de B(i,theta,phi)
-tap = length(data{1}{1}{1}{1}{1}{1}(:));
+tap = length(data{1}{1}{1}{1}{1}{1}(100-step_20mhz/2:100+step_20mhz/2));
 h = zeros(6*6*6,tap);
 
 i = 1;
@@ -35,11 +31,11 @@ for x=1:6
                     t = theta/theta_step*pi;
                     p = 2*pi*phi/phi_step;
                     
-                    B(i,theta,phi) = exp(1i*2*pi/lambda*(x*pos_step*sin(t)*cos(p)+y*pos_step*sin(t)*sin(p)+z*pos_step*cos(t)));
+                    B(i,theta,phi) = exp(1i*2*pi/lambda*(x*sin(t)*cos(p)+y*sin(t)*sin(p)+z*cos(t)));
                 end
             end
             
-            h(i,:) = ifft(data{x}{y}{z}{1}{1}{1}(:));
+            h(i,:) = ifft(data{x}{y}{z}{1}{1}{1}(100-step_20mhz/2:100+step_20mhz/2));
             
             i = i + 1;
         end
@@ -54,9 +50,4 @@ end
 
 a = a/(6*6*6);
 
-for k=1:201;
-
-c=reshape(a(k,:,:),theta_step,phi_step);
-imagesc(abs(c));
-pause(1/3);
-end
+imagesc()
