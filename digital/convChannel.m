@@ -1,6 +1,6 @@
 function out = convChannel( in,channel)
 %UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%Detailed explanation goes here
 
 %impulseResponse = ifft(channel);
 
