@@ -7,7 +7,7 @@ d=struct(...
     'M',16,...                          %constellation size
     'SNRMin',0,...                     %SNR in dB
     'SNRStep',1,...                     %Step
-    'SNRMax',10,...                     %SNR in dB
+    'SNRMax',1,...                     %SNR in dB
     'subCarriers',64,...                %subcarriers per OFDM symbol
     'cyclicPrefix',32,...               %carriers in CP
     'messageLength',64*1024*6,...        %bits sent
@@ -84,22 +84,23 @@ rConv=convChannel(s,impChannel_20mhz);
 Ps=signalPower(rConv);
 %Ps=signalPower(s);
 %Introducing time shift (for synchro)
-rConv=[zeros(100,1);rConv;zeros(100,1)];
+%rConv=[zeros(100,1);rConv;zeros(100,1)];
 %Loop for SNR
 index=1;
 while(index<length(SNR)+1)
 %Noise
 disp(['SNR=', num2str(SNR(index))]);
-r=addNoise(rConv,SNR(index),Ps);
+r=rConv;
+%r=addNoise(rConv,SNR(index),Ps);
 
 %% RX
 %Time synchronisation
-startIndex=timeSynchronisation(r);
+%startIndex=timeSynchronisation(r);
 %Separate preamble from data
-preambleRX=r(startIndex:startIndex+d.preambleLength-1);
-dataRX=r(startIndex+d.preambleLength+1:startIndex+d.signalLength);
-%preambleRX=r(1:d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble);
-%dataRX=r(d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble+1:end);
+%preambleRX=r(startIndex:startIndex+d.preambleLength-1);
+%dataRX=r(startIndex+d.preambleLength+1:startIndex+d.signalLength);
+preambleRX=r(1:d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble);
+dataRX=r(d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble+1:end);
 
 %PREAMBLE
 %Preamble "de-boost"
