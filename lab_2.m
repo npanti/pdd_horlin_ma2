@@ -1,5 +1,8 @@
-load('Loc1.mat');
+load('loss.mat');
 frequencyResponse = [];
+
+bandwidth_measure = 400e6;
+step = 201;
 
 max_x = length(data);
 max_y = length(data{1});
@@ -70,8 +73,16 @@ for x=1:max_x
        end
    end
 end
+
 PDP = PDP/(max_x*max_y*max_z);
+PDP_t = sum(PDP);
 
-stem(PDP);
-%Convert in time domain
+%stem(PDP);
 
+%% Delay Spread
+t = 0:1/bandwidth_measure:(step-1)/bandwidth_measure;
+t_m = 1/PDP_t*sum(t.*PDP);
+delay_spread = sqrt(1/PDP_t*sum(t.^2.*PDP)-t_m^2)
+
+%% Coherence distance
+delta_fc = 1/(2*pi*delay_spread)

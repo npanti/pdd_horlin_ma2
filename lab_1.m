@@ -11,7 +11,7 @@ stop_freq = 2.8e6;
 % => 20MHz/400kHz = 50 points
 %
 step_20mhz = (step-1)*bandwidth/bandwidth_measure;
-data_20mhz = data{1,1}{1,1}{1,1}{1,1}{1,1}{1,1}(100-step_20mhz/2:100+step_20mhz/2);
+data_20mhz = data{1}{1}{1}{1}{1}{1}(100-step_20mhz/2:100+step_20mhz/2);
 data_ifft_20mhz = ifft(data_20mhz);
 
 
