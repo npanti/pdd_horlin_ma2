@@ -7,7 +7,7 @@ d=struct(...
     'M',16,...                          %constellation size
     'SNRMin',0,...                     %SNR in dB
     'SNRStep',1,...                     %Step
-    'SNRMax',1,...                     %SNR in dB
+    'SNRMax',30,...                     %SNR in dB
     'subCarriers',64,...                %subcarriers per OFDM symbol
     'cyclicPrefix',32,...               %carriers in CP
     'messageLength',64*1024*6,...        %bits sent
@@ -15,7 +15,7 @@ d=struct(...
     'cyclicPrefixPreamble',64,...       %carriers in CP of preamble
     'preambleBoost',1.5,...             %amplitude boost of preamble
     'synchronisationPlots',0,...        %1=on 0=off
-    'bandwidthMeasured',200e6,...       %bandwidth of channel measured
+    'bandwidthMeasured',400e6,...       %bandwidth of channel measured
     'bandwidth',20e6...                 %bandwidth available
     );
     
@@ -84,23 +84,25 @@ rConv=convChannel(s,impChannel_20mhz);
 Ps=signalPower(rConv);
 %Ps=signalPower(s);
 %Introducing time shift (for synchro)
-%rConv=[zeros(100,1);rConv;zeros(100,1)];
+rConv=[zeros(100,1);rConv;zeros(100,1)];
 %Loop for SNR
 index=1;
 while(index<length(SNR)+1)
 %Noise
 disp(['SNR=', num2str(SNR(index))]);
-r=rConv;
-%r=addNoise(rConv,SNR(index),Ps);
+r=addNoise(rConv,SNR(index),Ps);
 
 %% RX
 %Time synchronisation
-%startIndex=timeSynchronisation(r);
+startIndex=timeSynchronisation(r);
+%startIndex=99;
+%Acquire frame
+frame=r(startIndex:startIndex+d.signalLength-1);
 %Separate preamble from data
-%preambleRX=r(startIndex:startIndex+d.preambleLength-1);
-%dataRX=r(startIndex+d.preambleLength+1:startIndex+d.signalLength);
-preambleRX=r(1:d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble);
-dataRX=r(d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble+1:end);
+preambleRX=frame(1:d.preambleLength);
+dataRX=frame(d.preambleLength+1:end);
+%preambleRX=r(1:d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble);
+%dataRX=r(d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble+1:end);
 
 %PREAMBLE
 %Preamble "de-boost"
