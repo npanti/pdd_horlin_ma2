@@ -59,23 +59,36 @@ a = a/(6*6*6);
 %% Physical Model
 
 N = 30;
+CHANNELS = 4;
 
 %Search the maximum beam
-load('freq');
-H = zeros(1,length(freq));
-freq=freq*1e9;
-x = rand(1)*2*lambda;
-y = rand(1)*2*lambda;
-z = rand(1)*2*lambda;
-for tap=1:N
-    Y = reshape(abs(a(tap,:,:)),theta_step,phi_step);
-    [theta_max, phi_max] = find(Y==max(Y(:)));
-    
-    e1 = exp(1i*rand(1)*2*pi);
-    e2 = exp(-1i*2*pi*freq*1/bandwidth_measure*(tap-1));
-    e3 = exp(-1i*2*pi*freq/3e8*(cos(phi_max)*sin(theta_max)*x+sin(phi_max)*sin(theta_max)*y+cos(theta_max)*z));
-    
-    H = H + Y(theta_max,phi_max).*e1.*e2.*e3;
-end
+%load('freq');
+%freq=freq*1e9;
+freq = 2700-10:20/200:2700+10;
+freq = freq*1e6;
 
- 
+for i=1:CHANNELS
+
+    eval(sprintf('H%d = zeros(1,length(freq));',i));
+    x = rand(1)*2*lambda;
+    y = rand(1)*2*lambda;
+    z = rand(1)*2*lambda;
+    for tap=1:N
+        Y = reshape(abs(a(tap,:,:)),theta_step,phi_step);
+        [theta_max, phi_max] = find(Y==max(Y(:)));
+
+        e1 = exp(1i*rand(1)*2*pi);
+        e2 = exp(-1i*2*pi*freq*1/bandwidth_measure*(tap-1));
+        e3 = exp(-1i*2*pi*freq/3e8*(cos(phi_max)*sin(theta_max)*x+sin(phi_max)*sin(theta_max)*y+cos(theta_max)*z));
+        
+        eval(sprintf('H%1$d = H%1$d + Y(theta_max,phi_max).*e1.*e2.*e3;',i));
+        %H = H + Y(theta_max,phi_max).*e1.*e2.*e3;
+    end
+    
+    if i==1
+        eval(sprintf('save(''channels'',''H%d'');',i));
+    else
+        eval(sprintf('save(''channels'',''H%d'',''-append'');',i));
+    end
+
+end

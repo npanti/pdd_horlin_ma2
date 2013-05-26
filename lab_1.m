@@ -1,8 +1,9 @@
 bandwidth = 20e6;
-bandwidth_measure = 200e6;
+bandwidth_measure = 400e6;
 step = 201;
-start_freq = 2.6e6;
-stop_freq = 2.8e6;
+start_freq = 2.5e6;
+stop_freq = 2.9e6;
+load('nloss');
 
 %% 200 to 20MHz
 
