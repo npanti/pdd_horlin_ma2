@@ -1,16 +1,18 @@
 clear all
 close all
 
-%% Initialisation
+%% ------ Initialisation ------
+%------------------------------
+
 global d
 d=struct(...
     'M',16,...                          %constellation size
-    'SNRMin',30,...                      %SNR in dB
+    'SNRMin',40,...                      %SNR in dB
     'SNRStep',1,...                     %Step
-    'SNRMax',30,...                      %SNR in dB
+    'SNRMax',40,...                      %SNR in dB
     'subCarriers',64,...                %subcarriers per OFDM symbol
     'cyclicPrefix',32,...               %carriers in CP
-    'messageLength',64*1024,...         %bits sent
+    'messageLength',64*1024*2,...         %bits sent
     'numberPreamble',2,...              %OFDM symbols in preamble
     'cyclicPrefixPreamble',64,...       %carriers in CP of preamble
     'preambleBoost',1.5,...             %amplitude boost of preamble
@@ -34,8 +36,10 @@ d.SNRIterations=(d.SNRMax-d.SNRMin)/d.SNRStep+1;
 BER=zeros(2,d.SNRIterations);
 BER(2,:)=SNR;
 
-%% TX
-%PREAMBLE
+%% ----- TX ------
+%-----------------
+
+%% PREAMBLE
 %preamble generation
 preambleBits=round(rand(d.subCarriers*d.bitsPerSymbol,1));
 %Replicate preamble
@@ -57,7 +61,7 @@ preamble=cyclicPrefixInsertionPreamble(preamble);
 preamble=preamble*d.preambleBoost;
 d.preambleLength=length(preamble);
 
-%DATA
+%% DATA
 %random message generation
 bitsTX=round(rand(d.messageLength, 1));
 d.data=bitsTX;
@@ -72,11 +76,13 @@ data=cyclicPrefixInsertion(data);
 %Parallel to Serial
 data=mux(data);
 
-%MESSAGE CONSTRUCTION
+%% MESSAGE CONSTRUCTION
 s=[preamble; data];
 d.signalLength=length(s);
 
-%% Channel
+%% ------ Channel ------
+%-----------------------
+
 %Channel Convolution
 rConv=convChannel(s,impChannel_20mhz);
 %rConv=s;
@@ -90,16 +96,15 @@ index=1;
 %while(index<length(SNR)+1)
 %Noise
 disp(['SNR=', num2str(SNR(index))]);
-r=rConv;
 r=addNoise(rConv,SNR(index),Ps);
 %Add CFO
 r=addCFO(r);
 
 
+%% ----- RX ------
+%-----------------
 
-%% RX
-
-%Time synchronisation
+%% Time synchronisation
 startIndex=timeSynchronisation(r);
 %startIndex=101;
 %Acquire frame
@@ -111,7 +116,7 @@ preambleRX=frame(1:d.preambleLength);
 %dataRX=r(d.subCarriers*d.numberPreamble+d.cyclicPrefixPreamble+1:end);
 
 
-%%CFO
+%% CFO
 %Preamble "de-boost"
 preambleRX=preambleRX/d.preambleBoost;
 %Remove cylic prefix
@@ -124,7 +129,7 @@ frame=r(startIndex:startIndex+d.signalLength-1);
 preambleRX=frame(1:d.preambleLength);
 
 
-%PREAMBLE
+%% PREAMBLE
 %Preamble "de-boost"
 preambleRX=preambleRX/d.preambleBoost;
 %Remove cylic prefix
@@ -140,7 +145,7 @@ preambleRX=mux(preambleRX);
 %Demapping
 preambleBitsRX=demodulation(preambleRX,d.M);
 
-%DATA
+%% DATA
 dataRX=frame(d.preambleLength+1:end);
 %Serial to Parallel
 dataRX=imux(dataRX,d.subCarriers+d.cyclicPrefix);
@@ -156,7 +161,8 @@ dataRX=mux(dataRX);
 bitsRX=demodulation(dataRX,d.M);
 plot(dataRX,'.');
 
-%% Statistics
+%% ------ Statistics -----
+%-------------------------
 %BER Calculation
 BERPreamble=BERCalculation(preambleBitsRX,0);
 BER(1,index)=BERCalculation(bitsRX,1);
