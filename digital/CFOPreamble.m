@@ -4,19 +4,17 @@ function CFO = CFOPreamble(in)
 
 global d
 
-%in = 64x2
+in = reshape(in,[],2);
 
-inPhase = arg(in);
+inPhase = unwrap(angle(in));
 
 %Déphasage entre les deux préambule
+
 dPhase = inPhase(:,2) - inPhase(:,1);
 
 %Calcul du CFO
 Ts = 1/d.bandwidth;
-CFO = mean(dPhase)/(d.subCarriers*Ts);
-
-%Correction
-%out = in.*exp(-1i*CFO);
+CFO = wrapToPi(mean(dPhase))/(d.subCarriers*Ts)
 
 end
 

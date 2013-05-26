@@ -5,9 +5,10 @@ function out = CFOCorrection(in, CFO)
 global d
 Ts = 1/d.bandwidth;
 
-n = 1:length(in);
+%n = startIndex:length(in)+startIndex-1;
+n=1:length(in);
 
-out = in*exp(-1i*CFO*n*Ts);
+out = in.*exp(-1i*CFO*Ts*transpose(n));
 
 end
 
