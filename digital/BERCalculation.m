@@ -12,7 +12,7 @@ if(type==1)
             incorrectBits=incorrectBits+1;
         end
     end
-    BER=incorrectBits/length(bitsRX);
+    BER=incorrectBits/d.messageLength;
     disp(['BER for data: ',num2str(BER)]);
 end
 if(type==0)
