@@ -1,20 +1,16 @@
-function CFO = CFOPreamble(in)
+function CFOPreamble(in)
 %CFO_PREAMBLE Summary of this function goes here
 %   Detailed explanation goes here
 
 global d
 
-in = reshape(in,[],2);
+%in = reshape(in,[],2);
 
-inPhase = unwrap(angle(in));
+phaseShift = angle(transpose(in(d.subCarriers+1:end))*conj(in(1:d.subCarriers)));
 
-%Déphasage entre les deux préambule
+d.CFO = phaseShift/(d.subCarriers*d.Ts);
 
-dPhase = inPhase(:,2) - inPhase(:,1);
-
-%Calcul du CFO
-Ts = 1/d.bandwidth;
-CFO = wrapToPi(mean(dPhase))/(d.subCarriers*Ts)
+%rad2deg(phaseShift)
 
 end
 

@@ -57,6 +57,7 @@ switch d.pilotPattern
         numberPilots=8;
 end
 
+d.numberPilots = numberPilots;
 d.maskData=maskData;
 d.maskPilots=maskPilots;
 
