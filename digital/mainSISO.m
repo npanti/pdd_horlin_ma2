@@ -1,5 +1,5 @@
 clear all
-tic;
+
 %% Initialisation
 global d
 d=struct(...
@@ -179,4 +179,3 @@ end %while BER~=0
 %% Plots
 BERPlot(BER);
 %plot(dataRX,'.');
-toc;
