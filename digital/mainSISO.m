@@ -4,9 +4,9 @@ clear all
 global d
 d=struct(...
     'M',16,...                          %constellation size
-    'SNRMin',20,...                     %SNR in dB
+    'SNRMin',35,...                     %SNR in dB
     'SNRStep',1,...                     %Step
-    'SNRMax',40,...                     %SNR in dB
+    'SNRMax',35,...                     %SNR in dB
     'subCarriers',64,...                %subcarriers per OFDM symbol
     'cyclicPrefix',32,...               %carriers in CP
     'messageLength',64*1024*6,...        %bits sent
@@ -173,5 +173,5 @@ end
 end %while BER~=0
 
 %% Plots
-BERPlot(BER);
-%plot(dataRX,'.');
+%BERPlot(BER);
+plot(dataRX,'.');
