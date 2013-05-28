@@ -20,7 +20,7 @@ for j=1:indexMax-d.cyclicPrefixPreamble
     correlationMean(j)=mean(correlation(j:d.cyclicPrefixPreamble+j-1));
 end
 
-[m,index]=max(correlationMean);
+[~,index]=max(correlationMean);
 index=index-5;
 
 if(d.synchronisationPlots==1)
