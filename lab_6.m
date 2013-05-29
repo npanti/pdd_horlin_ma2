@@ -3,15 +3,15 @@ clear all;
 close all;
 
 %Load data
-load('loss.mat');
+load('nloss.mat');
 
 %% Beamformer
 
 bandwidth = 20e6;
 bandwidth_measure = 400e6;
 step = 201;
-start_freq = 2.5e6;
-stop_freq = 2.9e6;
+start_freq = 2.5e9;
+stop_freq = 2.9e9;
 
 pos_step=0.03;
 
@@ -58,14 +58,15 @@ a = a/(6*6*6);
 
 %% Physical Model
 
-N = 30;
+N = 80;
 CHANNELS = 4;
 
 %Search the maximum beam
 %load('freq');
 %freq=freq*1e9;
-freq = 2700-10:20/200:2700+10;
-freq = freq*1e6;
+freq = start_freq:bandwidth_measure/step+1:stop_freq;
+%freq = 2700-10:20/200:2700+10;
+%freq = freq*1e6;
 
 for i=1:CHANNELS
 
@@ -86,9 +87,9 @@ for i=1:CHANNELS
     end
     
     if i==1
-        eval(sprintf('save(''channels'',''H%d'');',i));
+        eval(sprintf('save(''channelsNLOSS'',''H%d'');',i));
     else
-        eval(sprintf('save(''channels'',''H%d'',''-append'');',i));
+        eval(sprintf('save(''channelsNLOSS'',''H%d'',''-append'');',i));
     end
 
 end
