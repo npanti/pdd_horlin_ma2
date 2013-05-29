@@ -5,9 +5,9 @@ close all
 global d
 d=struct(...
     'M',16,...                          %constellation size
-    'SNRMin',0,...                     %SNR in dB
+    'SNRMin',25,...                     %SNR in dB
     'SNRStep',1,...                     %Step
-    'SNRMax',30,...                     %SNR in dB
+    'SNRMax',25,...                     %SNR in dB
     'subCarriers',64,...                %subcarriers per OFDM symbol
     'cyclicPrefix',32,...               %carriers in CP
     'messageLength',64*1024*6,...        %bits sent
@@ -15,10 +15,16 @@ d=struct(...
     'cyclicPrefixPreamble',64,...       %carriers in CP of preamble
     'preambleBoost',1.5,...             %amplitude boost of preamble
     'synchronisationPlots',0,...        %1=on 0=off
+    'pilotPattern',4,...                %Pilot pattern used (1~5)
     'RXAntenna',4,...                   %number of RX Antenna (1=SISO, >1=SIMO)
     'bandwidthMeasured',400e6,...       %bandwidth of channel measured
-    'bandwidth',20e6...                 %bandwidth available
+    'bandwidth',20e6,...                 %bandwidth available
+    'enableCFO',1 ...                   %enable CFO (on=1, off=0)
     );
+
+%CFO
+d.Ts = 1/d.bandwidth;
+phaseCFO = 10e3*d.Ts*d.subCarriers;
     
 %Channel characteristics
 load('channels.mat')
@@ -70,6 +76,8 @@ d.data=bitsTX;
 data=modulation(bitsTX,d.M);
 %Serial to Parallel
 data=imux(data,d.subCarriers);
+%Pilots insertion
+data=pilotInsertion(data);
 %OFDM Modulation
 data=OFDMModulation(data);
 %Cyclic Prefix insertion
@@ -109,14 +117,19 @@ r=zeros(d.signalLength+200,d.RXAntenna);
 for i=1:d.RXAntenna
 r(:,i)=addNoise(rConv(:,i),SNR(index),Ps(i));
 end
+%Add CFO
+for i=1:d.RXAntenna
+    r(:,i)=addCFO(r(:,i),phaseCFO);
+end
 
 %% RX
 %Time synchronisation
 startIndex=zeros(1,d.RXAntenna);
-startIndex(:)=101;
-% for i=1:d.RXAntenna
-%     startIndex(i)=timeSynchronisation(r(:,i));
-% end
+%startIndex(:)=101;
+for i=1:d.RXAntenna
+    %startIndex(i)=timeSynchronisation(r(:,i));
+    startIndex(i)=timeSynchronisationSIMO_mex(r(:,i));
+end
 %Acquire frame
 frame=zeros(d.signalLength,d.RXAntenna);
 for i=1:d.RXAntenna
@@ -129,6 +142,31 @@ for i=1:d.RXAntenna
     preambleRX(:,i)=frame(1:d.preambleLength,i);
     dataRX(:,i)=frame(d.preambleLength+1:end,i);
 end
+
+%CFO
+%Preamble "de-boost"
+preambleRX=preambleRX/d.preambleBoost;
+%Remove cylic prefix
+temp=zeros(d.preambleLength-d.cyclicPrefixPreamble,d.RXAntenna);
+for i=1:d.RXAntenna
+    temp(:,i)=preambleRX(d.cyclicPrefixPreamble+1:end,i);
+    CFO = CFOPreamble(temp(:,i));
+    r(:,i) = CFOCorrection(r(:,i),CFO);
+end
+clear preambleRX; preambleRX=temp; clear temp;
+%Acquire frame
+frame=zeros(d.signalLength,d.RXAntenna);
+for i=1:d.RXAntenna
+    frame(:,i)=r(startIndex:startIndex+d.signalLength-1,i);
+end
+%Separate preamble from data
+preambleRX=zeros(d.preambleLength,d.RXAntenna);
+dataRX=zeros(d.dataLength,d.RXAntenna);
+for i=1:d.RXAntenna
+    preambleRX(:,i)=frame(1:d.preambleLength,i);
+    dataRX(:,i)=frame(d.preambleLength+1:end,i);
+end
+
 
 %PREAMBLE
 %Preamble "de-boost"
@@ -183,6 +221,17 @@ end
 for i=1:d.RXAntenna
     dataRX(:,:,i)=channelEqualisation(dataRX(:,:,i),estimatedChannel(:,i));
 end
+
+%CFO Tracking
+for i=1:d.RXAntenna
+    dataRX(:,:,i)=CFOTracking(dataRX(:,:,1));
+end
+
+%Pilots removal
+for i=1:d.RXAntenna
+    dataRX(:,:,i)=pilotDetection(dataRX(:,:,1));
+end
+
 %SIMO to SISO
 temp=mean(dataRX,3);
 clear dataRX; dataRX=temp; clear temp;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.matlabcoder" plugin-version="R2013a">
-  <configuration target="target.matlab.coder" target-name="MEX, C, and C++ Code Generation" name="timeSynchoMex" location="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital" file="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/timeSynchoMex.prj" build-checksum="3276806956">
+  <configuration target="target.matlab.coder" target-name="MEX, C, and C++ Code Generation" name="timeSynchroSIMOMEX" location="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital" file="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/timeSynchroSIMOMEX.prj" build-checksum="3913621106">
     <profile key="profile.mex">
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
@@ -74,6 +74,7 @@
         <param.EnableDebugging />
         <param.GenerateReport />
         <param.LaunchReport />
+        <param.CustomSourceCode />
         <param.CustomHeaderCode />
         <param.CustomInitializer />
         <param.CustomTerminator />
@@ -298,7 +299,7 @@
         <param.UseECoderFeatures />
       </unset>
     </profile>
-    <param.outputfile>${PROJECT_ROOT}/timeSynchronisation_mex.mexmaci64</param.outputfile>
+    <param.outputfile>${PROJECT_ROOT}/timeSynchronisationSIMO_mex.mexmaci64</param.outputfile>
     <param.version>R2012a</param.version>
     <param.HasECoderFeatures>true</param.HasECoderFeatures>
     <param.globals>
@@ -409,6 +410,14 @@
             <UserDefined>true</UserDefined>
             <Complex>false</Complex>
           </Field>
+          <Field Name="RXAntenna">
+            <Class>double</Class>
+            <Size>1 x 1</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>true</UserDefined>
+            <Complex>false</Complex>
+          </Field>
           <Field Name="bandwidthMeasured">
             <Class>double</Class>
             <Size>1 x 1</Size>
@@ -497,6 +506,14 @@
             <UserDefined>true</UserDefined>
             <Complex>false</Complex>
           </Field>
+          <Field Name="data">
+            <Class>double</Class>
+            <Size>:inf x 1</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>true</UserDefined>
+            <Complex>false</Complex>
+          </Field>
           <Field Name="referenceSymbol">
             <Class>double</Class>
             <Size>1 x 1</Size>
@@ -529,9 +546,9 @@
             <UserDefined>true</UserDefined>
             <Complex>false</Complex>
           </Field>
-          <Field Name="data">
+          <Field Name="dataLength">
             <Class>double</Class>
-            <Size>:inf x 1</Size>
+            <Size>1 x 1</Size>
             <Value />
             <InitialValue />
             <UserDefined>true</UserDefined>
@@ -548,7 +565,7 @@
         </Input>
       </Globals>
     </param.globals>
-    <param.mex.mainhtml>/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/codegen/mex/timeSynchronisation/html/index.html</param.mex.mainhtml>
+    <param.mex.mainhtml>/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/codegen/mex/timeSynchronisationSIMO/html/index.html</param.mex.mainhtml>
     <param.grt.mainhtml />
     <param.CallGeneratedCodeFromTest>true</param.CallGeneratedCodeFromTest>
     <param.DefaultTestFile />
@@ -557,8 +574,8 @@
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
     <param.AutoInferVariableSizeThreshold>1024</param.AutoInferVariableSizeThreshold>
     <param.AutoInferUnboundedSizeThreshold>2048</param.AutoInferUnboundedSizeThreshold>
-    <param.mex.outputfile>timeSynchronisation_mex</param.mex.outputfile>
-    <param.grt.outputfile>timeSynchronisation</param.grt.outputfile>
+    <param.mex.outputfile>timeSynchronisationSIMO_mex</param.mex.outputfile>
+    <param.grt.outputfile>timeSynchronisationSIMO</param.grt.outputfile>
     <param.artifact>option.target.artifact.mex</param.artifact>
     <param.FixedPointTypeProposalMode>option.FixedPointTypeProposalMode.ProposeFractionLengths</param.FixedPointTypeProposalMode>
     <param.DefaultProposedFixedPointType>numerictype([],16,12)</param.DefaultProposedFixedPointType>
@@ -646,8 +663,8 @@
       <param.DefaultFixedPointSignedness />
     </unset>
     <fileset.entrypoints>
-      <file value="${PROJECT_ROOT}/timeSynchronisation.m" custom-data-expanded="true">
-        <Inputs fileName="timeSynchronisation.m" functionName="timeSynchronisation">
+      <file value="${PROJECT_ROOT}/timeSynchronisationSIMO.m" custom-data-expanded="true">
+        <Inputs fileName="timeSynchronisationSIMO.m" functionName="timeSynchronisation">
           <Input Name="input">
             <Class>double</Class>
             <Size>:inf x 1</Size>
@@ -662,7 +679,7 @@
     <fileset.testbench />
     <fileset.package />
     <build-deliverables>
-      <file name="timeSynchronisation_mex.mexmaci64" location="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital" optional="false">/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/timeSynchronisation_mex.mexmaci64</file>
+      <file name="timeSynchronisationSIMO_mex.mexmaci64" location="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital" optional="false">/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/timeSynchronisationSIMO_mex.mexmaci64</file>
     </build-deliverables>
     <workflow />
     <matlab>

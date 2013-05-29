@@ -20,6 +20,7 @@ d=struct(...
     'enableCFO',1 ...                   %CFO (on=1, off=0);
     );
     
+%CFO
 d.Ts = 1/d.bandwidth;
 phaseCFO = 10e3*d.Ts*d.subCarriers;
 
@@ -98,7 +99,7 @@ index=1;
 while(index<length(SNR)+1)
 %Noise
 disp(['SNR=', num2str(SNR(index))]);
-r=rConv;
+%r=rConv;
 r=addNoise(rConv,SNR(index),Ps);
 %Add CFO
 r=addCFO(r,phaseCFO);
@@ -122,9 +123,9 @@ preambleRX=preambleRX/d.preambleBoost;
 %Remove cylic prefix
 preambleRX=preambleRX(d.cyclicPrefixPreamble+1:end);
 %CFO Estimation
-CFOPreamble(preambleRX);
+CFOPreamble = CFOPreamble(preambleRX);
 %CFO Correction
-r=CFOCorrection(r);
+r=CFOCorrection(r,CFOPreamble);
 frame=r(startIndex:startIndex+d.signalLength-1);
 preambleRX=frame(1:d.preambleLength);
 dataRX=frame(d.preambleLength+1:end);
