@@ -3,7 +3,7 @@
  *
  * Code generation for function 'BERCalculation_api'
  *
- * C source code generated on: Wed May 29 16:22:14 2013
+ * C source code generated on: Wed May 29 16:57:07 2013
  *
  */
 
@@ -35,14 +35,14 @@ typedef struct {
 #endif                                 /*typedef_ResolvedFunctionInfo*/
 
 /* Variable Definitions */
-static emlrtRTEInfo b_emlrtRTEI = { 1, 1, "BERCalculation_api", "" };
+static emlrtRTEInfo emlrtRTEI = { 1, 1, "BERCalculation_api", "" };
 
 /* Function Declarations */
 static void c_emlrt_marshallIn(const mxArray *bitsRX, const char_T *identifier,
   emxArray_real_T *y);
 static void d_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
   *parentId, emxArray_real_T *y);
-static void j_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+static void m_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
   *msgId, emxArray_real_T *ret);
 
 /* Function Definitions */
@@ -59,21 +59,21 @@ static void c_emlrt_marshallIn(const mxArray *bitsRX, const char_T *identifier,
 static void d_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
   *parentId, emxArray_real_T *y)
 {
-  j_emlrt_marshallIn(emlrtAlias(u), parentId, y);
+  m_emlrt_marshallIn(emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
 }
 
-static void j_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+static void m_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
   *msgId, emxArray_real_T *ret)
 {
-  int32_T iv5[1];
+  int32_T iv11[1];
   boolean_T bv0[1];
-  int32_T iv6[1];
-  iv5[0] = -1;
+  int32_T iv12[1];
+  iv11[0] = -1;
   bv0[0] = TRUE;
   emlrtCheckVsBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", FALSE, 1U,
-    iv5, bv0, iv6);
-  ret->size[0] = iv6[0];
+    iv11, bv0, iv12);
+  ret->size[0] = iv12[0];
   ret->allocatedSize = ret->size[0];
   ret->data = (real_T *)mxGetData(src);
   ret->canFreeData = FALSE;
@@ -86,7 +86,7 @@ void BERCalculation_api(const mxArray * const prhs[2], const mxArray *plhs[1])
   real_T type;
   const mxArray *tmp;
   emlrtHeapReferenceStackEnterFcnR2012b(emlrtRootTLSGlobal);
-  emxInit_real_T(&bitsRX, 1, &b_emlrtRTEI, TRUE);
+  emxInit_real_T(&bitsRX, 1, &emlrtRTEI, TRUE);
 
   /* Marshall function inputs */
   c_emlrt_marshallIn(emlrtAlias(prhs[0]), "bitsRX", bitsRX);
@@ -121,7 +121,7 @@ const mxArray *emlrtMexFcnResolvedFunctionsInfo(void)
   int32_T i;
   const mxArray *y;
   int32_T iv4[1];
-  ResolvedFunctionInfo *r0;
+  ResolvedFunctionInfo *r1;
   const char * b_u;
   const mxArray *b_y;
   const mxArray *m3;
@@ -263,46 +263,46 @@ const mxArray *emlrtMexFcnResolvedFunctionsInfo(void)
   iv4[0] = 12;
   emlrtAssign(&y, mxCreateStructArray(1, iv4, 0, NULL));
   for (i = 0; i < 12; i++) {
-    r0 = &u[i];
-    b_u = r0->context;
+    r1 = &u[i];
+    b_u = r1->context;
     b_y = NULL;
     m3 = mxCreateString(b_u);
     emlrtAssign(&b_y, m3);
     emlrtAddField(y, b_y, "context", i);
-    b_u = r0->name;
+    b_u = r1->name;
     c_y = NULL;
     m3 = mxCreateString(b_u);
     emlrtAssign(&c_y, m3);
     emlrtAddField(y, c_y, "name", i);
-    b_u = r0->dominantType;
+    b_u = r1->dominantType;
     d_y = NULL;
     m3 = mxCreateString(b_u);
     emlrtAssign(&d_y, m3);
     emlrtAddField(y, d_y, "dominantType", i);
-    b_u = r0->resolved;
+    b_u = r1->resolved;
     e_y = NULL;
     m3 = mxCreateString(b_u);
     emlrtAssign(&e_y, m3);
     emlrtAddField(y, e_y, "resolved", i);
-    c_u = r0->fileTimeLo;
+    c_u = r1->fileTimeLo;
     f_y = NULL;
     m3 = mxCreateNumericMatrix(1, 1, mxUINT32_CLASS, mxREAL);
     *(uint32_T *)mxGetData(m3) = c_u;
     emlrtAssign(&f_y, m3);
     emlrtAddField(y, f_y, "fileTimeLo", i);
-    c_u = r0->fileTimeHi;
+    c_u = r1->fileTimeHi;
     g_y = NULL;
     m3 = mxCreateNumericMatrix(1, 1, mxUINT32_CLASS, mxREAL);
     *(uint32_T *)mxGetData(m3) = c_u;
     emlrtAssign(&g_y, m3);
     emlrtAddField(y, g_y, "fileTimeHi", i);
-    c_u = r0->mFileTimeLo;
+    c_u = r1->mFileTimeLo;
     h_y = NULL;
     m3 = mxCreateNumericMatrix(1, 1, mxUINT32_CLASS, mxREAL);
     *(uint32_T *)mxGetData(m3) = c_u;
     emlrtAssign(&h_y, m3);
     emlrtAddField(y, h_y, "mFileTimeLo", i);
-    c_u = r0->mFileTimeHi;
+    c_u = r1->mFileTimeHi;
     i_y = NULL;
     m3 = mxCreateNumericMatrix(1, 1, mxUINT32_CLASS, mxREAL);
     *(uint32_T *)mxGetData(m3) = c_u;

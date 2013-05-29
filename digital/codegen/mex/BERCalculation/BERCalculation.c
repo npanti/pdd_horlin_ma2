@@ -3,7 +3,7 @@
  *
  * Code generation for function 'BERCalculation'
  *
- * C source code generated on: Wed May 29 16:22:14 2013
+ * C source code generated on: Wed May 29 16:57:07 2013
  *
  */
 
@@ -24,13 +24,13 @@ static emlrtRSInfo b_emlrtRSI = { 26, "BERCalculation",
 static emlrtBCInfo emlrtBCI = { -1, -1, 21, 12, "bitsRX", "BERCalculation",
   "/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/BERCalculation.m", 0 };
 
-static emlrtBCInfo b_emlrtBCI = { -1, -1, 21, 23, "d.preamble", "BERCalculation",
+static emlrtBCInfo b_emlrtBCI = { 1, 512, 21, 23, "d.preamble", "BERCalculation",
   "/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/BERCalculation.m", 0 };
 
 static emlrtBCInfo c_emlrtBCI = { -1, -1, 11, 12, "bitsRX", "BERCalculation",
   "/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/BERCalculation.m", 0 };
 
-static emlrtBCInfo d_emlrtBCI = { -1, -1, 11, 23, "d.data", "BERCalculation",
+static emlrtBCInfo d_emlrtBCI = { 1, 393216, 11, 23, "d.data", "BERCalculation",
   "/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/BERCalculation.m", 0 };
 
 /* Function Definitions */
@@ -40,7 +40,6 @@ real_T BERCalculation(const emxArray_real_T *bitsRX, real_T type)
   real_T incorrectBits;
   int32_T m;
   int32_T i0;
-  int32_T i1;
 
   /* type=0 ->preamble */
   /* type=1 ->data */
@@ -49,11 +48,9 @@ real_T BERCalculation(const emxArray_real_T *bitsRX, real_T type)
     m = 1;
     while (m - 1 <= bitsRX->size[0] - 1) {
       i0 = bitsRX->size[0];
-      i1 = d.data->size[0];
       if (bitsRX->data[emlrtDynamicBoundsCheckFastR2012b(m, 1, i0, &c_emlrtBCI,
-           emlrtRootTLSGlobal) - 1] != d.data->
-          data[emlrtDynamicBoundsCheckFastR2012b(m, 1, i1, &d_emlrtBCI,
-           emlrtRootTLSGlobal) - 1]) {
+           emlrtRootTLSGlobal) - 1] != d.data[emlrtDynamicBoundsCheckFastR2012b
+          (m, 1, 393216, &d_emlrtBCI, emlrtRootTLSGlobal) - 1]) {
         incorrectBits++;
       }
 
@@ -72,10 +69,9 @@ real_T BERCalculation(const emxArray_real_T *bitsRX, real_T type)
     m = 1;
     while (m - 1 <= bitsRX->size[0] - 1) {
       i0 = bitsRX->size[0];
-      i1 = d.preamble->size[0];
       if (bitsRX->data[emlrtDynamicBoundsCheckFastR2012b(m, 1, i0, &emlrtBCI,
-           emlrtRootTLSGlobal) - 1] != d.preamble->
-          data[emlrtDynamicBoundsCheckFastR2012b(m, 1, i1, &b_emlrtBCI,
+           emlrtRootTLSGlobal) - 1] !=
+          d.preamble[emlrtDynamicBoundsCheckFastR2012b(m, 1, 512, &b_emlrtBCI,
            emlrtRootTLSGlobal) - 1]) {
         incorrectBits++;
       }

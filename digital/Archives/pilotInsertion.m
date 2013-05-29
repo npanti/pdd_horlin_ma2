@@ -59,7 +59,6 @@ end
 
 d.maskData=maskData;
 d.maskPilots=maskPilots;
-d.numberPilots=numberPilots;
 
 pilotsMatrix=repmat(maskPilots,1,d.OFDM);
 pilotsMatrix=pilotsMatrix*referenceSymbol;

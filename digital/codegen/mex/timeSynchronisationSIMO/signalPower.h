@@ -3,7 +3,7 @@
  *
  * Code generation for function 'signalPower'
  *
- * C source code generated on: Wed May 29 16:15:18 2013
+ * C source code generated on: Wed May 29 17:00:04 2013
  *
  */
 

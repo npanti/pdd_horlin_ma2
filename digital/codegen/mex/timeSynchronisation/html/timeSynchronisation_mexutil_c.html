@@ -14,7 +14,7 @@
 <a name="3"><font color="#888888 "><i>    3   </i></font></a><font color="#117755"><I> *</i></font>
 <a name="4"><font color="#888888 "><i>    4   </i></font></a><font color="#117755"><I> * Code generation for function 'timeSynchronisation_mexutil'</i></font>
 <a name="5"><font color="#888888 "><i>    5   </i></font></a><font color="#117755"><I> *</i></font>
-<a name="6"><font color="#888888 "><i>    6   </i></font></a><font color="#117755"><I> * C source code generated on: Wed May 29 16:20:29 2013</i></font>
+<a name="6"><font color="#888888 "><i>    6   </i></font></a><font color="#117755"><I> * C source code generated on: Wed May 29 16:55:15 2013</i></font>
 <a name="7"><font color="#888888 "><i>    7   </i></font></a><font color="#117755"><I> *</i></font>
 <a name="8"><font color="#888888 "><i>    8   </i></font></a><font color="#117755"><I> */</i></font>
 <a name="9"><font color="#888888 "><i>    9   </i></font></a>
@@ -32,457 +32,449 @@
 <a name="21"><font color="#888888 "><i>   21   </i></font></a>  *parentId);
 <a name="22"><font color="#888888 "><i>   22   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
 <a name="23"><font color="#888888 "><i>   23   </i></font></a>  *parentId, <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *y);
-<a name="24"><font color="#888888 "><i>   24   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a href="#fcn_g_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_g_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">g_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="25"><font color="#888888 "><i>   25   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *ret);
-<a name="26"><font color="#888888 "><i>   26   </i></font></a><font color="#112266"><b>static</b></font> real_T <a href="#fcn_h_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_h_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">h_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="27"><font color="#888888 "><i>   27   </i></font></a>  *msgId);
-<a name="28"><font color="#888888 "><i>   28   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a href="#fcn_i_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_i_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">i_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="29"><font color="#888888 "><i>   29   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *ret);
-<a name="30"><font color="#888888 "><i>   30   </i></font></a>
-<a name="31"><font color="#888888 "><i>   31   </i></font></a><font color="#117755"><i>/* Function Definitions */</i></font>
-<a name="32"><font color="#888888 "><i>   32   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_d_emlrt_marshallIn">d_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="33"><font color="#888888 "><i>   33   </i></font></a>  *parentId, <a href="timeSynchronisation_types_h.html#type_struct_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_struct_T');" target="rtwreport_document_frame"><font color="#1122aa">struct_T</font></a> *y)
-<a name="34"><font color="#888888 "><i>   34   </i></font></a><b>{</b>
-<a name="35"><font color="#888888 "><i>   35   </i></font></a>  emlrtMsgIdentifier thisId;
-<a name="36"><font color="#888888 "><i>   36   </i></font></a>  <font color="#112266"><b>static</b></font> <font color="#112266"><b>const</b></font> <font color="#112266"><b>char</b></font> * fieldNames[30] = <b>{</b> <font color="#1122ff">&quot;M&quot;</font>, <font color="#1122ff">&quot;SNRMin&quot;</font>, <font color="#1122ff">&quot;SNRStep&quot;</font>, <font color="#1122ff">&quot;SNRMax&quot;</font>,
-<a name="37"><font color="#888888 "><i>   37   </i></font></a>    <font color="#1122ff">&quot;subCarriers&quot;</font>, <font color="#1122ff">&quot;cyclicPrefix&quot;</font>, <font color="#1122ff">&quot;messageLength&quot;</font>, <font color="#1122ff">&quot;numberPreamble&quot;</font>,
-<a name="38"><font color="#888888 "><i>   38   </i></font></a>    <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>, <font color="#1122ff">&quot;preambleBoost&quot;</font>, <font color="#1122ff">&quot;synchronisationPlots&quot;</font>,
-<a name="39"><font color="#888888 "><i>   39   </i></font></a>    <font color="#1122ff">&quot;pilotPattern&quot;</font>, <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>, <font color="#1122ff">&quot;bandwidth&quot;</font>, <font color="#1122ff">&quot;enableCFO&quot;</font>, <font color="#1122ff">&quot;Ts&quot;</font>,
-<a name="40"><font color="#888888 "><i>   40   </i></font></a>    <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>, <font color="#1122ff">&quot;OFDM&quot;</font>, <font color="#1122ff">&quot;SNRIterations&quot;</font>, <font color="#1122ff">&quot;preamble&quot;</font>,
-<a name="41"><font color="#888888 "><i>   41   </i></font></a>    <font color="#1122ff">&quot;preambleConstellations&quot;</font>, <font color="#1122ff">&quot;preambleOFDM&quot;</font>, <font color="#1122ff">&quot;preambleLength&quot;</font>, <font color="#1122ff">&quot;numberPilots&quot;</font>,
-<a name="42"><font color="#888888 "><i>   42   </i></font></a>    <font color="#1122ff">&quot;referenceSymbol&quot;</font>, <font color="#1122ff">&quot;referenceSymbolMatrix&quot;</font>, <font color="#1122ff">&quot;maskData&quot;</font>, <font color="#1122ff">&quot;maskPilots&quot;</font>, <font color="#1122ff">&quot;data&quot;</font>,
-<a name="43"><font color="#888888 "><i>   43   </i></font></a>    <font color="#1122ff">&quot;signalLength&quot;</font> <b>}</b>;
-<a name="44"><font color="#888888 "><i>   44   </i></font></a>
-<a name="45"><font color="#888888 "><i>   45   </i></font></a>  thisId.fParent = parentId;
-<a name="46"><font color="#888888 "><i>   46   </i></font></a>  emlrtCheckStructR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, parentId, u, 30, fieldNames, 0U, 0);
-<a name="47"><font color="#888888 "><i>   47   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;M&quot;</font>;
-<a name="48"><font color="#888888 "><i>   48   </i></font></a>  y-&gt;M = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u,
-<a name="49"><font color="#888888 "><i>   49   </i></font></a>    0, <font color="#1122ff">&quot;M&quot;</font>)), &amp;thisId);
-<a name="50"><font color="#888888 "><i>   50   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRMin&quot;</font>;
-<a name="51"><font color="#888888 "><i>   51   </i></font></a>  y-&gt;SNRMin = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="52"><font color="#888888 "><i>   52   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRMin&quot;</font>)), &amp;thisId);
-<a name="53"><font color="#888888 "><i>   53   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRStep&quot;</font>;
-<a name="54"><font color="#888888 "><i>   54   </i></font></a>  y-&gt;SNRStep = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="55"><font color="#888888 "><i>   55   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRStep&quot;</font>)), &amp;thisId);
-<a name="56"><font color="#888888 "><i>   56   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRMax&quot;</font>;
-<a name="57"><font color="#888888 "><i>   57   </i></font></a>  y-&gt;SNRMax = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="58"><font color="#888888 "><i>   58   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRMax&quot;</font>)), &amp;thisId);
-<a name="59"><font color="#888888 "><i>   59   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;subCarriers&quot;</font>;
-<a name="60"><font color="#888888 "><i>   60   </i></font></a>  y-&gt;subCarriers = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="61"><font color="#888888 "><i>   61   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;subCarriers&quot;</font>)), &amp;thisId);
-<a name="62"><font color="#888888 "><i>   62   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;cyclicPrefix&quot;</font>;
-<a name="63"><font color="#888888 "><i>   63   </i></font></a>  y-&gt;cyclicPrefix = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="64"><font color="#888888 "><i>   64   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;cyclicPrefix&quot;</font>)), &amp;thisId);
-<a name="65"><font color="#888888 "><i>   65   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;messageLength&quot;</font>;
-<a name="66"><font color="#888888 "><i>   66   </i></font></a>  y-&gt;messageLength = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="67"><font color="#888888 "><i>   67   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;messageLength&quot;</font>)), &amp;thisId);
-<a name="68"><font color="#888888 "><i>   68   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;numberPreamble&quot;</font>;
-<a name="69"><font color="#888888 "><i>   69   </i></font></a>  y-&gt;numberPreamble = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="70"><font color="#888888 "><i>   70   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;numberPreamble&quot;</font>)), &amp;thisId);
-<a name="71"><font color="#888888 "><i>   71   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>;
-<a name="72"><font color="#888888 "><i>   72   </i></font></a>  y-&gt;cyclicPrefixPreamble = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="73"><font color="#888888 "><i>   73   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>)), &amp;thisId);
-<a name="74"><font color="#888888 "><i>   74   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleBoost&quot;</font>;
-<a name="75"><font color="#888888 "><i>   75   </i></font></a>  y-&gt;preambleBoost = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="76"><font color="#888888 "><i>   76   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;preambleBoost&quot;</font>)), &amp;thisId);
-<a name="77"><font color="#888888 "><i>   77   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;synchronisationPlots&quot;</font>;
-<a name="78"><font color="#888888 "><i>   78   </i></font></a>  y-&gt;synchronisationPlots = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="79"><font color="#888888 "><i>   79   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;synchronisationPlots&quot;</font>)), &amp;thisId);
-<a name="80"><font color="#888888 "><i>   80   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;pilotPattern&quot;</font>;
-<a name="81"><font color="#888888 "><i>   81   </i></font></a>  y-&gt;pilotPattern = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="82"><font color="#888888 "><i>   82   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;pilotPattern&quot;</font>)), &amp;thisId);
-<a name="83"><font color="#888888 "><i>   83   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>;
-<a name="84"><font color="#888888 "><i>   84   </i></font></a>  y-&gt;bandwidthMeasured = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="85"><font color="#888888 "><i>   85   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>)), &amp;thisId);
-<a name="86"><font color="#888888 "><i>   86   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;bandwidth&quot;</font>;
-<a name="87"><font color="#888888 "><i>   87   </i></font></a>  y-&gt;bandwidth = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="88"><font color="#888888 "><i>   88   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;bandwidth&quot;</font>)), &amp;thisId);
-<a name="89"><font color="#888888 "><i>   89   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;enableCFO&quot;</font>;
-<a name="90"><font color="#888888 "><i>   90   </i></font></a>  y-&gt;enableCFO = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="91"><font color="#888888 "><i>   91   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;enableCFO&quot;</font>)), &amp;thisId);
-<a name="92"><font color="#888888 "><i>   92   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;Ts&quot;</font>;
-<a name="93"><font color="#888888 "><i>   93   </i></font></a>  y-&gt;Ts = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>,
-<a name="94"><font color="#888888 "><i>   94   </i></font></a>    u, 0, <font color="#1122ff">&quot;Ts&quot;</font>)), &amp;thisId);
-<a name="95"><font color="#888888 "><i>   95   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>;
-<a name="96"><font color="#888888 "><i>   96   </i></font></a>  y-&gt;bitsPerSymbol = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="97"><font color="#888888 "><i>   97   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>)), &amp;thisId);
-<a name="98"><font color="#888888 "><i>   98   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;OFDM&quot;</font>;
-<a name="99"><font color="#888888 "><i>   99   </i></font></a>  y-&gt;OFDM = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>,
-<a name="100"><font color="#888888 "><i>  100   </i></font></a>    u, 0, <font color="#1122ff">&quot;OFDM&quot;</font>)), &amp;thisId);
-<a name="101"><font color="#888888 "><i>  101   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRIterations&quot;</font>;
-<a name="102"><font color="#888888 "><i>  102   </i></font></a>  y-&gt;SNRIterations = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="103"><font color="#888888 "><i>  103   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRIterations&quot;</font>)), &amp;thisId);
-<a name="104"><font color="#888888 "><i>  104   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preamble&quot;</font>;
-<a name="105"><font color="#888888 "><i>  105   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="106"><font color="#888888 "><i>  106   </i></font></a>    <font color="#1122ff">&quot;preamble&quot;</font>)), &amp;thisId, y-&gt;preamble);
-<a name="107"><font color="#888888 "><i>  107   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleConstellations&quot;</font>;
-<a name="108"><font color="#888888 "><i>  108   </i></font></a>  <a href="#fcn_b_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="109"><font color="#888888 "><i>  109   </i></font></a>    <font color="#1122ff">&quot;preambleConstellations&quot;</font>)), &amp;thisId, y-&gt;preambleConstellations);
-<a name="110"><font color="#888888 "><i>  110   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleOFDM&quot;</font>;
-<a name="111"><font color="#888888 "><i>  111   </i></font></a>  <a href="#fcn_b_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="112"><font color="#888888 "><i>  112   </i></font></a>    <font color="#1122ff">&quot;preambleOFDM&quot;</font>)), &amp;thisId, y-&gt;preambleOFDM);
-<a name="113"><font color="#888888 "><i>  113   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleLength&quot;</font>;
-<a name="114"><font color="#888888 "><i>  114   </i></font></a>  y-&gt;preambleLength = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="115"><font color="#888888 "><i>  115   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;preambleLength&quot;</font>)), &amp;thisId);
-<a name="116"><font color="#888888 "><i>  116   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;numberPilots&quot;</font>;
-<a name="117"><font color="#888888 "><i>  117   </i></font></a>  y-&gt;numberPilots = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="118"><font color="#888888 "><i>  118   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;numberPilots&quot;</font>)), &amp;thisId);
-<a name="119"><font color="#888888 "><i>  119   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;referenceSymbol&quot;</font>;
-<a name="120"><font color="#888888 "><i>  120   </i></font></a>  <a href="#fcn_b_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="121"><font color="#888888 "><i>  121   </i></font></a>    <font color="#1122ff">&quot;referenceSymbol&quot;</font>)), &amp;thisId, y-&gt;referenceSymbol);
-<a name="122"><font color="#888888 "><i>  122   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;referenceSymbolMatrix&quot;</font>;
-<a name="123"><font color="#888888 "><i>  123   </i></font></a>  <a href="#fcn_b_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="124"><font color="#888888 "><i>  124   </i></font></a>    <font color="#1122ff">&quot;referenceSymbolMatrix&quot;</font>)), &amp;thisId, y-&gt;referenceSymbolMatrix);
-<a name="125"><font color="#888888 "><i>  125   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;maskData&quot;</font>;
-<a name="126"><font color="#888888 "><i>  126   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="127"><font color="#888888 "><i>  127   </i></font></a>    <font color="#1122ff">&quot;maskData&quot;</font>)), &amp;thisId, y-&gt;maskData);
-<a name="128"><font color="#888888 "><i>  128   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;maskPilots&quot;</font>;
-<a name="129"><font color="#888888 "><i>  129   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="130"><font color="#888888 "><i>  130   </i></font></a>    <font color="#1122ff">&quot;maskPilots&quot;</font>)), &amp;thisId, y-&gt;maskPilots);
-<a name="131"><font color="#888888 "><i>  131   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;data&quot;</font>;
-<a name="132"><font color="#888888 "><i>  132   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
-<a name="133"><font color="#888888 "><i>  133   </i></font></a>    <font color="#1122ff">&quot;data&quot;</font>)), &amp;thisId, y-&gt;data);
-<a name="134"><font color="#888888 "><i>  134   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;signalLength&quot;</font>;
-<a name="135"><font color="#888888 "><i>  135   </i></font></a>  y-&gt;signalLength = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
-<a name="136"><font color="#888888 "><i>  136   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;signalLength&quot;</font>)), &amp;thisId);
-<a name="137"><font color="#888888 "><i>  137   </i></font></a>  emlrtDestroyArray(&amp;u);
-<a name="138"><font color="#888888 "><i>  138   </i></font></a><b>}</b>
-<a name="139"><font color="#888888 "><i>  139   </i></font></a>
-<a name="140"><font color="#888888 "><i>  140   </i></font></a><font color="#112266"><b>static</b></font> real_T <a name="fcn_e_emlrt_marshallIn">e_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="141"><font color="#888888 "><i>  141   </i></font></a>  *parentId)
-<a name="142"><font color="#888888 "><i>  142   </i></font></a><b>{</b>
-<a name="143"><font color="#888888 "><i>  143   </i></font></a>  real_T y;
-<a name="144"><font color="#888888 "><i>  144   </i></font></a>  y = <a href="#fcn_h_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_h_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">h_emlrt_marshallIn</font></a>(emlrtAlias(u), parentId);
-<a name="145"><font color="#888888 "><i>  145   </i></font></a>  emlrtDestroyArray(&amp;u);
-<a name="146"><font color="#888888 "><i>  146   </i></font></a>  <font color="#112266"><b>return</b></font> y;
-<a name="147"><font color="#888888 "><i>  147   </i></font></a><b>}</b>
-<a name="148"><font color="#888888 "><i>  148   </i></font></a>
-<a name="149"><font color="#888888 "><i>  149   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_f_emlrt_marshallIn">f_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="150"><font color="#888888 "><i>  150   </i></font></a>  *parentId, <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *y)
-<a name="151"><font color="#888888 "><i>  151   </i></font></a><b>{</b>
-<a name="152"><font color="#888888 "><i>  152   </i></font></a>  <a href="#fcn_i_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_i_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">i_emlrt_marshallIn</font></a>(emlrtAlias(u), parentId, y);
-<a name="153"><font color="#888888 "><i>  153   </i></font></a>  emlrtDestroyArray(&amp;u);
-<a name="154"><font color="#888888 "><i>  154   </i></font></a><b>}</b>
-<a name="155"><font color="#888888 "><i>  155   </i></font></a>
-<a name="156"><font color="#888888 "><i>  156   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_g_emlrt_marshallIn">g_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="157"><font color="#888888 "><i>  157   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *ret)
-<a name="158"><font color="#888888 "><i>  158   </i></font></a><b>{</b>
-<a name="159"><font color="#888888 "><i>  159   </i></font></a>  int32_T iv16[1];
-<a name="160"><font color="#888888 "><i>  160   </i></font></a>  boolean_T bv0[1];
-<a name="161"><font color="#888888 "><i>  161   </i></font></a>  int32_T iv17[1];
-<a name="162"><font color="#888888 "><i>  162   </i></font></a>  int32_T i5;
-<a name="163"><font color="#888888 "><i>  163   </i></font></a>  iv16[0] = -1;
-<a name="164"><font color="#888888 "><i>  164   </i></font></a>  bv0[0] = TRUE;
-<a name="165"><font color="#888888 "><i>  165   </i></font></a>  emlrtCheckVsBuiltInR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, msgId, src, <font color="#1122ff">&quot;double&quot;</font>, TRUE, 1U,
-<a name="166"><font color="#888888 "><i>  166   </i></font></a>    iv16, bv0, iv17);
-<a name="167"><font color="#888888 "><i>  167   </i></font></a>  i5 = ret-&gt;size[0];
-<a name="168"><font color="#888888 "><i>  168   </i></font></a>  ret-&gt;size[0] = iv17[0];
-<a name="169"><font color="#888888 "><i>  169   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)ret, i5, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
-<a name="170"><font color="#888888 "><i>  170   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="171"><font color="#888888 "><i>  171   </i></font></a>  emlrtImportArrayR2011b(src, ret-&gt;data, 8, TRUE);
-<a name="172"><font color="#888888 "><i>  172   </i></font></a>  emlrtDestroyArray(&amp;src);
-<a name="173"><font color="#888888 "><i>  173   </i></font></a><b>}</b>
-<a name="174"><font color="#888888 "><i>  174   </i></font></a>
-<a name="175"><font color="#888888 "><i>  175   </i></font></a><font color="#112266"><b>static</b></font> real_T <a name="fcn_h_emlrt_marshallIn">h_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="176"><font color="#888888 "><i>  176   </i></font></a>  *msgId)
-<a name="177"><font color="#888888 "><i>  177   </i></font></a><b>{</b>
-<a name="178"><font color="#888888 "><i>  178   </i></font></a>  real_T ret;
-<a name="179"><font color="#888888 "><i>  179   </i></font></a>  emlrtCheckBuiltInR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, msgId, src, <font color="#1122ff">&quot;double&quot;</font>, FALSE, 0U, 0);
-<a name="180"><font color="#888888 "><i>  180   </i></font></a>  ret = *(real_T *)mxGetData(src);
-<a name="181"><font color="#888888 "><i>  181   </i></font></a>  emlrtDestroyArray(&amp;src);
-<a name="182"><font color="#888888 "><i>  182   </i></font></a>  <font color="#112266"><b>return</b></font> ret;
-<a name="183"><font color="#888888 "><i>  183   </i></font></a><b>}</b>
-<a name="184"><font color="#888888 "><i>  184   </i></font></a>
-<a name="185"><font color="#888888 "><i>  185   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_i_emlrt_marshallIn">i_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
-<a name="186"><font color="#888888 "><i>  186   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *ret)
-<a name="187"><font color="#888888 "><i>  187   </i></font></a><b>{</b>
-<a name="188"><font color="#888888 "><i>  188   </i></font></a>  int32_T iv18[1];
-<a name="189"><font color="#888888 "><i>  189   </i></font></a>  boolean_T bv1[1];
-<a name="190"><font color="#888888 "><i>  190   </i></font></a>  int32_T iv19[1];
-<a name="191"><font color="#888888 "><i>  191   </i></font></a>  int32_T i6;
-<a name="192"><font color="#888888 "><i>  192   </i></font></a>  iv18[0] = -1;
-<a name="193"><font color="#888888 "><i>  193   </i></font></a>  bv1[0] = TRUE;
-<a name="194"><font color="#888888 "><i>  194   </i></font></a>  emlrtCheckVsBuiltInR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, msgId, src, <font color="#1122ff">&quot;double&quot;</font>, FALSE, 1U,
-<a name="195"><font color="#888888 "><i>  195   </i></font></a>    iv18, bv1, iv19);
-<a name="196"><font color="#888888 "><i>  196   </i></font></a>  i6 = ret-&gt;size[0];
-<a name="197"><font color="#888888 "><i>  197   </i></font></a>  ret-&gt;size[0] = iv19[0];
-<a name="198"><font color="#888888 "><i>  198   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)ret, i6, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
-<a name="199"><font color="#888888 "><i>  199   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="200"><font color="#888888 "><i>  200   </i></font></a>  emlrtImportArrayR2011b(src, ret-&gt;data, 8, FALSE);
-<a name="201"><font color="#888888 "><i>  201   </i></font></a>  emlrtDestroyArray(&amp;src);
-<a name="202"><font color="#888888 "><i>  202   </i></font></a><b>}</b>
-<a name="203"><font color="#888888 "><i>  203   </i></font></a>
-<a name="204"><font color="#888888 "><i>  204   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_b_emlrt_marshallIn">b_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier *parentId,
-<a name="205"><font color="#888888 "><i>  205   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *y)
-<a name="206"><font color="#888888 "><i>  206   </i></font></a><b>{</b>
-<a name="207"><font color="#888888 "><i>  207   </i></font></a>  <a href="#fcn_g_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_g_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">g_emlrt_marshallIn</font></a>(emlrtAlias(u), parentId, y);
-<a name="208"><font color="#888888 "><i>  208   </i></font></a>  emlrtDestroyArray(&amp;u);
-<a name="209"><font color="#888888 "><i>  209   </i></font></a><b>}</b>
-<a name="210"><font color="#888888 "><i>  210   </i></font></a>
-<a name="211"><font color="#888888 "><i>  211   </i></font></a><font color="#112266"><b>const</b></font> mxArray *<a name="fcn_b_emlrt_marshallOut">b_emlrt_marshallOut</a>(<font color="#112266"><b>const</b></font> <a href="timeSynchronisation_types_h.html#type_struct_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_struct_T');" target="rtwreport_document_frame"><font color="#1122aa">struct_T</font></a> *u)
-<a name="212"><font color="#888888 "><i>  212   </i></font></a><b>{</b>
-<a name="213"><font color="#888888 "><i>  213   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *y;
-<a name="214"><font color="#888888 "><i>  214   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *b_u;
-<a name="215"><font color="#888888 "><i>  215   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *c_u;
-<a name="216"><font color="#888888 "><i>  216   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *d_u;
-<a name="217"><font color="#888888 "><i>  217   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *e_u;
-<a name="218"><font color="#888888 "><i>  218   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *f_u;
-<a name="219"><font color="#888888 "><i>  219   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *g_u;
-<a name="220"><font color="#888888 "><i>  220   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *h_u;
-<a name="221"><font color="#888888 "><i>  221   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *i_u;
-<a name="222"><font color="#888888 "><i>  222   </i></font></a>  int32_T i4;
-<a name="223"><font color="#888888 "><i>  223   </i></font></a>  int32_T loop_ub;
-<a name="224"><font color="#888888 "><i>  224   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *b_y;
-<a name="225"><font color="#888888 "><i>  225   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *m5;
-<a name="226"><font color="#888888 "><i>  226   </i></font></a>  real_T (*pData)[];
-<a name="227"><font color="#888888 "><i>  227   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *c_y;
-<a name="228"><font color="#888888 "><i>  228   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *d_y;
-<a name="229"><font color="#888888 "><i>  229   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *e_y;
-<a name="230"><font color="#888888 "><i>  230   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *f_y;
-<a name="231"><font color="#888888 "><i>  231   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *g_y;
-<a name="232"><font color="#888888 "><i>  232   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *h_y;
-<a name="233"><font color="#888888 "><i>  233   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *i_y;
-<a name="234"><font color="#888888 "><i>  234   </i></font></a>  emlrtHeapReferenceStackEnterFcnR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>);
-<a name="235"><font color="#888888 "><i>  235   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;b_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="236"><font color="#888888 "><i>  236   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_creal_T</font></a>(&amp;c_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="237"><font color="#888888 "><i>  237   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_creal_T</font></a>(&amp;d_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="238"><font color="#888888 "><i>  238   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_creal_T</font></a>(&amp;e_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="239"><font color="#888888 "><i>  239   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_creal_T</font></a>(&amp;f_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="240"><font color="#888888 "><i>  240   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;g_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="241"><font color="#888888 "><i>  241   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;h_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="242"><font color="#888888 "><i>  242   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;i_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-<a name="243"><font color="#888888 "><i>  243   </i></font></a>  y = NULL;
-<a name="244"><font color="#888888 "><i>  244   </i></font></a>  emlrtAssign(&amp;y, mxCreateStructMatrix(1, 1, 0, NULL));
-<a name="245"><font color="#888888 "><i>  245   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;M), <font color="#1122ff">&quot;M&quot;</font>, 0);
-<a name="246"><font color="#888888 "><i>  246   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRMin), <font color="#1122ff">&quot;SNRMin&quot;</font>, 0);
-<a name="247"><font color="#888888 "><i>  247   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRStep), <font color="#1122ff">&quot;SNRStep&quot;</font>, 0);
-<a name="248"><font color="#888888 "><i>  248   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRMax), <font color="#1122ff">&quot;SNRMax&quot;</font>, 0);
-<a name="249"><font color="#888888 "><i>  249   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;subCarriers), <font color="#1122ff">&quot;subCarriers&quot;</font>, 0);
-<a name="250"><font color="#888888 "><i>  250   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;cyclicPrefix), <font color="#1122ff">&quot;cyclicPrefix&quot;</font>, 0);
-<a name="251"><font color="#888888 "><i>  251   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;messageLength), <font color="#1122ff">&quot;messageLength&quot;</font>, 0);
-<a name="252"><font color="#888888 "><i>  252   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;numberPreamble), <font color="#1122ff">&quot;numberPreamble&quot;</font>, 0);
-<a name="253"><font color="#888888 "><i>  253   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;cyclicPrefixPreamble),
-<a name="254"><font color="#888888 "><i>  254   </i></font></a>                <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>, 0);
-<a name="255"><font color="#888888 "><i>  255   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;preambleBoost), <font color="#1122ff">&quot;preambleBoost&quot;</font>, 0);
-<a name="256"><font color="#888888 "><i>  256   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;synchronisationPlots),
-<a name="257"><font color="#888888 "><i>  257   </i></font></a>                <font color="#1122ff">&quot;synchronisationPlots&quot;</font>, 0);
-<a name="258"><font color="#888888 "><i>  258   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;pilotPattern), <font color="#1122ff">&quot;pilotPattern&quot;</font>, 0);
-<a name="259"><font color="#888888 "><i>  259   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;bandwidthMeasured),
-<a name="260"><font color="#888888 "><i>  260   </i></font></a>                <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>, 0);
-<a name="261"><font color="#888888 "><i>  261   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;bandwidth), <font color="#1122ff">&quot;bandwidth&quot;</font>, 0);
-<a name="262"><font color="#888888 "><i>  262   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;enableCFO), <font color="#1122ff">&quot;enableCFO&quot;</font>, 0);
-<a name="263"><font color="#888888 "><i>  263   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;Ts), <font color="#1122ff">&quot;Ts&quot;</font>, 0);
-<a name="264"><font color="#888888 "><i>  264   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;bitsPerSymbol), <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>, 0);
-<a name="265"><font color="#888888 "><i>  265   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;OFDM), <font color="#1122ff">&quot;OFDM&quot;</font>, 0);
-<a name="266"><font color="#888888 "><i>  266   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRIterations), <font color="#1122ff">&quot;SNRIterations&quot;</font>, 0);
-<a name="267"><font color="#888888 "><i>  267   </i></font></a>  i4 = b_u-&gt;size[0];
-<a name="268"><font color="#888888 "><i>  268   </i></font></a>  b_u-&gt;size[0] = u-&gt;preamble-&gt;size[0];
-<a name="269"><font color="#888888 "><i>  269   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)b_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
-<a name="270"><font color="#888888 "><i>  270   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="271"><font color="#888888 "><i>  271   </i></font></a>  loop_ub = u-&gt;preamble-&gt;size[0];
-<a name="272"><font color="#888888 "><i>  272   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="273"><font color="#888888 "><i>  273   </i></font></a>    b_u-&gt;data[i4] = u-&gt;preamble-&gt;data[i4];
-<a name="274"><font color="#888888 "><i>  274   </i></font></a>  <b>}</b>
-<a name="275"><font color="#888888 "><i>  275   </i></font></a>
-<a name="276"><font color="#888888 "><i>  276   </i></font></a>  b_y = NULL;
-<a name="277"><font color="#888888 "><i>  277   </i></font></a>  m5 = mxCreateNumericArray(1, b_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
-<a name="278"><font color="#888888 "><i>  278   </i></font></a>  pData = (real_T (*)[])mxGetPr(m5);
-<a name="279"><font color="#888888 "><i>  279   </i></font></a>  i4 = 0;
-<a name="280"><font color="#888888 "><i>  280   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; b_u-&gt;size[0]; loop_ub++) <b>{</b>
-<a name="281"><font color="#888888 "><i>  281   </i></font></a>    (*pData)[i4] = b_u-&gt;data[loop_ub];
-<a name="282"><font color="#888888 "><i>  282   </i></font></a>    i4++;
-<a name="283"><font color="#888888 "><i>  283   </i></font></a>  <b>}</b>
-<a name="284"><font color="#888888 "><i>  284   </i></font></a>
-<a name="285"><font color="#888888 "><i>  285   </i></font></a>  emlrtAssign(&amp;b_y, m5);
-<a name="286"><font color="#888888 "><i>  286   </i></font></a>  emlrtAddField(y, b_y, <font color="#1122ff">&quot;preamble&quot;</font>, 0);
-<a name="287"><font color="#888888 "><i>  287   </i></font></a>  i4 = c_u-&gt;size[0];
-<a name="288"><font color="#888888 "><i>  288   </i></font></a>  c_u-&gt;size[0] = u-&gt;preambleConstellations-&gt;size[0];
-<a name="289"><font color="#888888 "><i>  289   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)c_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
-<a name="290"><font color="#888888 "><i>  290   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="291"><font color="#888888 "><i>  291   </i></font></a>  loop_ub = u-&gt;preambleConstellations-&gt;size[0];
-<a name="292"><font color="#888888 "><i>  292   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="293"><font color="#888888 "><i>  293   </i></font></a>    c_u-&gt;data[i4] = u-&gt;preambleConstellations-&gt;data[i4];
-<a name="294"><font color="#888888 "><i>  294   </i></font></a>  <b>}</b>
-<a name="295"><font color="#888888 "><i>  295   </i></font></a>
-<a name="296"><font color="#888888 "><i>  296   </i></font></a>  c_y = NULL;
-<a name="297"><font color="#888888 "><i>  297   </i></font></a>  m5 = mxCreateNumericArray(1, c_u-&gt;size, mxDOUBLE_CLASS, mxCOMPLEX);
-<a name="298"><font color="#888888 "><i>  298   </i></font></a>  emlrtExportNumericArrayR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, m5, (<font color="#112266"><b>void</b></font> *)c_u-&gt;data, 8);
-<a name="299"><font color="#888888 "><i>  299   </i></font></a>  emlrtAssign(&amp;c_y, m5);
-<a name="300"><font color="#888888 "><i>  300   </i></font></a>  emlrtAddField(y, c_y, <font color="#1122ff">&quot;preambleConstellations&quot;</font>, 0);
-<a name="301"><font color="#888888 "><i>  301   </i></font></a>  i4 = d_u-&gt;size[0];
-<a name="302"><font color="#888888 "><i>  302   </i></font></a>  d_u-&gt;size[0] = u-&gt;preambleOFDM-&gt;size[0];
-<a name="303"><font color="#888888 "><i>  303   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)d_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
-<a name="304"><font color="#888888 "><i>  304   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="305"><font color="#888888 "><i>  305   </i></font></a>  loop_ub = u-&gt;preambleOFDM-&gt;size[0];
-<a name="306"><font color="#888888 "><i>  306   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="307"><font color="#888888 "><i>  307   </i></font></a>    d_u-&gt;data[i4] = u-&gt;preambleOFDM-&gt;data[i4];
-<a name="308"><font color="#888888 "><i>  308   </i></font></a>  <b>}</b>
-<a name="309"><font color="#888888 "><i>  309   </i></font></a>
-<a name="310"><font color="#888888 "><i>  310   </i></font></a>  d_y = NULL;
-<a name="311"><font color="#888888 "><i>  311   </i></font></a>  m5 = mxCreateNumericArray(1, d_u-&gt;size, mxDOUBLE_CLASS, mxCOMPLEX);
-<a name="312"><font color="#888888 "><i>  312   </i></font></a>  emlrtExportNumericArrayR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, m5, (<font color="#112266"><b>void</b></font> *)d_u-&gt;data, 8);
-<a name="313"><font color="#888888 "><i>  313   </i></font></a>  emlrtAssign(&amp;d_y, m5);
-<a name="314"><font color="#888888 "><i>  314   </i></font></a>  emlrtAddField(y, d_y, <font color="#1122ff">&quot;preambleOFDM&quot;</font>, 0);
-<a name="315"><font color="#888888 "><i>  315   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;preambleLength), <font color="#1122ff">&quot;preambleLength&quot;</font>, 0);
-<a name="316"><font color="#888888 "><i>  316   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;numberPilots), <font color="#1122ff">&quot;numberPilots&quot;</font>, 0);
-<a name="317"><font color="#888888 "><i>  317   </i></font></a>  i4 = e_u-&gt;size[0];
-<a name="318"><font color="#888888 "><i>  318   </i></font></a>  e_u-&gt;size[0] = u-&gt;referenceSymbol-&gt;size[0];
-<a name="319"><font color="#888888 "><i>  319   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)e_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
+<a name="24"><font color="#888888 "><i>   24   </i></font></a><font color="#112266"><b>static</b></font> creal_T <a href="#fcn_g_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_g_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">g_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="25"><font color="#888888 "><i>   25   </i></font></a>  *parentId);
+<a name="26"><font color="#888888 "><i>   26   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a href="#fcn_h_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_h_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">h_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="27"><font color="#888888 "><i>   27   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *ret);
+<a name="28"><font color="#888888 "><i>   28   </i></font></a><font color="#112266"><b>static</b></font> real_T <a href="#fcn_i_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_i_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">i_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="29"><font color="#888888 "><i>   29   </i></font></a>  *msgId);
+<a name="30"><font color="#888888 "><i>   30   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a href="#fcn_j_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_j_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">j_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="31"><font color="#888888 "><i>   31   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *ret);
+<a name="32"><font color="#888888 "><i>   32   </i></font></a><font color="#112266"><b>static</b></font> creal_T <a href="#fcn_k_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_k_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">k_emlrt_marshallIn</font></a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="33"><font color="#888888 "><i>   33   </i></font></a>  *msgId);
+<a name="34"><font color="#888888 "><i>   34   </i></font></a>
+<a name="35"><font color="#888888 "><i>   35   </i></font></a><font color="#117755"><i>/* Function Definitions */</i></font>
+<a name="36"><font color="#888888 "><i>   36   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_d_emlrt_marshallIn">d_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="37"><font color="#888888 "><i>   37   </i></font></a>  *parentId, <a href="timeSynchronisation_types_h.html#type_struct_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_struct_T');" target="rtwreport_document_frame"><font color="#1122aa">struct_T</font></a> *y)
+<a name="38"><font color="#888888 "><i>   38   </i></font></a><b>{</b>
+<a name="39"><font color="#888888 "><i>   39   </i></font></a>  emlrtMsgIdentifier thisId;
+<a name="40"><font color="#888888 "><i>   40   </i></font></a>  <font color="#112266"><b>static</b></font> <font color="#112266"><b>const</b></font> <font color="#112266"><b>char</b></font> * fieldNames[29] = <b>{</b> <font color="#1122ff">&quot;M&quot;</font>, <font color="#1122ff">&quot;SNRMin&quot;</font>, <font color="#1122ff">&quot;SNRStep&quot;</font>, <font color="#1122ff">&quot;SNRMax&quot;</font>,
+<a name="41"><font color="#888888 "><i>   41   </i></font></a>    <font color="#1122ff">&quot;subCarriers&quot;</font>, <font color="#1122ff">&quot;cyclicPrefix&quot;</font>, <font color="#1122ff">&quot;messageLength&quot;</font>, <font color="#1122ff">&quot;numberPreamble&quot;</font>,
+<a name="42"><font color="#888888 "><i>   42   </i></font></a>    <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>, <font color="#1122ff">&quot;preambleBoost&quot;</font>, <font color="#1122ff">&quot;synchronisationPlots&quot;</font>,
+<a name="43"><font color="#888888 "><i>   43   </i></font></a>    <font color="#1122ff">&quot;pilotPattern&quot;</font>, <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>, <font color="#1122ff">&quot;bandwidth&quot;</font>, <font color="#1122ff">&quot;enableCFO&quot;</font>, <font color="#1122ff">&quot;Ts&quot;</font>,
+<a name="44"><font color="#888888 "><i>   44   </i></font></a>    <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>, <font color="#1122ff">&quot;OFDM&quot;</font>, <font color="#1122ff">&quot;SNRIterations&quot;</font>, <font color="#1122ff">&quot;preamble&quot;</font>,
+<a name="45"><font color="#888888 "><i>   45   </i></font></a>    <font color="#1122ff">&quot;preambleConstellations&quot;</font>, <font color="#1122ff">&quot;preambleOFDM&quot;</font>, <font color="#1122ff">&quot;preambleLength&quot;</font>,
+<a name="46"><font color="#888888 "><i>   46   </i></font></a>    <font color="#1122ff">&quot;referenceSymbol&quot;</font>, <font color="#1122ff">&quot;maskData&quot;</font>, <font color="#1122ff">&quot;maskPilots&quot;</font>, <font color="#1122ff">&quot;numberPilots&quot;</font>, <font color="#1122ff">&quot;data&quot;</font>,
+<a name="47"><font color="#888888 "><i>   47   </i></font></a>    <font color="#1122ff">&quot;signalLength&quot;</font> <b>}</b>;
+<a name="48"><font color="#888888 "><i>   48   </i></font></a>
+<a name="49"><font color="#888888 "><i>   49   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *m5;
+<a name="50"><font color="#888888 "><i>   50   </i></font></a>  thisId.fParent = parentId;
+<a name="51"><font color="#888888 "><i>   51   </i></font></a>  emlrtCheckStructR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, parentId, u, 29, fieldNames, 0U, 0);
+<a name="52"><font color="#888888 "><i>   52   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;M&quot;</font>;
+<a name="53"><font color="#888888 "><i>   53   </i></font></a>  y-&gt;M = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u,
+<a name="54"><font color="#888888 "><i>   54   </i></font></a>    0, <font color="#1122ff">&quot;M&quot;</font>)), &amp;thisId);
+<a name="55"><font color="#888888 "><i>   55   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRMin&quot;</font>;
+<a name="56"><font color="#888888 "><i>   56   </i></font></a>  y-&gt;SNRMin = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="57"><font color="#888888 "><i>   57   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRMin&quot;</font>)), &amp;thisId);
+<a name="58"><font color="#888888 "><i>   58   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRStep&quot;</font>;
+<a name="59"><font color="#888888 "><i>   59   </i></font></a>  y-&gt;SNRStep = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="60"><font color="#888888 "><i>   60   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRStep&quot;</font>)), &amp;thisId);
+<a name="61"><font color="#888888 "><i>   61   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRMax&quot;</font>;
+<a name="62"><font color="#888888 "><i>   62   </i></font></a>  y-&gt;SNRMax = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="63"><font color="#888888 "><i>   63   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRMax&quot;</font>)), &amp;thisId);
+<a name="64"><font color="#888888 "><i>   64   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;subCarriers&quot;</font>;
+<a name="65"><font color="#888888 "><i>   65   </i></font></a>  y-&gt;subCarriers = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="66"><font color="#888888 "><i>   66   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;subCarriers&quot;</font>)), &amp;thisId);
+<a name="67"><font color="#888888 "><i>   67   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;cyclicPrefix&quot;</font>;
+<a name="68"><font color="#888888 "><i>   68   </i></font></a>  y-&gt;cyclicPrefix = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="69"><font color="#888888 "><i>   69   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;cyclicPrefix&quot;</font>)), &amp;thisId);
+<a name="70"><font color="#888888 "><i>   70   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;messageLength&quot;</font>;
+<a name="71"><font color="#888888 "><i>   71   </i></font></a>  y-&gt;messageLength = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="72"><font color="#888888 "><i>   72   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;messageLength&quot;</font>)), &amp;thisId);
+<a name="73"><font color="#888888 "><i>   73   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;numberPreamble&quot;</font>;
+<a name="74"><font color="#888888 "><i>   74   </i></font></a>  y-&gt;numberPreamble = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="75"><font color="#888888 "><i>   75   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;numberPreamble&quot;</font>)), &amp;thisId);
+<a name="76"><font color="#888888 "><i>   76   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>;
+<a name="77"><font color="#888888 "><i>   77   </i></font></a>  y-&gt;cyclicPrefixPreamble = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="78"><font color="#888888 "><i>   78   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>)), &amp;thisId);
+<a name="79"><font color="#888888 "><i>   79   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleBoost&quot;</font>;
+<a name="80"><font color="#888888 "><i>   80   </i></font></a>  y-&gt;preambleBoost = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="81"><font color="#888888 "><i>   81   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;preambleBoost&quot;</font>)), &amp;thisId);
+<a name="82"><font color="#888888 "><i>   82   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;synchronisationPlots&quot;</font>;
+<a name="83"><font color="#888888 "><i>   83   </i></font></a>  y-&gt;synchronisationPlots = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="84"><font color="#888888 "><i>   84   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;synchronisationPlots&quot;</font>)), &amp;thisId);
+<a name="85"><font color="#888888 "><i>   85   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;pilotPattern&quot;</font>;
+<a name="86"><font color="#888888 "><i>   86   </i></font></a>  y-&gt;pilotPattern = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="87"><font color="#888888 "><i>   87   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;pilotPattern&quot;</font>)), &amp;thisId);
+<a name="88"><font color="#888888 "><i>   88   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>;
+<a name="89"><font color="#888888 "><i>   89   </i></font></a>  y-&gt;bandwidthMeasured = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="90"><font color="#888888 "><i>   90   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>)), &amp;thisId);
+<a name="91"><font color="#888888 "><i>   91   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;bandwidth&quot;</font>;
+<a name="92"><font color="#888888 "><i>   92   </i></font></a>  y-&gt;bandwidth = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="93"><font color="#888888 "><i>   93   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;bandwidth&quot;</font>)), &amp;thisId);
+<a name="94"><font color="#888888 "><i>   94   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;enableCFO&quot;</font>;
+<a name="95"><font color="#888888 "><i>   95   </i></font></a>  y-&gt;enableCFO = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="96"><font color="#888888 "><i>   96   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;enableCFO&quot;</font>)), &amp;thisId);
+<a name="97"><font color="#888888 "><i>   97   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;Ts&quot;</font>;
+<a name="98"><font color="#888888 "><i>   98   </i></font></a>  y-&gt;Ts = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>,
+<a name="99"><font color="#888888 "><i>   99   </i></font></a>    u, 0, <font color="#1122ff">&quot;Ts&quot;</font>)), &amp;thisId);
+<a name="100"><font color="#888888 "><i>  100   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>;
+<a name="101"><font color="#888888 "><i>  101   </i></font></a>  y-&gt;bitsPerSymbol = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="102"><font color="#888888 "><i>  102   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>)), &amp;thisId);
+<a name="103"><font color="#888888 "><i>  103   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;OFDM&quot;</font>;
+<a name="104"><font color="#888888 "><i>  104   </i></font></a>  y-&gt;OFDM = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>,
+<a name="105"><font color="#888888 "><i>  105   </i></font></a>    u, 0, <font color="#1122ff">&quot;OFDM&quot;</font>)), &amp;thisId);
+<a name="106"><font color="#888888 "><i>  106   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;SNRIterations&quot;</font>;
+<a name="107"><font color="#888888 "><i>  107   </i></font></a>  y-&gt;SNRIterations = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="108"><font color="#888888 "><i>  108   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;SNRIterations&quot;</font>)), &amp;thisId);
+<a name="109"><font color="#888888 "><i>  109   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preamble&quot;</font>;
+<a name="110"><font color="#888888 "><i>  110   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
+<a name="111"><font color="#888888 "><i>  111   </i></font></a>    <font color="#1122ff">&quot;preamble&quot;</font>)), &amp;thisId, y-&gt;preamble);
+<a name="112"><font color="#888888 "><i>  112   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleConstellations&quot;</font>;
+<a name="113"><font color="#888888 "><i>  113   </i></font></a>  <a href="#fcn_b_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
+<a name="114"><font color="#888888 "><i>  114   </i></font></a>    <font color="#1122ff">&quot;preambleConstellations&quot;</font>)), &amp;thisId, y-&gt;preambleConstellations);
+<a name="115"><font color="#888888 "><i>  115   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleOFDM&quot;</font>;
+<a name="116"><font color="#888888 "><i>  116   </i></font></a>  <a href="#fcn_b_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
+<a name="117"><font color="#888888 "><i>  117   </i></font></a>    <font color="#1122ff">&quot;preambleOFDM&quot;</font>)), &amp;thisId, y-&gt;preambleOFDM);
+<a name="118"><font color="#888888 "><i>  118   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;preambleLength&quot;</font>;
+<a name="119"><font color="#888888 "><i>  119   </i></font></a>  y-&gt;preambleLength = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="120"><font color="#888888 "><i>  120   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;preambleLength&quot;</font>)), &amp;thisId);
+<a name="121"><font color="#888888 "><i>  121   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;referenceSymbol&quot;</font>;
+<a name="122"><font color="#888888 "><i>  122   </i></font></a>  m5 = emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;referenceSymbol&quot;</font>);
+<a name="123"><font color="#888888 "><i>  123   </i></font></a>  y-&gt;referenceSymbol = <a href="#fcn_g_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_g_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">g_emlrt_marshallIn</font></a>(emlrtAlias(m5), &amp;thisId);
+<a name="124"><font color="#888888 "><i>  124   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;maskData&quot;</font>;
+<a name="125"><font color="#888888 "><i>  125   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
+<a name="126"><font color="#888888 "><i>  126   </i></font></a>    <font color="#1122ff">&quot;maskData&quot;</font>)), &amp;thisId, y-&gt;maskData);
+<a name="127"><font color="#888888 "><i>  127   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;maskPilots&quot;</font>;
+<a name="128"><font color="#888888 "><i>  128   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
+<a name="129"><font color="#888888 "><i>  129   </i></font></a>    <font color="#1122ff">&quot;maskPilots&quot;</font>)), &amp;thisId, y-&gt;maskPilots);
+<a name="130"><font color="#888888 "><i>  130   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;numberPilots&quot;</font>;
+<a name="131"><font color="#888888 "><i>  131   </i></font></a>  y-&gt;numberPilots = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="132"><font color="#888888 "><i>  132   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;numberPilots&quot;</font>)), &amp;thisId);
+<a name="133"><font color="#888888 "><i>  133   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;data&quot;</font>;
+<a name="134"><font color="#888888 "><i>  134   </i></font></a>  <a href="#fcn_f_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">f_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0,
+<a name="135"><font color="#888888 "><i>  135   </i></font></a>    <font color="#1122ff">&quot;data&quot;</font>)), &amp;thisId, y-&gt;data);
+<a name="136"><font color="#888888 "><i>  136   </i></font></a>  thisId.fIdentifier = <font color="#1122ff">&quot;signalLength&quot;</font>;
+<a name="137"><font color="#888888 "><i>  137   </i></font></a>  y-&gt;signalLength = <a href="#fcn_e_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">e_emlrt_marshallIn</font></a>(emlrtAlias(emlrtGetFieldR2013a
+<a name="138"><font color="#888888 "><i>  138   </i></font></a>    (<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, u, 0, <font color="#1122ff">&quot;signalLength&quot;</font>)), &amp;thisId);
+<a name="139"><font color="#888888 "><i>  139   </i></font></a>  emlrtDestroyArray(&amp;u);
+<a name="140"><font color="#888888 "><i>  140   </i></font></a><b>}</b>
+<a name="141"><font color="#888888 "><i>  141   </i></font></a>
+<a name="142"><font color="#888888 "><i>  142   </i></font></a><font color="#112266"><b>static</b></font> real_T <a name="fcn_e_emlrt_marshallIn">e_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="143"><font color="#888888 "><i>  143   </i></font></a>  *parentId)
+<a name="144"><font color="#888888 "><i>  144   </i></font></a><b>{</b>
+<a name="145"><font color="#888888 "><i>  145   </i></font></a>  real_T y;
+<a name="146"><font color="#888888 "><i>  146   </i></font></a>  y = <a href="#fcn_i_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_i_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">i_emlrt_marshallIn</font></a>(emlrtAlias(u), parentId);
+<a name="147"><font color="#888888 "><i>  147   </i></font></a>  emlrtDestroyArray(&amp;u);
+<a name="148"><font color="#888888 "><i>  148   </i></font></a>  <font color="#112266"><b>return</b></font> y;
+<a name="149"><font color="#888888 "><i>  149   </i></font></a><b>}</b>
+<a name="150"><font color="#888888 "><i>  150   </i></font></a>
+<a name="151"><font color="#888888 "><i>  151   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_f_emlrt_marshallIn">f_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="152"><font color="#888888 "><i>  152   </i></font></a>  *parentId, <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *y)
+<a name="153"><font color="#888888 "><i>  153   </i></font></a><b>{</b>
+<a name="154"><font color="#888888 "><i>  154   </i></font></a>  <a href="#fcn_j_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_j_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">j_emlrt_marshallIn</font></a>(emlrtAlias(u), parentId, y);
+<a name="155"><font color="#888888 "><i>  155   </i></font></a>  emlrtDestroyArray(&amp;u);
+<a name="156"><font color="#888888 "><i>  156   </i></font></a><b>}</b>
+<a name="157"><font color="#888888 "><i>  157   </i></font></a>
+<a name="158"><font color="#888888 "><i>  158   </i></font></a><font color="#112266"><b>static</b></font> creal_T <a name="fcn_g_emlrt_marshallIn">g_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="159"><font color="#888888 "><i>  159   </i></font></a>  *parentId)
+<a name="160"><font color="#888888 "><i>  160   </i></font></a><b>{</b>
+<a name="161"><font color="#888888 "><i>  161   </i></font></a>  creal_T y;
+<a name="162"><font color="#888888 "><i>  162   </i></font></a>  y = <a href="#fcn_k_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_k_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">k_emlrt_marshallIn</font></a>(emlrtAlias(u), parentId);
+<a name="163"><font color="#888888 "><i>  163   </i></font></a>  emlrtDestroyArray(&amp;u);
+<a name="164"><font color="#888888 "><i>  164   </i></font></a>  <font color="#112266"><b>return</b></font> y;
+<a name="165"><font color="#888888 "><i>  165   </i></font></a><b>}</b>
+<a name="166"><font color="#888888 "><i>  166   </i></font></a>
+<a name="167"><font color="#888888 "><i>  167   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_h_emlrt_marshallIn">h_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="168"><font color="#888888 "><i>  168   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *ret)
+<a name="169"><font color="#888888 "><i>  169   </i></font></a><b>{</b>
+<a name="170"><font color="#888888 "><i>  170   </i></font></a>  int32_T iv16[1];
+<a name="171"><font color="#888888 "><i>  171   </i></font></a>  boolean_T bv0[1];
+<a name="172"><font color="#888888 "><i>  172   </i></font></a>  int32_T iv17[1];
+<a name="173"><font color="#888888 "><i>  173   </i></font></a>  int32_T i5;
+<a name="174"><font color="#888888 "><i>  174   </i></font></a>  iv16[0] = -1;
+<a name="175"><font color="#888888 "><i>  175   </i></font></a>  bv0[0] = TRUE;
+<a name="176"><font color="#888888 "><i>  176   </i></font></a>  emlrtCheckVsBuiltInR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, msgId, src, <font color="#1122ff">&quot;double&quot;</font>, TRUE, 1U,
+<a name="177"><font color="#888888 "><i>  177   </i></font></a>    iv16, bv0, iv17);
+<a name="178"><font color="#888888 "><i>  178   </i></font></a>  i5 = ret-&gt;size[0];
+<a name="179"><font color="#888888 "><i>  179   </i></font></a>  ret-&gt;size[0] = iv17[0];
+<a name="180"><font color="#888888 "><i>  180   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)ret, i5, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
+<a name="181"><font color="#888888 "><i>  181   </i></font></a>                    (emlrtRTEInfo *)NULL);
+<a name="182"><font color="#888888 "><i>  182   </i></font></a>  emlrtImportArrayR2011b(src, ret-&gt;data, 8, TRUE);
+<a name="183"><font color="#888888 "><i>  183   </i></font></a>  emlrtDestroyArray(&amp;src);
+<a name="184"><font color="#888888 "><i>  184   </i></font></a><b>}</b>
+<a name="185"><font color="#888888 "><i>  185   </i></font></a>
+<a name="186"><font color="#888888 "><i>  186   </i></font></a><font color="#112266"><b>static</b></font> real_T <a name="fcn_i_emlrt_marshallIn">i_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="187"><font color="#888888 "><i>  187   </i></font></a>  *msgId)
+<a name="188"><font color="#888888 "><i>  188   </i></font></a><b>{</b>
+<a name="189"><font color="#888888 "><i>  189   </i></font></a>  real_T ret;
+<a name="190"><font color="#888888 "><i>  190   </i></font></a>  emlrtCheckBuiltInR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, msgId, src, <font color="#1122ff">&quot;double&quot;</font>, FALSE, 0U, 0);
+<a name="191"><font color="#888888 "><i>  191   </i></font></a>  ret = *(real_T *)mxGetData(src);
+<a name="192"><font color="#888888 "><i>  192   </i></font></a>  emlrtDestroyArray(&amp;src);
+<a name="193"><font color="#888888 "><i>  193   </i></font></a>  <font color="#112266"><b>return</b></font> ret;
+<a name="194"><font color="#888888 "><i>  194   </i></font></a><b>}</b>
+<a name="195"><font color="#888888 "><i>  195   </i></font></a>
+<a name="196"><font color="#888888 "><i>  196   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_j_emlrt_marshallIn">j_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="197"><font color="#888888 "><i>  197   </i></font></a>  *msgId, <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *ret)
+<a name="198"><font color="#888888 "><i>  198   </i></font></a><b>{</b>
+<a name="199"><font color="#888888 "><i>  199   </i></font></a>  int32_T iv18[1];
+<a name="200"><font color="#888888 "><i>  200   </i></font></a>  boolean_T bv1[1];
+<a name="201"><font color="#888888 "><i>  201   </i></font></a>  int32_T iv19[1];
+<a name="202"><font color="#888888 "><i>  202   </i></font></a>  int32_T i6;
+<a name="203"><font color="#888888 "><i>  203   </i></font></a>  iv18[0] = -1;
+<a name="204"><font color="#888888 "><i>  204   </i></font></a>  bv1[0] = TRUE;
+<a name="205"><font color="#888888 "><i>  205   </i></font></a>  emlrtCheckVsBuiltInR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, msgId, src, <font color="#1122ff">&quot;double&quot;</font>, FALSE, 1U,
+<a name="206"><font color="#888888 "><i>  206   </i></font></a>    iv18, bv1, iv19);
+<a name="207"><font color="#888888 "><i>  207   </i></font></a>  i6 = ret-&gt;size[0];
+<a name="208"><font color="#888888 "><i>  208   </i></font></a>  ret-&gt;size[0] = iv19[0];
+<a name="209"><font color="#888888 "><i>  209   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)ret, i6, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
+<a name="210"><font color="#888888 "><i>  210   </i></font></a>                    (emlrtRTEInfo *)NULL);
+<a name="211"><font color="#888888 "><i>  211   </i></font></a>  emlrtImportArrayR2011b(src, ret-&gt;data, 8, FALSE);
+<a name="212"><font color="#888888 "><i>  212   </i></font></a>  emlrtDestroyArray(&amp;src);
+<a name="213"><font color="#888888 "><i>  213   </i></font></a><b>}</b>
+<a name="214"><font color="#888888 "><i>  214   </i></font></a>
+<a name="215"><font color="#888888 "><i>  215   </i></font></a><font color="#112266"><b>static</b></font> creal_T <a name="fcn_k_emlrt_marshallIn">k_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *src, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier
+<a name="216"><font color="#888888 "><i>  216   </i></font></a>  *msgId)
+<a name="217"><font color="#888888 "><i>  217   </i></font></a><b>{</b>
+<a name="218"><font color="#888888 "><i>  218   </i></font></a>  creal_T ret;
+<a name="219"><font color="#888888 "><i>  219   </i></font></a>  emlrtCheckBuiltInR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, msgId, src, <font color="#1122ff">&quot;double&quot;</font>, TRUE, 0U, 0);
+<a name="220"><font color="#888888 "><i>  220   </i></font></a>  emlrtImportArrayR2011b(src, &amp;ret, 8, TRUE);
+<a name="221"><font color="#888888 "><i>  221   </i></font></a>  emlrtDestroyArray(&amp;src);
+<a name="222"><font color="#888888 "><i>  222   </i></font></a>  <font color="#112266"><b>return</b></font> ret;
+<a name="223"><font color="#888888 "><i>  223   </i></font></a><b>}</b>
+<a name="224"><font color="#888888 "><i>  224   </i></font></a>
+<a name="225"><font color="#888888 "><i>  225   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_b_emlrt_marshallIn">b_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *u, <font color="#112266"><b>const</b></font> emlrtMsgIdentifier *parentId,
+<a name="226"><font color="#888888 "><i>  226   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *y)
+<a name="227"><font color="#888888 "><i>  227   </i></font></a><b>{</b>
+<a name="228"><font color="#888888 "><i>  228   </i></font></a>  <a href="#fcn_h_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_h_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">h_emlrt_marshallIn</font></a>(emlrtAlias(u), parentId, y);
+<a name="229"><font color="#888888 "><i>  229   </i></font></a>  emlrtDestroyArray(&amp;u);
+<a name="230"><font color="#888888 "><i>  230   </i></font></a><b>}</b>
+<a name="231"><font color="#888888 "><i>  231   </i></font></a>
+<a name="232"><font color="#888888 "><i>  232   </i></font></a><font color="#112266"><b>const</b></font> mxArray *<a name="fcn_b_emlrt_marshallOut">b_emlrt_marshallOut</a>(<font color="#112266"><b>const</b></font> <a href="timeSynchronisation_types_h.html#type_struct_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_struct_T');" target="rtwreport_document_frame"><font color="#1122aa">struct_T</font></a> *u)
+<a name="233"><font color="#888888 "><i>  233   </i></font></a><b>{</b>
+<a name="234"><font color="#888888 "><i>  234   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *y;
+<a name="235"><font color="#888888 "><i>  235   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *b_u;
+<a name="236"><font color="#888888 "><i>  236   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *c_u;
+<a name="237"><font color="#888888 "><i>  237   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_creal_T</font></a> *d_u;
+<a name="238"><font color="#888888 "><i>  238   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *e_u;
+<a name="239"><font color="#888888 "><i>  239   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *f_u;
+<a name="240"><font color="#888888 "><i>  240   </i></font></a>  <a href="timeSynchronisation_types_h.html#type_emxArray_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxArray_real_T</font></a> *g_u;
+<a name="241"><font color="#888888 "><i>  241   </i></font></a>  int32_T i4;
+<a name="242"><font color="#888888 "><i>  242   </i></font></a>  int32_T loop_ub;
+<a name="243"><font color="#888888 "><i>  243   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *b_y;
+<a name="244"><font color="#888888 "><i>  244   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *m6;
+<a name="245"><font color="#888888 "><i>  245   </i></font></a>  real_T (*pData)[];
+<a name="246"><font color="#888888 "><i>  246   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *c_y;
+<a name="247"><font color="#888888 "><i>  247   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *d_y;
+<a name="248"><font color="#888888 "><i>  248   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *e_y;
+<a name="249"><font color="#888888 "><i>  249   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *f_y;
+<a name="250"><font color="#888888 "><i>  250   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *g_y;
+<a name="251"><font color="#888888 "><i>  251   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *h_y;
+<a name="252"><font color="#888888 "><i>  252   </i></font></a>  emlrtHeapReferenceStackEnterFcnR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>);
+<a name="253"><font color="#888888 "><i>  253   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;b_u, 1, (emlrtRTEInfo *)NULL, TRUE);
+<a name="254"><font color="#888888 "><i>  254   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_creal_T</font></a>(&amp;c_u, 1, (emlrtRTEInfo *)NULL, TRUE);
+<a name="255"><font color="#888888 "><i>  255   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_creal_T</font></a>(&amp;d_u, 1, (emlrtRTEInfo *)NULL, TRUE);
+<a name="256"><font color="#888888 "><i>  256   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;e_u, 1, (emlrtRTEInfo *)NULL, TRUE);
+<a name="257"><font color="#888888 "><i>  257   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;f_u, 1, (emlrtRTEInfo *)NULL, TRUE);
+<a name="258"><font color="#888888 "><i>  258   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxInit_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxInit_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxInit_real_T</font></a>(&amp;g_u, 1, (emlrtRTEInfo *)NULL, TRUE);
+<a name="259"><font color="#888888 "><i>  259   </i></font></a>  y = NULL;
+<a name="260"><font color="#888888 "><i>  260   </i></font></a>  emlrtAssign(&amp;y, mxCreateStructMatrix(1, 1, 0, NULL));
+<a name="261"><font color="#888888 "><i>  261   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;M), <font color="#1122ff">&quot;M&quot;</font>, 0);
+<a name="262"><font color="#888888 "><i>  262   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRMin), <font color="#1122ff">&quot;SNRMin&quot;</font>, 0);
+<a name="263"><font color="#888888 "><i>  263   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRStep), <font color="#1122ff">&quot;SNRStep&quot;</font>, 0);
+<a name="264"><font color="#888888 "><i>  264   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRMax), <font color="#1122ff">&quot;SNRMax&quot;</font>, 0);
+<a name="265"><font color="#888888 "><i>  265   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;subCarriers), <font color="#1122ff">&quot;subCarriers&quot;</font>, 0);
+<a name="266"><font color="#888888 "><i>  266   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;cyclicPrefix), <font color="#1122ff">&quot;cyclicPrefix&quot;</font>, 0);
+<a name="267"><font color="#888888 "><i>  267   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;messageLength), <font color="#1122ff">&quot;messageLength&quot;</font>, 0);
+<a name="268"><font color="#888888 "><i>  268   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;numberPreamble), <font color="#1122ff">&quot;numberPreamble&quot;</font>, 0);
+<a name="269"><font color="#888888 "><i>  269   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;cyclicPrefixPreamble),
+<a name="270"><font color="#888888 "><i>  270   </i></font></a>                <font color="#1122ff">&quot;cyclicPrefixPreamble&quot;</font>, 0);
+<a name="271"><font color="#888888 "><i>  271   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;preambleBoost), <font color="#1122ff">&quot;preambleBoost&quot;</font>, 0);
+<a name="272"><font color="#888888 "><i>  272   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;synchronisationPlots),
+<a name="273"><font color="#888888 "><i>  273   </i></font></a>                <font color="#1122ff">&quot;synchronisationPlots&quot;</font>, 0);
+<a name="274"><font color="#888888 "><i>  274   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;pilotPattern), <font color="#1122ff">&quot;pilotPattern&quot;</font>, 0);
+<a name="275"><font color="#888888 "><i>  275   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;bandwidthMeasured),
+<a name="276"><font color="#888888 "><i>  276   </i></font></a>                <font color="#1122ff">&quot;bandwidthMeasured&quot;</font>, 0);
+<a name="277"><font color="#888888 "><i>  277   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;bandwidth), <font color="#1122ff">&quot;bandwidth&quot;</font>, 0);
+<a name="278"><font color="#888888 "><i>  278   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;enableCFO), <font color="#1122ff">&quot;enableCFO&quot;</font>, 0);
+<a name="279"><font color="#888888 "><i>  279   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;Ts), <font color="#1122ff">&quot;Ts&quot;</font>, 0);
+<a name="280"><font color="#888888 "><i>  280   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;bitsPerSymbol), <font color="#1122ff">&quot;bitsPerSymbol&quot;</font>, 0);
+<a name="281"><font color="#888888 "><i>  281   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;OFDM), <font color="#1122ff">&quot;OFDM&quot;</font>, 0);
+<a name="282"><font color="#888888 "><i>  282   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;SNRIterations), <font color="#1122ff">&quot;SNRIterations&quot;</font>, 0);
+<a name="283"><font color="#888888 "><i>  283   </i></font></a>  i4 = b_u-&gt;size[0];
+<a name="284"><font color="#888888 "><i>  284   </i></font></a>  b_u-&gt;size[0] = u-&gt;preamble-&gt;size[0];
+<a name="285"><font color="#888888 "><i>  285   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)b_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
+<a name="286"><font color="#888888 "><i>  286   </i></font></a>                    (emlrtRTEInfo *)NULL);
+<a name="287"><font color="#888888 "><i>  287   </i></font></a>  loop_ub = u-&gt;preamble-&gt;size[0];
+<a name="288"><font color="#888888 "><i>  288   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
+<a name="289"><font color="#888888 "><i>  289   </i></font></a>    b_u-&gt;data[i4] = u-&gt;preamble-&gt;data[i4];
+<a name="290"><font color="#888888 "><i>  290   </i></font></a>  <b>}</b>
+<a name="291"><font color="#888888 "><i>  291   </i></font></a>
+<a name="292"><font color="#888888 "><i>  292   </i></font></a>  b_y = NULL;
+<a name="293"><font color="#888888 "><i>  293   </i></font></a>  m6 = mxCreateNumericArray(1, b_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
+<a name="294"><font color="#888888 "><i>  294   </i></font></a>  pData = (real_T (*)[])mxGetPr(m6);
+<a name="295"><font color="#888888 "><i>  295   </i></font></a>  i4 = 0;
+<a name="296"><font color="#888888 "><i>  296   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; b_u-&gt;size[0]; loop_ub++) <b>{</b>
+<a name="297"><font color="#888888 "><i>  297   </i></font></a>    (*pData)[i4] = b_u-&gt;data[loop_ub];
+<a name="298"><font color="#888888 "><i>  298   </i></font></a>    i4++;
+<a name="299"><font color="#888888 "><i>  299   </i></font></a>  <b>}</b>
+<a name="300"><font color="#888888 "><i>  300   </i></font></a>
+<a name="301"><font color="#888888 "><i>  301   </i></font></a>  emlrtAssign(&amp;b_y, m6);
+<a name="302"><font color="#888888 "><i>  302   </i></font></a>  emlrtAddField(y, b_y, <font color="#1122ff">&quot;preamble&quot;</font>, 0);
+<a name="303"><font color="#888888 "><i>  303   </i></font></a>  i4 = c_u-&gt;size[0];
+<a name="304"><font color="#888888 "><i>  304   </i></font></a>  c_u-&gt;size[0] = u-&gt;preambleConstellations-&gt;size[0];
+<a name="305"><font color="#888888 "><i>  305   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)c_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
+<a name="306"><font color="#888888 "><i>  306   </i></font></a>                    (emlrtRTEInfo *)NULL);
+<a name="307"><font color="#888888 "><i>  307   </i></font></a>  loop_ub = u-&gt;preambleConstellations-&gt;size[0];
+<a name="308"><font color="#888888 "><i>  308   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
+<a name="309"><font color="#888888 "><i>  309   </i></font></a>    c_u-&gt;data[i4] = u-&gt;preambleConstellations-&gt;data[i4];
+<a name="310"><font color="#888888 "><i>  310   </i></font></a>  <b>}</b>
+<a name="311"><font color="#888888 "><i>  311   </i></font></a>
+<a name="312"><font color="#888888 "><i>  312   </i></font></a>  c_y = NULL;
+<a name="313"><font color="#888888 "><i>  313   </i></font></a>  m6 = mxCreateNumericArray(1, c_u-&gt;size, mxDOUBLE_CLASS, mxCOMPLEX);
+<a name="314"><font color="#888888 "><i>  314   </i></font></a>  emlrtExportNumericArrayR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, m6, (<font color="#112266"><b>void</b></font> *)c_u-&gt;data, 8);
+<a name="315"><font color="#888888 "><i>  315   </i></font></a>  emlrtAssign(&amp;c_y, m6);
+<a name="316"><font color="#888888 "><i>  316   </i></font></a>  emlrtAddField(y, c_y, <font color="#1122ff">&quot;preambleConstellations&quot;</font>, 0);
+<a name="317"><font color="#888888 "><i>  317   </i></font></a>  i4 = d_u-&gt;size[0];
+<a name="318"><font color="#888888 "><i>  318   </i></font></a>  d_u-&gt;size[0] = u-&gt;preambleOFDM-&gt;size[0];
+<a name="319"><font color="#888888 "><i>  319   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)d_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
 <a name="320"><font color="#888888 "><i>  320   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="321"><font color="#888888 "><i>  321   </i></font></a>  loop_ub = u-&gt;referenceSymbol-&gt;size[0];
+<a name="321"><font color="#888888 "><i>  321   </i></font></a>  loop_ub = u-&gt;preambleOFDM-&gt;size[0];
 <a name="322"><font color="#888888 "><i>  322   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="323"><font color="#888888 "><i>  323   </i></font></a>    e_u-&gt;data[i4] = u-&gt;referenceSymbol-&gt;data[i4];
+<a name="323"><font color="#888888 "><i>  323   </i></font></a>    d_u-&gt;data[i4] = u-&gt;preambleOFDM-&gt;data[i4];
 <a name="324"><font color="#888888 "><i>  324   </i></font></a>  <b>}</b>
 <a name="325"><font color="#888888 "><i>  325   </i></font></a>
-<a name="326"><font color="#888888 "><i>  326   </i></font></a>  e_y = NULL;
-<a name="327"><font color="#888888 "><i>  327   </i></font></a>  m5 = mxCreateNumericArray(1, e_u-&gt;size, mxDOUBLE_CLASS, mxCOMPLEX);
-<a name="328"><font color="#888888 "><i>  328   </i></font></a>  emlrtExportNumericArrayR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, m5, (<font color="#112266"><b>void</b></font> *)e_u-&gt;data, 8);
-<a name="329"><font color="#888888 "><i>  329   </i></font></a>  emlrtAssign(&amp;e_y, m5);
-<a name="330"><font color="#888888 "><i>  330   </i></font></a>  emlrtAddField(y, e_y, <font color="#1122ff">&quot;referenceSymbol&quot;</font>, 0);
-<a name="331"><font color="#888888 "><i>  331   </i></font></a>  i4 = f_u-&gt;size[0];
-<a name="332"><font color="#888888 "><i>  332   </i></font></a>  f_u-&gt;size[0] = u-&gt;referenceSymbolMatrix-&gt;size[0];
-<a name="333"><font color="#888888 "><i>  333   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)f_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(creal_T),
-<a name="334"><font color="#888888 "><i>  334   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="335"><font color="#888888 "><i>  335   </i></font></a>  loop_ub = u-&gt;referenceSymbolMatrix-&gt;size[0];
-<a name="336"><font color="#888888 "><i>  336   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="337"><font color="#888888 "><i>  337   </i></font></a>    f_u-&gt;data[i4] = u-&gt;referenceSymbolMatrix-&gt;data[i4];
-<a name="338"><font color="#888888 "><i>  338   </i></font></a>  <b>}</b>
-<a name="339"><font color="#888888 "><i>  339   </i></font></a>
-<a name="340"><font color="#888888 "><i>  340   </i></font></a>  f_y = NULL;
-<a name="341"><font color="#888888 "><i>  341   </i></font></a>  m5 = mxCreateNumericArray(1, f_u-&gt;size, mxDOUBLE_CLASS, mxCOMPLEX);
-<a name="342"><font color="#888888 "><i>  342   </i></font></a>  emlrtExportNumericArrayR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, m5, (<font color="#112266"><b>void</b></font> *)f_u-&gt;data, 8);
-<a name="343"><font color="#888888 "><i>  343   </i></font></a>  emlrtAssign(&amp;f_y, m5);
-<a name="344"><font color="#888888 "><i>  344   </i></font></a>  emlrtAddField(y, f_y, <font color="#1122ff">&quot;referenceSymbolMatrix&quot;</font>, 0);
-<a name="345"><font color="#888888 "><i>  345   </i></font></a>  i4 = g_u-&gt;size[0];
-<a name="346"><font color="#888888 "><i>  346   </i></font></a>  g_u-&gt;size[0] = u-&gt;maskData-&gt;size[0];
-<a name="347"><font color="#888888 "><i>  347   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)g_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
-<a name="348"><font color="#888888 "><i>  348   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="349"><font color="#888888 "><i>  349   </i></font></a>  loop_ub = u-&gt;maskData-&gt;size[0];
-<a name="350"><font color="#888888 "><i>  350   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="351"><font color="#888888 "><i>  351   </i></font></a>    g_u-&gt;data[i4] = u-&gt;maskData-&gt;data[i4];
-<a name="352"><font color="#888888 "><i>  352   </i></font></a>  <b>}</b>
-<a name="353"><font color="#888888 "><i>  353   </i></font></a>
-<a name="354"><font color="#888888 "><i>  354   </i></font></a>  g_y = NULL;
-<a name="355"><font color="#888888 "><i>  355   </i></font></a>  m5 = mxCreateNumericArray(1, g_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
-<a name="356"><font color="#888888 "><i>  356   </i></font></a>  pData = (real_T (*)[])mxGetPr(m5);
-<a name="357"><font color="#888888 "><i>  357   </i></font></a>  i4 = 0;
-<a name="358"><font color="#888888 "><i>  358   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; g_u-&gt;size[0]; loop_ub++) <b>{</b>
-<a name="359"><font color="#888888 "><i>  359   </i></font></a>    (*pData)[i4] = g_u-&gt;data[loop_ub];
-<a name="360"><font color="#888888 "><i>  360   </i></font></a>    i4++;
-<a name="361"><font color="#888888 "><i>  361   </i></font></a>  <b>}</b>
-<a name="362"><font color="#888888 "><i>  362   </i></font></a>
-<a name="363"><font color="#888888 "><i>  363   </i></font></a>  emlrtAssign(&amp;g_y, m5);
-<a name="364"><font color="#888888 "><i>  364   </i></font></a>  emlrtAddField(y, g_y, <font color="#1122ff">&quot;maskData&quot;</font>, 0);
-<a name="365"><font color="#888888 "><i>  365   </i></font></a>  i4 = h_u-&gt;size[0];
-<a name="366"><font color="#888888 "><i>  366   </i></font></a>  h_u-&gt;size[0] = u-&gt;maskPilots-&gt;size[0];
-<a name="367"><font color="#888888 "><i>  367   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)h_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
-<a name="368"><font color="#888888 "><i>  368   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="369"><font color="#888888 "><i>  369   </i></font></a>  loop_ub = u-&gt;maskPilots-&gt;size[0];
-<a name="370"><font color="#888888 "><i>  370   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="371"><font color="#888888 "><i>  371   </i></font></a>    h_u-&gt;data[i4] = u-&gt;maskPilots-&gt;data[i4];
-<a name="372"><font color="#888888 "><i>  372   </i></font></a>  <b>}</b>
-<a name="373"><font color="#888888 "><i>  373   </i></font></a>
-<a name="374"><font color="#888888 "><i>  374   </i></font></a>  h_y = NULL;
-<a name="375"><font color="#888888 "><i>  375   </i></font></a>  m5 = mxCreateNumericArray(1, h_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
-<a name="376"><font color="#888888 "><i>  376   </i></font></a>  pData = (real_T (*)[])mxGetPr(m5);
-<a name="377"><font color="#888888 "><i>  377   </i></font></a>  i4 = 0;
-<a name="378"><font color="#888888 "><i>  378   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; h_u-&gt;size[0]; loop_ub++) <b>{</b>
-<a name="379"><font color="#888888 "><i>  379   </i></font></a>    (*pData)[i4] = h_u-&gt;data[loop_ub];
-<a name="380"><font color="#888888 "><i>  380   </i></font></a>    i4++;
-<a name="381"><font color="#888888 "><i>  381   </i></font></a>  <b>}</b>
-<a name="382"><font color="#888888 "><i>  382   </i></font></a>
-<a name="383"><font color="#888888 "><i>  383   </i></font></a>  emlrtAssign(&amp;h_y, m5);
-<a name="384"><font color="#888888 "><i>  384   </i></font></a>  emlrtAddField(y, h_y, <font color="#1122ff">&quot;maskPilots&quot;</font>, 0);
-<a name="385"><font color="#888888 "><i>  385   </i></font></a>  i4 = i_u-&gt;size[0];
-<a name="386"><font color="#888888 "><i>  386   </i></font></a>  i_u-&gt;size[0] = u-&gt;data-&gt;size[0];
-<a name="387"><font color="#888888 "><i>  387   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)i_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
-<a name="388"><font color="#888888 "><i>  388   </i></font></a>                    (emlrtRTEInfo *)NULL);
-<a name="389"><font color="#888888 "><i>  389   </i></font></a>  loop_ub = u-&gt;data-&gt;size[0];
-<a name="390"><font color="#888888 "><i>  390   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
-<a name="391"><font color="#888888 "><i>  391   </i></font></a>    i_u-&gt;data[i4] = u-&gt;data-&gt;data[i4];
-<a name="392"><font color="#888888 "><i>  392   </i></font></a>  <b>}</b>
-<a name="393"><font color="#888888 "><i>  393   </i></font></a>
-<a name="394"><font color="#888888 "><i>  394   </i></font></a>  i_y = NULL;
-<a name="395"><font color="#888888 "><i>  395   </i></font></a>  m5 = mxCreateNumericArray(1, i_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
-<a name="396"><font color="#888888 "><i>  396   </i></font></a>  pData = (real_T (*)[])mxGetPr(m5);
-<a name="397"><font color="#888888 "><i>  397   </i></font></a>  i4 = 0;
-<a name="398"><font color="#888888 "><i>  398   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; i_u-&gt;size[0]; loop_ub++) <b>{</b>
-<a name="399"><font color="#888888 "><i>  399   </i></font></a>    (*pData)[i4] = i_u-&gt;data[loop_ub];
-<a name="400"><font color="#888888 "><i>  400   </i></font></a>    i4++;
-<a name="401"><font color="#888888 "><i>  401   </i></font></a>  <b>}</b>
-<a name="402"><font color="#888888 "><i>  402   </i></font></a>
-<a name="403"><font color="#888888 "><i>  403   </i></font></a>  emlrtAssign(&amp;i_y, m5);
-<a name="404"><font color="#888888 "><i>  404   </i></font></a>  emlrtAddField(y, i_y, <font color="#1122ff">&quot;data&quot;</font>, 0);
-<a name="405"><font color="#888888 "><i>  405   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;signalLength), <font color="#1122ff">&quot;signalLength&quot;</font>, 0);
-<a name="406"><font color="#888888 "><i>  406   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;i_u);
-<a name="407"><font color="#888888 "><i>  407   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;h_u);
-<a name="408"><font color="#888888 "><i>  408   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;g_u);
-<a name="409"><font color="#888888 "><i>  409   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_creal_T</font></a>(&amp;f_u);
-<a name="410"><font color="#888888 "><i>  410   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_creal_T</font></a>(&amp;e_u);
-<a name="411"><font color="#888888 "><i>  411   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_creal_T</font></a>(&amp;d_u);
-<a name="412"><font color="#888888 "><i>  412   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_creal_T</font></a>(&amp;c_u);
-<a name="413"><font color="#888888 "><i>  413   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;b_u);
-<a name="414"><font color="#888888 "><i>  414   </i></font></a>  emlrtHeapReferenceStackLeaveFcnR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>);
-<a name="415"><font color="#888888 "><i>  415   </i></font></a>  <font color="#112266"><b>return</b></font> y;
-<a name="416"><font color="#888888 "><i>  416   </i></font></a><b>}</b>
-<a name="417"><font color="#888888 "><i>  417   </i></font></a>
-<a name="418"><font color="#888888 "><i>  418   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_c_emlrt_marshallIn">c_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *c_d, <font color="#112266"><b>const</b></font> char_T *identifier, <a href="timeSynchronisation_types_h.html#type_struct_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_struct_T');" target="rtwreport_document_frame"><font color="#1122aa">struct_T</font></a>
-<a name="419"><font color="#888888 "><i>  419   </i></font></a>  *y)
-<a name="420"><font color="#888888 "><i>  420   </i></font></a><b>{</b>
-<a name="421"><font color="#888888 "><i>  421   </i></font></a>  emlrtMsgIdentifier thisId;
-<a name="422"><font color="#888888 "><i>  422   </i></font></a>  thisId.fIdentifier = identifier;
-<a name="423"><font color="#888888 "><i>  423   </i></font></a>  thisId.fParent = NULL;
-<a name="424"><font color="#888888 "><i>  424   </i></font></a>  <a href="#fcn_d_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_d_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">d_emlrt_marshallIn</font></a>(emlrtAlias(c_d), &amp;thisId, y);
-<a name="425"><font color="#888888 "><i>  425   </i></font></a>  emlrtDestroyArray(&amp;c_d);
-<a name="426"><font color="#888888 "><i>  426   </i></font></a><b>}</b>
-<a name="427"><font color="#888888 "><i>  427   </i></font></a>
-<a name="428"><font color="#888888 "><i>  428   </i></font></a><font color="#112266"><b>const</b></font> mxArray *<a name="fcn_c_emlrt_marshallOut">c_emlrt_marshallOut</a>(real_T u)
-<a name="429"><font color="#888888 "><i>  429   </i></font></a><b>{</b>
-<a name="430"><font color="#888888 "><i>  430   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *y;
-<a name="431"><font color="#888888 "><i>  431   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *m6;
-<a name="432"><font color="#888888 "><i>  432   </i></font></a>  y = NULL;
-<a name="433"><font color="#888888 "><i>  433   </i></font></a>  m6 = mxCreateDoubleScalar(u);
-<a name="434"><font color="#888888 "><i>  434   </i></font></a>  emlrtAssign(&amp;y, m6);
-<a name="435"><font color="#888888 "><i>  435   </i></font></a>  <font color="#112266"><b>return</b></font> y;
-<a name="436"><font color="#888888 "><i>  436   </i></font></a><b>}</b>
-<a name="437"><font color="#888888 "><i>  437   </i></font></a>
-<a name="438"><font color="#888888 "><i>  438   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emlrt_checkEscapedGlobals">emlrt_checkEscapedGlobals</a>(<font color="#112266"><b>void</b></font>)
-<a name="439"><font color="#888888 "><i>  439   </i></font></a><b>{</b>
-<a name="440"><font color="#888888 "><i>  440   </i></font></a>  <a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> |= <a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> &gt;&gt; 1U;
-<a name="441"><font color="#888888 "><i>  441   </i></font></a><b>}</b>
-<a name="442"><font color="#888888 "><i>  442   </i></font></a>
-<a name="443"><font color="#888888 "><i>  443   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emlrt_synchGlobalsFromML">emlrt_synchGlobalsFromML</a>(<font color="#112266"><b>void</b></font>)
-<a name="444"><font color="#888888 "><i>  444   </i></font></a><b>{</b>
-<a name="445"><font color="#888888 "><i>  445   </i></font></a>  <a href="#fcn_c_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallIn</font></a>(mexGetVariable(<font color="#1122ff">&quot;global&quot;</font>, <font color="#1122ff">&quot;d&quot;</font>), <font color="#1122ff">&quot;d&quot;</font>, &amp;<a href="timeSynchronisation_data_c.html#var_d" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d');" target="rtwreport_document_frame"><font color="#1122aa">d</font></a>);
+<a name="326"><font color="#888888 "><i>  326   </i></font></a>  d_y = NULL;
+<a name="327"><font color="#888888 "><i>  327   </i></font></a>  m6 = mxCreateNumericArray(1, d_u-&gt;size, mxDOUBLE_CLASS, mxCOMPLEX);
+<a name="328"><font color="#888888 "><i>  328   </i></font></a>  emlrtExportNumericArrayR2013a(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, m6, (<font color="#112266"><b>void</b></font> *)d_u-&gt;data, 8);
+<a name="329"><font color="#888888 "><i>  329   </i></font></a>  emlrtAssign(&amp;d_y, m6);
+<a name="330"><font color="#888888 "><i>  330   </i></font></a>  emlrtAddField(y, d_y, <font color="#1122ff">&quot;preambleOFDM&quot;</font>, 0);
+<a name="331"><font color="#888888 "><i>  331   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;preambleLength), <font color="#1122ff">&quot;preambleLength&quot;</font>, 0);
+<a name="332"><font color="#888888 "><i>  332   </i></font></a>  e_y = NULL;
+<a name="333"><font color="#888888 "><i>  333   </i></font></a>  m6 = mxCreateNumericMatrix(1, 1, mxDOUBLE_CLASS, mxCOMPLEX);
+<a name="334"><font color="#888888 "><i>  334   </i></font></a>  *mxGetPr(m6) = u-&gt;referenceSymbol.re;
+<a name="335"><font color="#888888 "><i>  335   </i></font></a>  *mxGetPi(m6) = u-&gt;referenceSymbol.im;
+<a name="336"><font color="#888888 "><i>  336   </i></font></a>  emlrtAssign(&amp;e_y, m6);
+<a name="337"><font color="#888888 "><i>  337   </i></font></a>  emlrtAddField(y, e_y, <font color="#1122ff">&quot;referenceSymbol&quot;</font>, 0);
+<a name="338"><font color="#888888 "><i>  338   </i></font></a>  i4 = e_u-&gt;size[0];
+<a name="339"><font color="#888888 "><i>  339   </i></font></a>  e_u-&gt;size[0] = u-&gt;maskData-&gt;size[0];
+<a name="340"><font color="#888888 "><i>  340   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)e_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
+<a name="341"><font color="#888888 "><i>  341   </i></font></a>                    (emlrtRTEInfo *)NULL);
+<a name="342"><font color="#888888 "><i>  342   </i></font></a>  loop_ub = u-&gt;maskData-&gt;size[0];
+<a name="343"><font color="#888888 "><i>  343   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
+<a name="344"><font color="#888888 "><i>  344   </i></font></a>    e_u-&gt;data[i4] = u-&gt;maskData-&gt;data[i4];
+<a name="345"><font color="#888888 "><i>  345   </i></font></a>  <b>}</b>
+<a name="346"><font color="#888888 "><i>  346   </i></font></a>
+<a name="347"><font color="#888888 "><i>  347   </i></font></a>  f_y = NULL;
+<a name="348"><font color="#888888 "><i>  348   </i></font></a>  m6 = mxCreateNumericArray(1, e_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
+<a name="349"><font color="#888888 "><i>  349   </i></font></a>  pData = (real_T (*)[])mxGetPr(m6);
+<a name="350"><font color="#888888 "><i>  350   </i></font></a>  i4 = 0;
+<a name="351"><font color="#888888 "><i>  351   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; e_u-&gt;size[0]; loop_ub++) <b>{</b>
+<a name="352"><font color="#888888 "><i>  352   </i></font></a>    (*pData)[i4] = e_u-&gt;data[loop_ub];
+<a name="353"><font color="#888888 "><i>  353   </i></font></a>    i4++;
+<a name="354"><font color="#888888 "><i>  354   </i></font></a>  <b>}</b>
+<a name="355"><font color="#888888 "><i>  355   </i></font></a>
+<a name="356"><font color="#888888 "><i>  356   </i></font></a>  emlrtAssign(&amp;f_y, m6);
+<a name="357"><font color="#888888 "><i>  357   </i></font></a>  emlrtAddField(y, f_y, <font color="#1122ff">&quot;maskData&quot;</font>, 0);
+<a name="358"><font color="#888888 "><i>  358   </i></font></a>  i4 = f_u-&gt;size[0];
+<a name="359"><font color="#888888 "><i>  359   </i></font></a>  f_u-&gt;size[0] = u-&gt;maskPilots-&gt;size[0];
+<a name="360"><font color="#888888 "><i>  360   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)f_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
+<a name="361"><font color="#888888 "><i>  361   </i></font></a>                    (emlrtRTEInfo *)NULL);
+<a name="362"><font color="#888888 "><i>  362   </i></font></a>  loop_ub = u-&gt;maskPilots-&gt;size[0];
+<a name="363"><font color="#888888 "><i>  363   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
+<a name="364"><font color="#888888 "><i>  364   </i></font></a>    f_u-&gt;data[i4] = u-&gt;maskPilots-&gt;data[i4];
+<a name="365"><font color="#888888 "><i>  365   </i></font></a>  <b>}</b>
+<a name="366"><font color="#888888 "><i>  366   </i></font></a>
+<a name="367"><font color="#888888 "><i>  367   </i></font></a>  g_y = NULL;
+<a name="368"><font color="#888888 "><i>  368   </i></font></a>  m6 = mxCreateNumericArray(1, f_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
+<a name="369"><font color="#888888 "><i>  369   </i></font></a>  pData = (real_T (*)[])mxGetPr(m6);
+<a name="370"><font color="#888888 "><i>  370   </i></font></a>  i4 = 0;
+<a name="371"><font color="#888888 "><i>  371   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; f_u-&gt;size[0]; loop_ub++) <b>{</b>
+<a name="372"><font color="#888888 "><i>  372   </i></font></a>    (*pData)[i4] = f_u-&gt;data[loop_ub];
+<a name="373"><font color="#888888 "><i>  373   </i></font></a>    i4++;
+<a name="374"><font color="#888888 "><i>  374   </i></font></a>  <b>}</b>
+<a name="375"><font color="#888888 "><i>  375   </i></font></a>
+<a name="376"><font color="#888888 "><i>  376   </i></font></a>  emlrtAssign(&amp;g_y, m6);
+<a name="377"><font color="#888888 "><i>  377   </i></font></a>  emlrtAddField(y, g_y, <font color="#1122ff">&quot;maskPilots&quot;</font>, 0);
+<a name="378"><font color="#888888 "><i>  378   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;numberPilots), <font color="#1122ff">&quot;numberPilots&quot;</font>, 0);
+<a name="379"><font color="#888888 "><i>  379   </i></font></a>  i4 = g_u-&gt;size[0];
+<a name="380"><font color="#888888 "><i>  380   </i></font></a>  g_u-&gt;size[0] = u-&gt;data-&gt;size[0];
+<a name="381"><font color="#888888 "><i>  381   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxEnsureCapacity" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxEnsureCapacity');" target="rtwreport_document_frame"><font color="#1122aa">emxEnsureCapacity</font></a>((<a href="timeSynchronisation_types_h.html#type_emxArray__common" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_emxArray__common');" target="rtwreport_document_frame"><font color="#1122aa">emxArray__common</font></a> *)g_u, i4, (int32_T)<font color="#112266"><b>sizeof</b></font>(real_T),
+<a name="382"><font color="#888888 "><i>  382   </i></font></a>                    (emlrtRTEInfo *)NULL);
+<a name="383"><font color="#888888 "><i>  383   </i></font></a>  loop_ub = u-&gt;data-&gt;size[0];
+<a name="384"><font color="#888888 "><i>  384   </i></font></a>  <font color="#112266"><b>for</b></font> (i4 = 0; i4 &lt; loop_ub; i4++) <b>{</b>
+<a name="385"><font color="#888888 "><i>  385   </i></font></a>    g_u-&gt;data[i4] = u-&gt;data-&gt;data[i4];
+<a name="386"><font color="#888888 "><i>  386   </i></font></a>  <b>}</b>
+<a name="387"><font color="#888888 "><i>  387   </i></font></a>
+<a name="388"><font color="#888888 "><i>  388   </i></font></a>  h_y = NULL;
+<a name="389"><font color="#888888 "><i>  389   </i></font></a>  m6 = mxCreateNumericArray(1, g_u-&gt;size, mxDOUBLE_CLASS, mxREAL);
+<a name="390"><font color="#888888 "><i>  390   </i></font></a>  pData = (real_T (*)[])mxGetPr(m6);
+<a name="391"><font color="#888888 "><i>  391   </i></font></a>  i4 = 0;
+<a name="392"><font color="#888888 "><i>  392   </i></font></a>  <font color="#112266"><b>for</b></font> (loop_ub = 0; loop_ub &lt; g_u-&gt;size[0]; loop_ub++) <b>{</b>
+<a name="393"><font color="#888888 "><i>  393   </i></font></a>    (*pData)[i4] = g_u-&gt;data[loop_ub];
+<a name="394"><font color="#888888 "><i>  394   </i></font></a>    i4++;
+<a name="395"><font color="#888888 "><i>  395   </i></font></a>  <b>}</b>
+<a name="396"><font color="#888888 "><i>  396   </i></font></a>
+<a name="397"><font color="#888888 "><i>  397   </i></font></a>  emlrtAssign(&amp;h_y, m6);
+<a name="398"><font color="#888888 "><i>  398   </i></font></a>  emlrtAddField(y, h_y, <font color="#1122ff">&quot;data&quot;</font>, 0);
+<a name="399"><font color="#888888 "><i>  399   </i></font></a>  emlrtAddField(y, <a href="#fcn_c_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallOut</font></a>(u-&gt;signalLength), <font color="#1122ff">&quot;signalLength&quot;</font>, 0);
+<a name="400"><font color="#888888 "><i>  400   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;g_u);
+<a name="401"><font color="#888888 "><i>  401   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;f_u);
+<a name="402"><font color="#888888 "><i>  402   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;e_u);
+<a name="403"><font color="#888888 "><i>  403   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_creal_T</font></a>(&amp;d_u);
+<a name="404"><font color="#888888 "><i>  404   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_creal_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_creal_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_creal_T</font></a>(&amp;c_u);
+<a name="405"><font color="#888888 "><i>  405   </i></font></a>  <a href="timeSynchronisation_emxutil_c.html#fcn_emxFree_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emxFree_real_T');" target="rtwreport_document_frame"><font color="#1122aa">emxFree_real_T</font></a>(&amp;b_u);
+<a name="406"><font color="#888888 "><i>  406   </i></font></a>  emlrtHeapReferenceStackLeaveFcnR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>);
+<a name="407"><font color="#888888 "><i>  407   </i></font></a>  <font color="#112266"><b>return</b></font> y;
+<a name="408"><font color="#888888 "><i>  408   </i></font></a><b>}</b>
+<a name="409"><font color="#888888 "><i>  409   </i></font></a>
+<a name="410"><font color="#888888 "><i>  410   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_c_emlrt_marshallIn">c_emlrt_marshallIn</a>(<font color="#112266"><b>const</b></font> mxArray *c_d, <font color="#112266"><b>const</b></font> char_T *identifier, <a href="timeSynchronisation_types_h.html#type_struct_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_struct_T');" target="rtwreport_document_frame"><font color="#1122aa">struct_T</font></a>
+<a name="411"><font color="#888888 "><i>  411   </i></font></a>  *y)
+<a name="412"><font color="#888888 "><i>  412   </i></font></a><b>{</b>
+<a name="413"><font color="#888888 "><i>  413   </i></font></a>  emlrtMsgIdentifier thisId;
+<a name="414"><font color="#888888 "><i>  414   </i></font></a>  thisId.fIdentifier = identifier;
+<a name="415"><font color="#888888 "><i>  415   </i></font></a>  thisId.fParent = NULL;
+<a name="416"><font color="#888888 "><i>  416   </i></font></a>  <a href="#fcn_d_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_d_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">d_emlrt_marshallIn</font></a>(emlrtAlias(c_d), &amp;thisId, y);
+<a name="417"><font color="#888888 "><i>  417   </i></font></a>  emlrtDestroyArray(&amp;c_d);
+<a name="418"><font color="#888888 "><i>  418   </i></font></a><b>}</b>
+<a name="419"><font color="#888888 "><i>  419   </i></font></a>
+<a name="420"><font color="#888888 "><i>  420   </i></font></a><font color="#112266"><b>const</b></font> mxArray *<a name="fcn_c_emlrt_marshallOut">c_emlrt_marshallOut</a>(real_T u)
+<a name="421"><font color="#888888 "><i>  421   </i></font></a><b>{</b>
+<a name="422"><font color="#888888 "><i>  422   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *y;
+<a name="423"><font color="#888888 "><i>  423   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *m7;
+<a name="424"><font color="#888888 "><i>  424   </i></font></a>  y = NULL;
+<a name="425"><font color="#888888 "><i>  425   </i></font></a>  m7 = mxCreateDoubleScalar(u);
+<a name="426"><font color="#888888 "><i>  426   </i></font></a>  emlrtAssign(&amp;y, m7);
+<a name="427"><font color="#888888 "><i>  427   </i></font></a>  <font color="#112266"><b>return</b></font> y;
+<a name="428"><font color="#888888 "><i>  428   </i></font></a><b>}</b>
+<a name="429"><font color="#888888 "><i>  429   </i></font></a>
+<a name="430"><font color="#888888 "><i>  430   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emlrt_checkEscapedGlobals">emlrt_checkEscapedGlobals</a>(<font color="#112266"><b>void</b></font>)
+<a name="431"><font color="#888888 "><i>  431   </i></font></a><b>{</b>
+<a name="432"><font color="#888888 "><i>  432   </i></font></a>  <a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> |= <a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> &gt;&gt; 1U;
+<a name="433"><font color="#888888 "><i>  433   </i></font></a><b>}</b>
+<a name="434"><font color="#888888 "><i>  434   </i></font></a>
+<a name="435"><font color="#888888 "><i>  435   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emlrt_synchGlobalsFromML">emlrt_synchGlobalsFromML</a>(<font color="#112266"><b>void</b></font>)
+<a name="436"><font color="#888888 "><i>  436   </i></font></a><b>{</b>
+<a name="437"><font color="#888888 "><i>  437   </i></font></a>  <a href="#fcn_c_emlrt_marshallIn" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallIn');" target="rtwreport_document_frame"><font color="#1122aa">c_emlrt_marshallIn</font></a>(mexGetVariable(<font color="#1122ff">&quot;global&quot;</font>, <font color="#1122ff">&quot;d&quot;</font>), <font color="#1122ff">&quot;d&quot;</font>, &amp;<a href="timeSynchronisation_data_c.html#var_d" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d');" target="rtwreport_document_frame"><font color="#1122aa">d</font></a>);
+<a name="438"><font color="#888888 "><i>  438   </i></font></a><b>}</b>
+<a name="439"><font color="#888888 "><i>  439   </i></font></a>
+<a name="440"><font color="#888888 "><i>  440   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emlrt_synchGlobalsToML">emlrt_synchGlobalsToML</a>(<font color="#112266"><b>void</b></font>)
+<a name="441"><font color="#888888 "><i>  441   </i></font></a><b>{</b>
+<a name="442"><font color="#888888 "><i>  442   </i></font></a>  <font color="#112266"><b>if</b></font> (<a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> &amp; 1U) <b>{</b>
+<a name="443"><font color="#888888 "><i>  443   </i></font></a>    mexPutVariable(<font color="#1122ff">&quot;global&quot;</font>, <font color="#1122ff">&quot;d&quot;</font>, <a href="#fcn_b_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallOut</font></a>(&amp;<a href="timeSynchronisation_data_c.html#var_d" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d');" target="rtwreport_document_frame"><font color="#1122aa">d</font></a>));
+<a name="444"><font color="#888888 "><i>  444   </i></font></a>    <a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> &amp;= 2U;
+<a name="445"><font color="#888888 "><i>  445   </i></font></a>  <b>}</b>
 <a name="446"><font color="#888888 "><i>  446   </i></font></a><b>}</b>
 <a name="447"><font color="#888888 "><i>  447   </i></font></a>
-<a name="448"><font color="#888888 "><i>  448   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emlrt_synchGlobalsToML">emlrt_synchGlobalsToML</a>(<font color="#112266"><b>void</b></font>)
+<a name="448"><font color="#888888 "><i>  448   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_error">error</a>(<font color="#112266"><b>const</b></font> mxArray *b, emlrtMCInfo *location)
 <a name="449"><font color="#888888 "><i>  449   </i></font></a><b>{</b>
-<a name="450"><font color="#888888 "><i>  450   </i></font></a>  <font color="#112266"><b>if</b></font> (<a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> &amp; 1U) <b>{</b>
-<a name="451"><font color="#888888 "><i>  451   </i></font></a>    mexPutVariable(<font color="#1122ff">&quot;global&quot;</font>, <font color="#1122ff">&quot;d&quot;</font>, <a href="#fcn_b_emlrt_marshallOut" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallOut');" target="rtwreport_document_frame"><font color="#1122aa">b_emlrt_marshallOut</font></a>(&amp;<a href="timeSynchronisation_data_c.html#var_d" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d');" target="rtwreport_document_frame"><font color="#1122aa">d</font></a>));
-<a name="452"><font color="#888888 "><i>  452   </i></font></a>    <a href="timeSynchronisation_data_c.html#var_d_dirty" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_dirty');" target="rtwreport_document_frame"><font color="#1122aa">d_dirty</font></a> &amp;= 2U;
-<a name="453"><font color="#888888 "><i>  453   </i></font></a>  <b>}</b>
+<a name="450"><font color="#888888 "><i>  450   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *pArray;
+<a name="451"><font color="#888888 "><i>  451   </i></font></a>  pArray = b;
+<a name="452"><font color="#888888 "><i>  452   </i></font></a>  emlrtCallMATLABR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, 0, NULL, 1, &amp;pArray, <font color="#1122ff">&quot;error&quot;</font>, TRUE,
+<a name="453"><font color="#888888 "><i>  453   </i></font></a>                        location);
 <a name="454"><font color="#888888 "><i>  454   </i></font></a><b>}</b>
 <a name="455"><font color="#888888 "><i>  455   </i></font></a>
-<a name="456"><font color="#888888 "><i>  456   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_error">error</a>(<font color="#112266"><b>const</b></font> mxArray *b, emlrtMCInfo *location)
+<a name="456"><font color="#888888 "><i>  456   </i></font></a><font color="#112266"><b>const</b></font> mxArray *<a name="fcn_message">message</a>(<font color="#112266"><b>const</b></font> mxArray *b, emlrtMCInfo *location)
 <a name="457"><font color="#888888 "><i>  457   </i></font></a><b>{</b>
 <a name="458"><font color="#888888 "><i>  458   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *pArray;
-<a name="459"><font color="#888888 "><i>  459   </i></font></a>  pArray = b;
-<a name="460"><font color="#888888 "><i>  460   </i></font></a>  emlrtCallMATLABR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, 0, NULL, 1, &amp;pArray, <font color="#1122ff">&quot;error&quot;</font>, TRUE,
-<a name="461"><font color="#888888 "><i>  461   </i></font></a>                        location);
-<a name="462"><font color="#888888 "><i>  462   </i></font></a><b>}</b>
-<a name="463"><font color="#888888 "><i>  463   </i></font></a>
-<a name="464"><font color="#888888 "><i>  464   </i></font></a><font color="#112266"><b>const</b></font> mxArray *<a name="fcn_message">message</a>(<font color="#112266"><b>const</b></font> mxArray *b, emlrtMCInfo *location)
-<a name="465"><font color="#888888 "><i>  465   </i></font></a><b>{</b>
-<a name="466"><font color="#888888 "><i>  466   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *pArray;
-<a name="467"><font color="#888888 "><i>  467   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *m7;
-<a name="468"><font color="#888888 "><i>  468   </i></font></a>  pArray = b;
-<a name="469"><font color="#888888 "><i>  469   </i></font></a>  <font color="#112266"><b>return</b></font> emlrtCallMATLABR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, 1, &amp;m7, 1, &amp;pArray, <font color="#1122ff">&quot;message&quot;</font>,
-<a name="470"><font color="#888888 "><i>  470   </i></font></a>    TRUE, location);
-<a name="471"><font color="#888888 "><i>  471   </i></font></a><b>}</b>
-<a name="472"><font color="#888888 "><i>  472   </i></font></a>
-<a name="473"><font color="#888888 "><i>  473   </i></font></a><font color="#117755"><i>/* End of code generation (timeSynchronisation_mexutil.c) */</i></font>
-<a name="474"><font color="#888888 "><i>  474   </i></font></a></pre>
+<a name="459"><font color="#888888 "><i>  459   </i></font></a>  <font color="#112266"><b>const</b></font> mxArray *m8;
+<a name="460"><font color="#888888 "><i>  460   </i></font></a>  pArray = b;
+<a name="461"><font color="#888888 "><i>  461   </i></font></a>  <font color="#112266"><b>return</b></font> emlrtCallMATLABR2012b(<a href="timeSynchronisation_mex_c.html#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, 1, &amp;m8, 1, &amp;pArray, <font color="#1122ff">&quot;message&quot;</font>,
+<a name="462"><font color="#888888 "><i>  462   </i></font></a>    TRUE, location);
+<a name="463"><font color="#888888 "><i>  463   </i></font></a><b>}</b>
+<a name="464"><font color="#888888 "><i>  464   </i></font></a>
+<a name="465"><font color="#888888 "><i>  465   </i></font></a><font color="#117755"><i>/* End of code generation (timeSynchronisation_mexutil.c) */</i></font>
+<a name="466"><font color="#888888 "><i>  466   </i></font></a></pre>
 </td></tr></table>
 </p>
 </body>

@@ -3,7 +3,7 @@
  *
  * Code generation for function 'timeSynchronisationSIMO'
  *
- * C source code generated on: Wed May 29 16:15:18 2013
+ * C source code generated on: Wed May 29 17:00:04 2013
  *
  */
 
@@ -314,10 +314,10 @@ static const mxArray *b_message(const mxArray *b, const mxArray *c, emlrtMCInfo 
   location)
 {
   const mxArray *pArrays[2];
-  const mxArray *m8;
+  const mxArray *m9;
   pArrays[0] = b;
   pArrays[1] = c;
-  return emlrtCallMATLABR2012b(emlrtRootTLSGlobal, 1, &m8, 2, pArrays, "message",
+  return emlrtCallMATLABR2012b(emlrtRootTLSGlobal, 1, &m9, 2, pArrays, "message",
     TRUE, location);
 }
 

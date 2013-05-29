@@ -3,7 +3,7 @@
  *
  * Code generation for function 'BERCalculationSIMO'
  *
- * C source code generated on: Wed May 29 16:17:11 2013
+ * C source code generated on: Wed May 29 17:02:02 2013
  *
  */
 

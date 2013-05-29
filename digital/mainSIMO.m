@@ -19,7 +19,7 @@ d=struct(...
     'RXAntenna',4,...                   %number of RX Antenna (1=SISO, >1=SIMO)
     'bandwidthMeasured',400e6,...       %bandwidth of channel measured
     'bandwidth',20e6,...                 %bandwidth available
-    'enableCFO',0 ...                   %enable CFO (on=1, off=0)
+    'enableCFO',1 ...                   %enable CFO (on=1, off=0)
     );
 
 %CFO

@@ -3,7 +3,7 @@
  *
  * Code generation for function 'fprintf'
  *
- * C source code generated on: Wed May 29 16:17:11 2013
+ * C source code generated on: Wed May 29 17:02:01 2013
  *
  */
 
@@ -122,12 +122,12 @@ static const mxArray *feval(const mxArray *b, const mxArray *c, const mxArray *e
   const mxArray *f, emlrtMCInfo *location)
 {
   const mxArray *pArrays[4];
-  const mxArray *m5;
+  const mxArray *m6;
   pArrays[0] = b;
   pArrays[1] = c;
   pArrays[2] = e;
   pArrays[3] = f;
-  return emlrtCallMATLABR2012b(emlrtRootTLSGlobal, 1, &m5, 4, pArrays, "feval",
+  return emlrtCallMATLABR2012b(emlrtRootTLSGlobal, 1, &m6, 4, pArrays, "feval",
     TRUE, location);
 }
 

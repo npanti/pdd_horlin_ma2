@@ -3,7 +3,7 @@
  *
  * Code generation for function 'timeSynchronisationSIMO_mexutil'
  *
- * C source code generated on: Wed May 29 16:15:15 2013
+ * C source code generated on: Wed May 29 17:00:01 2013
  *
  */
 

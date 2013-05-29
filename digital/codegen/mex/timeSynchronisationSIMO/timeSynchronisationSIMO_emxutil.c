@@ -3,7 +3,7 @@
  *
  * Code generation for function 'timeSynchronisationSIMO_emxutil'
  *
- * C source code generated on: Wed May 29 16:15:18 2013
+ * C source code generated on: Wed May 29 17:00:04 2013
  *
  */
 
@@ -122,8 +122,6 @@ void emxFreeStruct_struct_T(struct_T *pStruct)
   emxFree_creal_T(&pStruct->preambleConstellations);
   emxFree_creal_T(&pStruct->preambleOFDM);
   emxFree_real_T(&pStruct->data);
-  emxFree_creal_T(&pStruct->referenceSymbol);
-  emxFree_creal_T(&pStruct->referenceSymbolMatrix);
   emxFree_real_T(&pStruct->maskData);
   emxFree_real_T(&pStruct->maskPilots);
 }
@@ -174,8 +172,6 @@ void emxInitStruct_struct_T(struct_T *pStruct, const emlrtRTEInfo *srcLocation,
   emxInit_creal_T(&pStruct->preambleConstellations, 1, srcLocation, doPush);
   emxInit_creal_T(&pStruct->preambleOFDM, 1, srcLocation, doPush);
   emxInit_real_T(&pStruct->data, 1, srcLocation, doPush);
-  emxInit_creal_T(&pStruct->referenceSymbol, 1, srcLocation, doPush);
-  emxInit_creal_T(&pStruct->referenceSymbolMatrix, 1, srcLocation, doPush);
   emxInit_real_T(&pStruct->maskData, 1, srcLocation, doPush);
   emxInit_real_T(&pStruct->maskPilots, 1, srcLocation, doPush);
 }

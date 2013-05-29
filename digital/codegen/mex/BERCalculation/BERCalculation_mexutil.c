@@ -3,7 +3,7 @@
  *
  * Code generation for function 'BERCalculation_mexutil'
  *
- * C source code generated on: Wed May 29 16:22:09 2013
+ * C source code generated on: Wed May 29 16:57:06 2013
  *
  */
 
@@ -11,7 +11,6 @@
 #include "rt_nonfinite.h"
 #include "BERCalculation.h"
 #include "BERCalculation_mexutil.h"
-#include "BERCalculation_emxutil.h"
 #include "fprintf.h"
 #include "BERCalculation_data.h"
 #include <stdio.h>
@@ -20,32 +19,44 @@
 static void f_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
   *parentId, struct_T *y);
 static void g_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
-  *parentId, emxArray_real_T *y);
+  *parentId, real_T y[512]);
 static void h_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
-  *parentId, emxArray_creal_T *y);
-static real_T i_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *parentId, creal_T y[64]);
+static creal_T i_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
+  *parentId);
+static void j_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
+  *parentId, real_T y[64]);
+static void k_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
+  *parentId, real_T y[393216]);
+static real_T l_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
   *msgId);
-static void k_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
-  *msgId, emxArray_real_T *ret);
-static void l_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
-  *msgId, emxArray_creal_T *ret);
+static void n_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, real_T ret[512]);
+static void o_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, creal_T ret[64]);
+static creal_T p_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId);
+static void q_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, real_T ret[64]);
+static void r_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, real_T ret[393216]);
 
 /* Function Definitions */
 static void f_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
   *parentId, struct_T *y)
 {
   emlrtMsgIdentifier thisId;
-  static const char * fieldNames[30] = { "M", "SNRMin", "SNRStep", "SNRMax",
+  static const char * fieldNames[29] = { "M", "SNRMin", "SNRStep", "SNRMax",
     "subCarriers", "cyclicPrefix", "messageLength", "numberPreamble",
     "cyclicPrefixPreamble", "preambleBoost", "synchronisationPlots",
     "pilotPattern", "bandwidthMeasured", "bandwidth", "enableCFO", "Ts",
     "bitsPerSymbol", "OFDM", "SNRIterations", "preamble",
-    "preambleConstellations", "preambleOFDM", "preambleLength", "numberPilots",
-    "referenceSymbol", "referenceSymbolMatrix", "maskData", "maskPilots", "data",
+    "preambleConstellations", "preambleOFDM", "preambleLength",
+    "referenceSymbol", "maskData", "maskPilots", "numberPilots", "data",
     "signalLength" };
 
   thisId.fParent = parentId;
-  emlrtCheckStructR2012b(emlrtRootTLSGlobal, parentId, u, 30, fieldNames, 0U, 0);
+  emlrtCheckStructR2012b(emlrtRootTLSGlobal, parentId, u, 29, fieldNames, 0U, 0);
   thisId.fIdentifier = "M";
   y->M = b_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u,
     0, "M")), &thisId);
@@ -115,23 +126,20 @@ static void f_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
   thisId.fIdentifier = "preambleLength";
   y->preambleLength = b_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a
     (emlrtRootTLSGlobal, u, 0, "preambleLength")), &thisId);
+  thisId.fIdentifier = "referenceSymbol";
+  y->referenceSymbol = i_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a
+    (emlrtRootTLSGlobal, u, 0, "referenceSymbol")), &thisId);
+  thisId.fIdentifier = "maskData";
+  j_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
+    "maskData")), &thisId, y->maskData);
+  thisId.fIdentifier = "maskPilots";
+  j_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
+    "maskPilots")), &thisId, y->maskPilots);
   thisId.fIdentifier = "numberPilots";
   y->numberPilots = b_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a
     (emlrtRootTLSGlobal, u, 0, "numberPilots")), &thisId);
-  thisId.fIdentifier = "referenceSymbol";
-  h_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
-    "referenceSymbol")), &thisId, y->referenceSymbol);
-  thisId.fIdentifier = "referenceSymbolMatrix";
-  h_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
-    "referenceSymbolMatrix")), &thisId, y->referenceSymbolMatrix);
-  thisId.fIdentifier = "maskData";
-  g_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
-    "maskData")), &thisId, y->maskData);
-  thisId.fIdentifier = "maskPilots";
-  g_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
-    "maskPilots")), &thisId, y->maskPilots);
   thisId.fIdentifier = "data";
-  g_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
+  k_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a(emlrtRootTLSGlobal, u, 0,
     "data")), &thisId, y->data);
   thisId.fIdentifier = "signalLength";
   y->signalLength = b_emlrt_marshallIn(emlrtAlias(emlrtGetFieldR2013a
@@ -140,20 +148,43 @@ static void f_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
 }
 
 static void g_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
-  *parentId, emxArray_real_T *y)
+  *parentId, real_T y[512])
 {
-  k_emlrt_marshallIn(emlrtAlias(u), parentId, y);
+  n_emlrt_marshallIn(emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
 }
 
 static void h_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
-  *parentId, emxArray_creal_T *y)
+  *parentId, creal_T y[64])
 {
-  l_emlrt_marshallIn(emlrtAlias(u), parentId, y);
+  o_emlrt_marshallIn(emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
 }
 
-static real_T i_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+static creal_T i_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
+  *parentId)
+{
+  creal_T y;
+  y = p_emlrt_marshallIn(emlrtAlias(u), parentId);
+  emlrtDestroyArray(&u);
+  return y;
+}
+
+static void j_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
+  *parentId, real_T y[64])
+{
+  q_emlrt_marshallIn(emlrtAlias(u), parentId, y);
+  emlrtDestroyArray(&u);
+}
+
+static void k_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
+  *parentId, real_T y[393216])
+{
+  r_emlrt_marshallIn(emlrtAlias(u), parentId, y);
+  emlrtDestroyArray(&u);
+}
+
+static real_T l_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
   *msgId)
 {
   real_T ret;
@@ -163,48 +194,76 @@ static real_T i_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
   return ret;
 }
 
-static void k_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
-  *msgId, emxArray_real_T *ret)
+static void n_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, real_T ret[512])
 {
-  int32_T iv7[1];
-  boolean_T bv1[1];
-  int32_T iv8[1];
-  int32_T i3;
-  iv7[0] = -1;
-  bv1[0] = TRUE;
-  emlrtCheckVsBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", FALSE, 1U,
-    iv7, bv1, iv8);
-  i3 = ret->size[0];
-  ret->size[0] = iv8[0];
-  emxEnsureCapacity((emxArray__common *)ret, i3, (int32_T)sizeof(real_T),
-                    (emlrtRTEInfo *)NULL);
-  emlrtImportArrayR2011b(src, ret->data, 8, FALSE);
+  int32_T iv13[1];
+  int32_T i1;
+  iv13[0] = 512;
+  emlrtCheckBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", FALSE, 1U,
+    iv13);
+  for (i1 = 0; i1 < 512; i1++) {
+    ret[i1] = (*(real_T (*)[512])mxGetData(src))[i1];
+  }
+
   emlrtDestroyArray(&src);
 }
 
-static void l_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
-  *msgId, emxArray_creal_T *ret)
+static void o_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, creal_T ret[64])
 {
-  int32_T iv9[1];
-  boolean_T bv2[1];
-  int32_T iv10[1];
-  int32_T i4;
-  iv9[0] = -1;
-  bv2[0] = TRUE;
-  emlrtCheckVsBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", TRUE, 1U,
-    iv9, bv2, iv10);
-  i4 = ret->size[0];
-  ret->size[0] = iv10[0];
-  emxEnsureCapacity((emxArray__common *)ret, i4, (int32_T)sizeof(creal_T),
-                    (emlrtRTEInfo *)NULL);
-  emlrtImportArrayR2011b(src, ret->data, 8, TRUE);
+  int32_T iv14[1];
+  iv14[0] = 64;
+  emlrtCheckBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", TRUE, 1U,
+    iv14);
+  emlrtImportArrayR2011b(src, ret, 8, TRUE);
+  emlrtDestroyArray(&src);
+}
+
+static creal_T p_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId)
+{
+  creal_T ret;
+  emlrtCheckBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", TRUE, 0U, 0);
+  emlrtImportArrayR2011b(src, &ret, 8, TRUE);
+  emlrtDestroyArray(&src);
+  return ret;
+}
+
+static void q_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, real_T ret[64])
+{
+  int32_T iv15[1];
+  int32_T i2;
+  iv15[0] = 64;
+  emlrtCheckBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", FALSE, 1U,
+    iv15);
+  for (i2 = 0; i2 < 64; i2++) {
+    ret[i2] = (*(real_T (*)[64])mxGetData(src))[i2];
+  }
+
+  emlrtDestroyArray(&src);
+}
+
+static void r_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+  *msgId, real_T ret[393216])
+{
+  int32_T iv16[1];
+  int32_T i3;
+  iv16[0] = 393216;
+  emlrtCheckBuiltInR2012b(emlrtRootTLSGlobal, msgId, src, "double", FALSE, 1U,
+    iv16);
+  for (i3 = 0; i3 < 393216; i3++) {
+    ret[i3] = (*(real_T (*)[393216])mxGetData(src))[i3];
+  }
+
   emlrtDestroyArray(&src);
 }
 
 real_T b_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier *parentId)
 {
   real_T y;
-  y = i_emlrt_marshallIn(emlrtAlias(u), parentId);
+  y = l_emlrt_marshallIn(emlrtAlias(u), parentId);
   emlrtDestroyArray(&u);
   return y;
 }
@@ -212,35 +271,29 @@ real_T b_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier *parentId)
 const mxArray *b_emlrt_marshallOut(const struct_T *u)
 {
   const mxArray *y;
-  emxArray_real_T *b_u;
-  emxArray_creal_T *c_u;
-  emxArray_creal_T *d_u;
-  emxArray_creal_T *e_u;
-  emxArray_creal_T *f_u;
-  emxArray_real_T *g_u;
-  emxArray_real_T *h_u;
-  emxArray_real_T *i_u;
-  int32_T i2;
-  int32_T loop_ub;
   const mxArray *b_y;
+  static const int32_T iv5[1] = { 512 };
+
   const mxArray *m4;
   real_T (*pData)[];
+  int32_T i;
   const mxArray *c_y;
+  static const int32_T iv6[1] = { 64 };
+
+  creal_T b_u[64];
   const mxArray *d_y;
+  static const int32_T iv7[1] = { 64 };
+
   const mxArray *e_y;
   const mxArray *f_y;
+  static const int32_T iv8[1] = { 64 };
+
   const mxArray *g_y;
+  static const int32_T iv9[1] = { 64 };
+
   const mxArray *h_y;
-  const mxArray *i_y;
-  emlrtHeapReferenceStackEnterFcnR2012b(emlrtRootTLSGlobal);
-  emxInit_real_T(&b_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-  emxInit_creal_T(&c_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-  emxInit_creal_T(&d_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-  emxInit_creal_T(&e_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-  emxInit_creal_T(&f_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-  emxInit_real_T(&g_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-  emxInit_real_T(&h_u, 1, (emlrtRTEInfo *)NULL, TRUE);
-  emxInit_real_T(&i_u, 1, (emlrtRTEInfo *)NULL, TRUE);
+  static const int32_T iv10[1] = { 393216 };
+
   y = NULL;
   emlrtAssign(&y, mxCreateStructMatrix(1, 1, 0, NULL));
   emlrtAddField(y, emlrt_marshallOut(u->M), "M", 0);
@@ -265,154 +318,69 @@ const mxArray *b_emlrt_marshallOut(const struct_T *u)
   emlrtAddField(y, emlrt_marshallOut(u->bitsPerSymbol), "bitsPerSymbol", 0);
   emlrtAddField(y, emlrt_marshallOut(u->OFDM), "OFDM", 0);
   emlrtAddField(y, emlrt_marshallOut(u->SNRIterations), "SNRIterations", 0);
-  i2 = b_u->size[0];
-  b_u->size[0] = u->preamble->size[0];
-  emxEnsureCapacity((emxArray__common *)b_u, i2, (int32_T)sizeof(real_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->preamble->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    b_u->data[i2] = u->preamble->data[i2];
-  }
-
   b_y = NULL;
-  m4 = mxCreateNumericArray(1, b_u->size, mxDOUBLE_CLASS, mxREAL);
+  m4 = mxCreateNumericArray(1, (int32_T *)&iv5, mxDOUBLE_CLASS, mxREAL);
   pData = (real_T (*)[])mxGetPr(m4);
-  i2 = 0;
-  for (loop_ub = 0; loop_ub < b_u->size[0]; loop_ub++) {
-    (*pData)[i2] = b_u->data[loop_ub];
-    i2++;
+  for (i = 0; i < 512; i++) {
+    (*pData)[i] = u->preamble[i];
   }
 
   emlrtAssign(&b_y, m4);
   emlrtAddField(y, b_y, "preamble", 0);
-  i2 = c_u->size[0];
-  c_u->size[0] = u->preambleConstellations->size[0];
-  emxEnsureCapacity((emxArray__common *)c_u, i2, (int32_T)sizeof(creal_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->preambleConstellations->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    c_u->data[i2] = u->preambleConstellations->data[i2];
+  c_y = NULL;
+  m4 = mxCreateNumericArray(1, (int32_T *)&iv6, mxDOUBLE_CLASS, mxCOMPLEX);
+  for (i = 0; i < 64; i++) {
+    b_u[i] = u->preambleConstellations[i];
   }
 
-  c_y = NULL;
-  m4 = mxCreateNumericArray(1, c_u->size, mxDOUBLE_CLASS, mxCOMPLEX);
-  emlrtExportNumericArrayR2013a(emlrtRootTLSGlobal, m4, (void *)c_u->data, 8);
+  emlrtExportNumericArrayR2013a(emlrtRootTLSGlobal, m4, b_u, 8);
   emlrtAssign(&c_y, m4);
   emlrtAddField(y, c_y, "preambleConstellations", 0);
-  i2 = d_u->size[0];
-  d_u->size[0] = u->preambleOFDM->size[0];
-  emxEnsureCapacity((emxArray__common *)d_u, i2, (int32_T)sizeof(creal_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->preambleOFDM->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    d_u->data[i2] = u->preambleOFDM->data[i2];
+  d_y = NULL;
+  m4 = mxCreateNumericArray(1, (int32_T *)&iv7, mxDOUBLE_CLASS, mxCOMPLEX);
+  for (i = 0; i < 64; i++) {
+    b_u[i] = u->preambleOFDM[i];
   }
 
-  d_y = NULL;
-  m4 = mxCreateNumericArray(1, d_u->size, mxDOUBLE_CLASS, mxCOMPLEX);
-  emlrtExportNumericArrayR2013a(emlrtRootTLSGlobal, m4, (void *)d_u->data, 8);
+  emlrtExportNumericArrayR2013a(emlrtRootTLSGlobal, m4, b_u, 8);
   emlrtAssign(&d_y, m4);
   emlrtAddField(y, d_y, "preambleOFDM", 0);
   emlrtAddField(y, emlrt_marshallOut(u->preambleLength), "preambleLength", 0);
-  emlrtAddField(y, emlrt_marshallOut(u->numberPilots), "numberPilots", 0);
-  i2 = e_u->size[0];
-  e_u->size[0] = u->referenceSymbol->size[0];
-  emxEnsureCapacity((emxArray__common *)e_u, i2, (int32_T)sizeof(creal_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->referenceSymbol->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    e_u->data[i2] = u->referenceSymbol->data[i2];
-  }
-
   e_y = NULL;
-  m4 = mxCreateNumericArray(1, e_u->size, mxDOUBLE_CLASS, mxCOMPLEX);
-  emlrtExportNumericArrayR2013a(emlrtRootTLSGlobal, m4, (void *)e_u->data, 8);
+  m4 = mxCreateNumericMatrix(1, 1, mxDOUBLE_CLASS, mxCOMPLEX);
+  *mxGetPr(m4) = u->referenceSymbol.re;
+  *mxGetPi(m4) = u->referenceSymbol.im;
   emlrtAssign(&e_y, m4);
   emlrtAddField(y, e_y, "referenceSymbol", 0);
-  i2 = f_u->size[0];
-  f_u->size[0] = u->referenceSymbolMatrix->size[0];
-  emxEnsureCapacity((emxArray__common *)f_u, i2, (int32_T)sizeof(creal_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->referenceSymbolMatrix->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    f_u->data[i2] = u->referenceSymbolMatrix->data[i2];
-  }
-
   f_y = NULL;
-  m4 = mxCreateNumericArray(1, f_u->size, mxDOUBLE_CLASS, mxCOMPLEX);
-  emlrtExportNumericArrayR2013a(emlrtRootTLSGlobal, m4, (void *)f_u->data, 8);
-  emlrtAssign(&f_y, m4);
-  emlrtAddField(y, f_y, "referenceSymbolMatrix", 0);
-  i2 = g_u->size[0];
-  g_u->size[0] = u->maskData->size[0];
-  emxEnsureCapacity((emxArray__common *)g_u, i2, (int32_T)sizeof(real_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->maskData->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    g_u->data[i2] = u->maskData->data[i2];
+  m4 = mxCreateNumericArray(1, (int32_T *)&iv8, mxDOUBLE_CLASS, mxREAL);
+  pData = (real_T (*)[])mxGetPr(m4);
+  for (i = 0; i < 64; i++) {
+    (*pData)[i] = u->maskData[i];
   }
 
+  emlrtAssign(&f_y, m4);
+  emlrtAddField(y, f_y, "maskData", 0);
   g_y = NULL;
-  m4 = mxCreateNumericArray(1, g_u->size, mxDOUBLE_CLASS, mxREAL);
+  m4 = mxCreateNumericArray(1, (int32_T *)&iv9, mxDOUBLE_CLASS, mxREAL);
   pData = (real_T (*)[])mxGetPr(m4);
-  i2 = 0;
-  for (loop_ub = 0; loop_ub < g_u->size[0]; loop_ub++) {
-    (*pData)[i2] = g_u->data[loop_ub];
-    i2++;
+  for (i = 0; i < 64; i++) {
+    (*pData)[i] = u->maskPilots[i];
   }
 
   emlrtAssign(&g_y, m4);
-  emlrtAddField(y, g_y, "maskData", 0);
-  i2 = h_u->size[0];
-  h_u->size[0] = u->maskPilots->size[0];
-  emxEnsureCapacity((emxArray__common *)h_u, i2, (int32_T)sizeof(real_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->maskPilots->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    h_u->data[i2] = u->maskPilots->data[i2];
-  }
-
+  emlrtAddField(y, g_y, "maskPilots", 0);
+  emlrtAddField(y, emlrt_marshallOut(u->numberPilots), "numberPilots", 0);
   h_y = NULL;
-  m4 = mxCreateNumericArray(1, h_u->size, mxDOUBLE_CLASS, mxREAL);
+  m4 = mxCreateNumericArray(1, (int32_T *)&iv10, mxDOUBLE_CLASS, mxREAL);
   pData = (real_T (*)[])mxGetPr(m4);
-  i2 = 0;
-  for (loop_ub = 0; loop_ub < h_u->size[0]; loop_ub++) {
-    (*pData)[i2] = h_u->data[loop_ub];
-    i2++;
+  for (i = 0; i < 393216; i++) {
+    (*pData)[i] = u->data[i];
   }
 
   emlrtAssign(&h_y, m4);
-  emlrtAddField(y, h_y, "maskPilots", 0);
-  i2 = i_u->size[0];
-  i_u->size[0] = u->data->size[0];
-  emxEnsureCapacity((emxArray__common *)i_u, i2, (int32_T)sizeof(real_T),
-                    (emlrtRTEInfo *)NULL);
-  loop_ub = u->data->size[0];
-  for (i2 = 0; i2 < loop_ub; i2++) {
-    i_u->data[i2] = u->data->data[i2];
-  }
-
-  i_y = NULL;
-  m4 = mxCreateNumericArray(1, i_u->size, mxDOUBLE_CLASS, mxREAL);
-  pData = (real_T (*)[])mxGetPr(m4);
-  i2 = 0;
-  for (loop_ub = 0; loop_ub < i_u->size[0]; loop_ub++) {
-    (*pData)[i2] = i_u->data[loop_ub];
-    i2++;
-  }
-
-  emlrtAssign(&i_y, m4);
-  emlrtAddField(y, i_y, "data", 0);
+  emlrtAddField(y, h_y, "data", 0);
   emlrtAddField(y, emlrt_marshallOut(u->signalLength), "signalLength", 0);
-  emxFree_real_T(&i_u);
-  emxFree_real_T(&h_u);
-  emxFree_real_T(&g_u);
-  emxFree_creal_T(&f_u);
-  emxFree_creal_T(&e_u);
-  emxFree_creal_T(&d_u);
-  emxFree_creal_T(&c_u);
-  emxFree_real_T(&b_u);
-  emlrtHeapReferenceStackLeaveFcnR2012b(emlrtRootTLSGlobal);
   return y;
 }
 

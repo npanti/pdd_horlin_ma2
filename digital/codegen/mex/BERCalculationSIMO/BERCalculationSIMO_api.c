@@ -3,7 +3,7 @@
  *
  * Code generation for function 'BERCalculationSIMO_api'
  *
- * C source code generated on: Wed May 29 16:17:11 2013
+ * C source code generated on: Wed May 29 17:02:01 2013
  *
  */
 
@@ -42,7 +42,7 @@ static void c_emlrt_marshallIn(const mxArray *bitsRX, const char_T *identifier,
   emxArray_real_T *y);
 static void d_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
   *parentId, emxArray_real_T *y);
-static void j_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+static void k_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
   *msgId, emxArray_real_T *ret);
 
 /* Function Definitions */
@@ -59,11 +59,11 @@ static void c_emlrt_marshallIn(const mxArray *bitsRX, const char_T *identifier,
 static void d_emlrt_marshallIn(const mxArray *u, const emlrtMsgIdentifier
   *parentId, emxArray_real_T *y)
 {
-  j_emlrt_marshallIn(emlrtAlias(u), parentId, y);
+  k_emlrt_marshallIn(emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
 }
 
-static void j_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
+static void k_emlrt_marshallIn(const mxArray *src, const emlrtMsgIdentifier
   *msgId, emxArray_real_T *ret)
 {
   int32_T iv5[1];
