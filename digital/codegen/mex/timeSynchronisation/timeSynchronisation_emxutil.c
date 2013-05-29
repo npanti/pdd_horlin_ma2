@@ -3,7 +3,7 @@
  *
  * Code generation for function 'timeSynchronisation_emxutil'
  *
- * C source code generated on: Tue May 28 21:54:24 2013
+ * C source code generated on: Wed May 29 16:20:33 2013
  *
  */
 
@@ -121,6 +121,8 @@ void emxFreeStruct_struct_T(struct_T *pStruct)
   emxFree_real_T(&pStruct->preamble);
   emxFree_creal_T(&pStruct->preambleConstellations);
   emxFree_creal_T(&pStruct->preambleOFDM);
+  emxFree_creal_T(&pStruct->referenceSymbol);
+  emxFree_creal_T(&pStruct->referenceSymbolMatrix);
   emxFree_real_T(&pStruct->maskData);
   emxFree_real_T(&pStruct->maskPilots);
   emxFree_real_T(&pStruct->data);
@@ -171,6 +173,8 @@ void emxInitStruct_struct_T(struct_T *pStruct, const emlrtRTEInfo *srcLocation,
   emxInit_real_T(&pStruct->preamble, 1, srcLocation, doPush);
   emxInit_creal_T(&pStruct->preambleConstellations, 1, srcLocation, doPush);
   emxInit_creal_T(&pStruct->preambleOFDM, 1, srcLocation, doPush);
+  emxInit_creal_T(&pStruct->referenceSymbol, 1, srcLocation, doPush);
+  emxInit_creal_T(&pStruct->referenceSymbolMatrix, 1, srcLocation, doPush);
   emxInit_real_T(&pStruct->maskData, 1, srcLocation, doPush);
   emxInit_real_T(&pStruct->maskPilots, 1, srcLocation, doPush);
   emxInit_real_T(&pStruct->data, 1, srcLocation, doPush);

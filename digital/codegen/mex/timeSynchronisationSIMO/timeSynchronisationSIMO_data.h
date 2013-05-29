@@ -3,7 +3,7 @@
  *
  * Code generation for function 'timeSynchronisationSIMO_data'
  *
- * C source code generated on: Wed May 29 13:24:32 2013
+ * C source code generated on: Wed May 29 16:15:15 2013
  *
  */
 

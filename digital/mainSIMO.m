@@ -5,9 +5,9 @@ close all
 global d
 d=struct(...
     'M',16,...                          %constellation size
-    'SNRMin',25,...                     %SNR in dB
+    'SNRMin',30,...                     %SNR in dB
     'SNRStep',1,...                     %Step
-    'SNRMax',25,...                     %SNR in dB
+    'SNRMax',30,...                     %SNR in dB
     'subCarriers',64,...                %subcarriers per OFDM symbol
     'cyclicPrefix',32,...               %carriers in CP
     'messageLength',64*1024*6,...        %bits sent
@@ -19,7 +19,7 @@ d=struct(...
     'RXAntenna',4,...                   %number of RX Antenna (1=SISO, >1=SIMO)
     'bandwidthMeasured',400e6,...       %bandwidth of channel measured
     'bandwidth',20e6,...                 %bandwidth available
-    'enableCFO',1 ...                   %enable CFO (on=1, off=0)
+    'enableCFO',0 ...                   %enable CFO (on=1, off=0)
     );
 
 %CFO
@@ -27,7 +27,7 @@ d.Ts = 1/d.bandwidth;
 phaseCFO = 10e3*d.Ts*d.subCarriers;
     
 %Channel characteristics
-load('channels.mat')
+load('channelsLOSS.mat')
 channel=[H1;H2;H3;H4];
 step_20mhz=(length(channel)-1)*d.bandwidth/d.bandwidthMeasured;
 channel_20mhz=channel(:,100-step_20mhz/2:100+step_20mhz/2);
@@ -242,8 +242,8 @@ bitsRX=demodulation(dataRX,d.M);
 
 %% Statistics
 %BER Calculation
-BERPreamble=BERCalculation(preambleBitsRX,0);
-BER(1,index)=BERCalculation(bitsRX,1);
+BERPreamble=BERCalculationSIMO_mex(preambleBitsRX,0);
+BER(1,index)=BERCalculationSIMO_mex(bitsRX,1);
 
 %stop the loop if BER=0
 if(BER(1,index)==0)

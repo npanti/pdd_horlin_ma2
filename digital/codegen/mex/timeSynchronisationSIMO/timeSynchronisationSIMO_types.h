@@ -3,7 +3,7 @@
  *
  * Code generation for function 'timeSynchronisationSIMO'
  *
- * C source code generated on: Wed May 29 13:24:31 2013
+ * C source code generated on: Wed May 29 16:15:15 2013
  *
  */
 
@@ -43,8 +43,9 @@ typedef struct
     creal_T preambleOFDM[64];
     real_T preambleLength;
     real_T data[393216];
-    creal_T referenceSymbol;
     real_T numberPilots;
+    creal_T referenceSymbol[4];
+    creal_T referenceSymbolMatrix[64];
     real_T maskData[64];
     real_T maskPilots[64];
     real_T dataLength;
@@ -140,8 +141,9 @@ typedef struct
     emxArray_creal_T *preambleOFDM;
     real_T preambleLength;
     emxArray_real_T *data;
-    creal_T referenceSymbol;
     real_T numberPilots;
+    emxArray_creal_T *referenceSymbol;
+    emxArray_creal_T *referenceSymbolMatrix;
     emxArray_real_T *maskData;
     emxArray_real_T *maskPilots;
     real_T dataLength;

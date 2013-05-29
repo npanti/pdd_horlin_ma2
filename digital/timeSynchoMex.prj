@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.matlabcoder" plugin-version="R2013a">
-  <configuration target="target.matlab.coder" target-name="MEX, C, and C++ Code Generation" name="timeSynchoMex" location="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital" file="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/timeSynchoMex.prj" build-checksum="3276806956">
+  <configuration target="target.matlab.coder" target-name="MEX, C, and C++ Code Generation" name="timeSynchoMex" location="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital" file="/Users/nicolas/Documents/MATLAB/pdd_horlin_ma2/digital/timeSynchoMex.prj" build-checksum="441747378">
     <profile key="profile.mex">
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
@@ -497,14 +497,6 @@
             <UserDefined>true</UserDefined>
             <Complex>false</Complex>
           </Field>
-          <Field Name="referenceSymbol">
-            <Class>double</Class>
-            <Size>1 x 1</Size>
-            <Value />
-            <InitialValue />
-            <UserDefined>true</UserDefined>
-            <Complex>true</Complex>
-          </Field>
           <Field Name="numberPilots">
             <Class>double</Class>
             <Size>1 x 1</Size>
@@ -512,6 +504,22 @@
             <InitialValue />
             <UserDefined>true</UserDefined>
             <Complex>false</Complex>
+          </Field>
+          <Field Name="referenceSymbol">
+            <Class>double</Class>
+            <Size>:inf x 1</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>true</UserDefined>
+            <Complex>true</Complex>
+          </Field>
+          <Field Name="referenceSymbolMatrix">
+            <Class>double</Class>
+            <Size>:inf x 1</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>true</UserDefined>
+            <Complex>true</Complex>
           </Field>
           <Field Name="maskData">
             <Class>double</Class>
@@ -646,7 +654,7 @@
       <param.DefaultFixedPointSignedness />
     </unset>
     <fileset.entrypoints>
-      <file value="${PROJECT_ROOT}/timeSynchronisation.m" custom-data-expanded="true">
+      <file value="${PROJECT_ROOT}/timeSynchronisation.m" custom-data-expanded="false">
         <Inputs fileName="timeSynchronisation.m" functionName="timeSynchronisation">
           <Input Name="input">
             <Class>double</Class>

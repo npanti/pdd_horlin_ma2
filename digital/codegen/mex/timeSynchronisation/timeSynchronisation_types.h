@@ -3,7 +3,7 @@
  *
  * Code generation for function 'timeSynchronisation'
  *
- * C source code generated on: Tue May 28 21:54:20 2013
+ * C source code generated on: Wed May 29 16:20:29 2013
  *
  */
 
@@ -41,8 +41,9 @@ typedef struct
     creal_T preambleConstellations[64];
     creal_T preambleOFDM[64];
     real_T preambleLength;
-    creal_T referenceSymbol;
     real_T numberPilots;
+    creal_T referenceSymbol[4];
+    creal_T referenceSymbolMatrix[64];
     real_T maskData[64];
     real_T maskPilots[64];
     real_T data[393216];
@@ -136,8 +137,9 @@ typedef struct
     emxArray_creal_T *preambleConstellations;
     emxArray_creal_T *preambleOFDM;
     real_T preambleLength;
-    creal_T referenceSymbol;
     real_T numberPilots;
+    emxArray_creal_T *referenceSymbol;
+    emxArray_creal_T *referenceSymbolMatrix;
     emxArray_real_T *maskData;
     emxArray_real_T *maskPilots;
     emxArray_real_T *data;

@@ -91,6 +91,7 @@ switch d.pilotPattern
         maskData(64)=0;
         numberPilots=8;
 end
+d.numberPilots = numberPilots;
 d.referenceSymbol=referenceSymbol;
 d.referenceSymbolMatrix=maskPilotsTemp;
 d.maskData=maskData;
