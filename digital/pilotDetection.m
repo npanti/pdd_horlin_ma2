@@ -3,8 +3,7 @@ function out=pilotDetection(input)
 global d
 
 %replacing pilots by the reference symbol
-pilotsMatrix=repmat(d.maskPilots,1,d.OFDM);
-pilotsMatrix=pilotsMatrix*d.referenceSymbol;
+pilotsMatrix=repmat(d.referenceSymbolMatrix,1,d.OFDM);
 
 dataMatrix=repmat(d.maskData,1,d.OFDM);
 dataMatrix=dataMatrix.*input;
