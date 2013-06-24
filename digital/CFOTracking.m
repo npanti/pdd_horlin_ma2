@@ -1,51 +1,29 @@
-function out = CFOTracking(in)
-%CFOTRACKING Summary of this function goes here
-%   Detailed explanation goes here
+function out=CFOTracking(input)
 
 global d
+out=zeros(size(input));
+out(:,1)=input(:,1);
 
-out = in;
+phaseEstimated=zeros([d.numberPilots d.OFDM]);
 
-if d.enableCFO
-    %% On récupère les pilotes
-    pilots = zeros(d.numberPilots,d.OFDM);
-    i=1;
-
-    %On passe les sous porteuse en revue (64 dans notre cas)
-    for subC = 1:d.subCarriers
-
-        %Si on tombe sur un sous porteuse pilote
-        if d.maskPilots(subC)
-            pilots(i,:) = in(subC,:);
-            i=i+1;
-        end
+for z=2:d.OFDM
+    phaseEstimated(:,z)=0;
+    for j=1:d.numberPilots
+        channelID=j*12;
+        errorPhase=phase(input(channelID,z)*conj(out(channelID,z-1)));
+        phaseEstimated(j,z)=errorPhase;
+        out(:,z)=out(:,z)+input(:,z)*exp(-1i*phaseEstimated(j,z));
     end
-
-    %A la fin on obtient uniquement les sous porteuses contenant les pilotes
-
-
-    %% On calcule le déphasage entre deux symboles adjacants d'une même sous porteuse
-    phaseShift = zeros(d.numberPilots,d.OFDM);
-    for i=2:size(pilots,2)
-
-        phaseShift(:,i) = angle(pilots(:,i).*conj(pilots(:,i-1)));
-
-    end
-
-    %On moyenne le déphasage pour un symbole sur chaque sous porteuse
-    phaseShift = mean(phaseShift,1);
-
-    %On calcule le déphasage cummulé sur chaque symbole
-    CFO = cumsum(phaseShift);
-
-    %sum(mean(rad2deg(phaseShift),1));
-
-    %% Correction
-    out = zeros(size(in));
-    for subC = 1:d.subCarriers
-        out(subC,:) = in(subC,:).*exp(-1i*CFO);
-    end
+    out(:,z)=out(:,z)/d.numberPilots;
 end
 
+for j=1:d.numberPilots
+    phaseEstimated(j,:)=unwrap(phaseEstimated(j,:).',pi/2);
 end
-
+%plot(transpose(phaseEstimated))
+phaseEstimatedFinal=mean(phaseEstimated,1);
+for i=1:d.OFDM
+    out(:,i)=input(:,i)*exp(-1i*mean(phaseEstimatedFinal(:,i)));
+end
+d.estimatedCFO=mean(phaseEstimatedFinal./(1:d.OFDM));
+end

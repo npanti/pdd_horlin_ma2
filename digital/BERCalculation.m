@@ -13,9 +13,9 @@ if(type==1)
         end
     end
     BER=incorrectBits/d.messageLength;
-    fprintf('BER for data: %.10f\n',BER);
-    %disp(['BER for data: ',num2str(BER)]);
-elseif(type==0)
+    disp(['BER for data: ',num2str(BER)]);
+end
+if(type==0)
     incorrectBits=0;
     for m=1:length(bitsRX)
         if(bitsRX(m)~=d.preamble(m))
@@ -23,10 +23,7 @@ elseif(type==0)
         end
     end
     BER=incorrectBits/length(bitsRX);
-    fprintf('BER for preamble: %.10f\n',BER);
-    %disp(['BER for preamble: ',num2str(BER)]);
-else
-    BER = -1;
+    disp(['BER for preamble: ',num2str(BER)]);
 end
 
 end

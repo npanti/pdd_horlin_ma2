@@ -1,11 +1,7 @@
-function out = CFOCorrection(in,CFO)
-%CFOCORRECTION Summary of this function goes here
-%   Detailed explanation goes here
+function out = CFOCorrection(input,CFO)
 
 global d
 
-n=1:length(in);
-out = in.*exp(-1i*CFO*d.Ts*transpose(n));
+out = input.*exp(-1i*d.Ts*((1:length(input)).'-1)*CFO);
 
 end
-

@@ -1,0 +1,67 @@
+% This file was created by matlab2tikz v0.3.3.
+% Copyright (c) 2008--2013, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+% The latest updates can be retrieved from
+%   http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+% where you can also make suggestions and rate matlab2tikz.
+% 
+% 
+% 
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=7cm,
+height=7cm,
+scale only axis,
+xmin=1,
+xmax=11,
+xlabel={Tap},
+xmajorgrids,
+ymin=0,
+ymax=0.0006,
+ylabel={Power [W]},
+ymajorgrids,
+legend style={draw=black,fill=white,legend cell align=left}
+]
+\addplot[ycomb,color=blue,solid,mark=o,mark options={solid}] plot coordinates{(1,0.00054742283242265)
+(2,0.000551919587229499)
+(3,0.000271954262349941)
+(4,0.000194492378436619)
+(5,0.000140208337961707)
+(6,0.000117166065423489)
+(7,0.000108093926067097)
+(8,0.000108123431131363)
+(9,0.000125447520721237)
+(10,0.000147897597858733)
+(11,0.000240324970052312)
+};
+
+\addlegendentry{LOS};
+
+\addplot [
+color=black,
+solid,
+forget plot
+]
+table[row sep=crcr]{
+1 0\\
+11 0\\
+};
+\addplot[ycomb,color=red,solid,mark=o,mark options={solid}] plot coordinates{(1,6.5848800694559e-05)
+(2,7.35059896523613e-05)
+(3,0.000109080209093991)
+(4,2.17615880571833e-05)
+(5,2.06283370401012e-05)
+(6,1.40596518508894e-05)
+(7,7.51006149175917e-06)
+(8,1.13957291088269e-05)
+(9,1.31057754141876e-05)
+(10,1.75756426093495e-05)
+(11,2.39068591143797e-05)
+};
+
+\addlegendentry{NLOS};
+
+\end{axis}
+\end{tikzpicture}%

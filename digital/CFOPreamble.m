@@ -1,15 +1,10 @@
 function CFO = CFOPreamble(in)
-%CFO_PREAMBLE Summary of this function goes here
-%   Detailed explanation goes here
 
 global d
 
-CFO = 0;
-if d.enableCFO
-    phaseShift = angle(transpose(in(d.subCarriers+1:end))*conj(in(1:d.subCarriers)));
+temp=reshape(in,d.subCarriers,d.numberPreamble);
 
-    CFO = phaseShift/(d.subCarriers*d.Ts);
-end
+CFO=phase(temp(:,2).*conj(temp(:,1)));
+CFO=mean(CFO)/(d.Ts*d.subCarriers);
 
 end
-

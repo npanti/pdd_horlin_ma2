@@ -1,6 +1,7 @@
 function index=timeSynchronisation(input)
 
 global d
+timeSyncOffSet=1;
 x=zeros(1,d.subCarriers); %utilise pour calculer la correlation
 indexMax=length(input)-2*length(x);
 correlation=zeros(1,indexMax);
@@ -20,19 +21,20 @@ for j=1:indexMax-d.cyclicPrefixPreamble
     correlationMean(j)=mean(correlation(j:d.cyclicPrefixPreamble+j-1));
 end
 
-[~,index]=max(correlationMean);
-index=index-5;
+[m,index]=max(correlationMean);
+index=index-timeSyncOffSet;
 
 if(d.synchronisationPlots==1)
-figure();
-plot(correlation);
-xlabel('Sample number');
-ylabel('Correlation');
+%figure();
 
-figure()
-plot(correlationMean);
-xlabel('sample number');
-ylabel('mean  of correlation');
+subplot(2,1,1),plot(correlation(1:2000));
+xlabel('Sample number');
+ylabel('Auto-correlation');
+
+%figure()
+subplot(2,1,2),plot(correlationMean(1:2000));
+xlabel('Sample number');
+ylabel('Mean  of auto-correlation');
 end
 
 end

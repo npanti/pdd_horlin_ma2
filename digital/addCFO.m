@@ -1,17 +1,7 @@
-function out = addCFO(in,phaseCFO)
-%ADDCFO Summary of this function goes here
-%   Detailed explanation goes here
+function out=addCFO(input)
+
 global d
 
-out = in;
-
-if d.enableCFO
-    %CFO = -pi/(2*d.subCarriers*d.Ts) + 2*pi/(2*d.subCarriers*d.Ts)*rand(1);
-    CFO = phaseCFO/(d.Ts*d.subCarriers);
-    
-    n = 1:length(in);
-    out = in.*exp(1i*CFO*d.Ts*transpose(n));
-end
+out=input.*exp(1i*d.Ts*((1:length(input)).'-1)*d.CFO);
 
 end
-

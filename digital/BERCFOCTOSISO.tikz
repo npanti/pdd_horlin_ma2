@@ -1,0 +1,95 @@
+% This file was created by matlab2tikz v0.3.3.
+% Copyright (c) 2008--2013, Nico Schlmer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+% The latest updates can be retrieved from
+%   http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+% where you can also make suggestions and rate matlab2tikz.
+% 
+% 
+% 
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=\figureheight,
+scale only axis,
+xmin=0,
+xmax=25,
+xlabel={SNR(dB)},
+xmajorgrids,
+ymode=log,
+ymin=0.0001,
+ymax=1,
+yminorticks=true,
+ylabel={BER},
+ymajorgrids,
+yminorgrids,
+legend style={at={(0.03,0.03)},anchor=south west,draw=black,fill=white,legend cell align=left}
+]
+\addplot [
+color=red,
+solid,
+line width=1.5pt
+]
+table[row sep=crcr]{
+0 0.287708875868056\\
+1 0.263704427083333\\
+2 0.239911566840278\\
+3 0.215448676215278\\
+4 0.192179361979167\\
+5 0.167635091145833\\
+6 0.1451171875\\
+7 0.12353515625\\
+8 0.102010091145833\\
+9 0.0823459201388889\\
+10 0.0643608940972222\\
+11 0.0475531684027778\\
+12 0.0340386284722222\\
+13 0.0231391059027778\\
+14 0.0148871527777778\\
+15 0.00891927083333333\\
+16 0.00521104600694444\\
+17 0.00282118055555556\\
+18 0.00154079861111111\\
+19 0.000908745659722222\\
+20 0.000523546006944444\\
+21 0\\
+};
+\addlegendentry{without CFO};
+
+\addplot [
+color=blue,
+solid,
+line width=1.5pt
+]
+table[row sep=crcr]{
+0 0.48762946234809\\
+1 0.481076931423611\\
+2 0.478470594618056\\
+3 0.470567152235243\\
+4 0.459967651367187\\
+5 0.460995754665799\\
+6 0.452203572591146\\
+7 0.446434122721354\\
+8 0.442311604817708\\
+9 0.43086432562934\\
+10 0.427843017578125\\
+11 0.428955485026042\\
+12 0.421361287434896\\
+13 0.381297200520833\\
+14 0.296103040907118\\
+15 0.203348931206597\\
+16 0.0989460584852431\\
+17 0.0437422688802083\\
+18 0.021242133246528\\
+19 0.009134657118056\\
+20 0.00487467447916667\\
+21 0.003537055121528\\
+22 0.00119547526041667\\
+23 0\\
+};
+\addlegendentry{with CFO};
+
+\end{axis}
+\end{tikzpicture}%

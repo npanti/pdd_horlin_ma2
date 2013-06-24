@@ -1,0 +1,124 @@
+% This file was created by matlab2tikz v0.3.3.
+% Copyright (c) 2008--2013, Nico Schlmer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+% The latest updates can be retrieved from
+%   http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+% where you can also make suggestions and rate matlab2tikz.
+% 
+% 
+% 
+
+% defining custom colors
+\definecolor{mycolor1}{rgb}{0,1,1}
+
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=\figureheight,
+scale only axis,
+xmin=0,
+xmax=20,
+xlabel={SNR(dB)},
+xmajorgrids,
+ymode=log,
+ymin=0.0001,
+ymax=1,
+yminorticks=true,
+ylabel={BER},
+ymajorgrids,
+yminorgrids,
+legend style={at={(0.03,0.03)},anchor=south west,draw=black,fill=white,legend cell align=left}
+]
+\addplot [
+color=blue,
+solid,
+line width=1.5pt
+]
+table[row sep=crcr]{
+0 0.339669466018677\\
+1 0.288930177688599\\
+2 0.285921255747477\\
+3 0.256237586339315\\
+4 0.237667163213094\\
+5 0.20223061243693\\
+6 0.171640952428182\\
+7 0.156409581502279\\
+8 0.136198441187541\\
+9 0.108516613642375\\
+10 0.0911342302958171\\
+11 0.0685512224833171\\
+12 0.0468652248382568\\
+13 0.0350315570831299\\
+14 0.0247791608174642\\
+15 0.0179109573364258\\
+16 0.0092778205871582\\
+17 0.00668128331502279\\
+18 0.00312558809916178\\
+19 0.000611305236816406\\
+20 0\\
+};
+\addlegendentry{channel estimated (2 preambles)};
+
+\addplot [
+color=red,
+solid,
+line width=1.5pt
+]
+table[row sep=crcr]{
+0 0.307161569595337\\
+1 0.287971973419189\\
+2 0.259190082550049\\
+3 0.2344122727712\\
+4 0.207935810089111\\
+5 0.186564127604167\\
+6 0.159338156382243\\
+7 0.13864008585612\\
+8 0.113068580627441\\
+9 0.0977067947387695\\
+10 0.0720517635345459\\
+11 0.0560230414072673\\
+12 0.0398421287536621\\
+13 0.0273955663045247\\
+14 0.0187880198160807\\
+15 0.00977603594462077\\
+16 0.00470829010009766\\
+17 0.00248233477274577\\
+18 0.00104967753092448\\
+19 0.000410159428914388\\
+20 0\\
+};
+\addlegendentry{channel estimated (4 preambles)};
+
+\addplot [
+color=mycolor1,
+solid,
+line width=1.5pt
+]
+table[row sep=crcr]{
+0 0.290110270182292\\
+1 0.266338268915812\\
+2 0.241595188776652\\
+3 0.216548442840576\\
+4 0.192345937093099\\
+5 0.168513377507528\\
+6 0.145663102467855\\
+7 0.123577435811361\\
+8 0.102203448613485\\
+9 0.0821897983551025\\
+10 0.0633374849955241\\
+11 0.0467202663421631\\
+12 0.0324412981669108\\
+13 0.0211079120635986\\
+14 0.0125329494476318\\
+15 0.00678920745849609\\
+16 0.00328747431437174\\
+17 0.00138179461161296\\
+18 0.000494877497355143\\
+19 0\\
+};
+\addlegendentry{channel known};
+
+\end{axis}
+\end{tikzpicture}%

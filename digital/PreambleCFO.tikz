@@ -1,0 +1,99 @@
+% This file was created by matlab2tikz v0.3.3.
+% Copyright (c) 2008--2013, Nico Schlmer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+% The latest updates can be retrieved from
+%   http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+% where you can also make suggestions and rate matlab2tikz.
+% 
+% 
+% 
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=\figureheight,
+scale only axis,
+xmin=0,
+xmax=30,
+xlabel={SNR(dB)},
+xmajorgrids,
+ymode=log,
+ymin=0.0001,
+ymax=1,
+yminorticks=true,
+ylabel={BER},
+ymajorgrids,
+yminorgrids,
+legend style={at={(0.03,0.03)},anchor=south west,draw=black,fill=white,legend cell align=left}
+]
+\addplot [
+color=blue,
+solid,
+line width=1.5pt
+]
+table[row sep=crcr]{
+0 0.473846435546875\\
+1 0.47381591796875\\
+2 0.462636311848958\\
+3 0.459493408203125\\
+4 0.442914632161458\\
+5 0.423990071614583\\
+6 0.390747884114583\\
+7 0.38332275390625\\
+8 0.374774576822917\\
+9 0.36146240234375\\
+10 0.345814208984375\\
+11 0.311381022135417\\
+12 0.289703369140625\\
+13 0.264994303385417\\
+14 0.262176106770833\\
+15 0.249898274739583\\
+16 0.214059244791667\\
+17 0.19280029296875\\
+18 0.167959798177083\\
+19 0.140970458984375\\
+20 0.100921630859375\\
+21 0.0680341796875\\
+22 0.052525146484375\\
+23 0.038483479817708\\
+24 0.0295817057291667\\
+25 0.0214029947916667\\
+26 0.0140283203125\\
+27 0.009172347005208\\
+28 0.00129191080729167\\
+29 0\\
+};
+\addlegendentry{64 subcarriers in preamble};
+
+\addplot [
+color=red,
+solid,
+line width=1.5pt
+]
+table[row sep=crcr]{
+0 0.498222351074219\\
+1 0.49768320719401\\
+2 0.506439208984375\\
+3 0.501172383626302\\
+4 0.489751180013021\\
+5 0.493728637695312\\
+6 0.475018819173177\\
+7 0.46301015218099\\
+8 0.459332784016927\\
+9 0.456662495930989\\
+10 0.407768249511719\\
+11 0.3072119140625\\
+12 0.231329142252604\\
+13 0.17642822265625\\
+14 0.126978658040365\\
+15 0.085087178548177\\
+16 0.0425364176432292\\
+17 0.00752512613932292\\
+18 0.0001983642578125\\
+19 0\\
+};
+\addlegendentry{1024 subcarriers in preamble};
+
+\end{axis}
+\end{tikzpicture}%

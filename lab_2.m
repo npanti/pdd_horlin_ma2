@@ -1,4 +1,4 @@
-load('loss.mat');
+load('loss');
 frequencyResponse = [];
 
 bandwidth_measure = 400e6;
@@ -16,20 +16,29 @@ for x=1:max_x
    end
 end
 
+impulseTest =[];
+for x=1:max_x
+   for y=1:max_y
+       for z=1:max_z
+           impulseTest = [impulseTest abs(mean(ifft(data{x}{y}{z}{1}{1}{1})))];
+       end
+   end
+end
 
 %Fit distribution
 [param, ~] = mle(frequencyResponse,'distribution','rician');
 %cf Wikipedia http://en.wikipedia.org/wiki/
 %param(1) = s
 %param(2) = sigma
+param(2)
 
-A = param(1)^2 + 2*param(2)^2;
-K = param(1)^2/(2*param(2)^2);
+A = param(1)^2 + 2*param(2)^2
+K = param(1)^2/(2*param(2)^2)
 
 
 %% Rice factor variation in function of delay
 B = [];
-for i=1:20:200
+for i=1:50:200
     
     impulseResponse = [];
     for x=1:max_x
@@ -40,7 +49,7 @@ for i=1:20:200
            end
        end
     end
-    B = [B mle(impulseResponse,'distribution','Rayleigh')];
+    B = [B mle(impulseResponse,'distribution','rayleigh')];
 end
 
 
@@ -56,7 +65,7 @@ for i=1:1:length(B)
        i_tmp = i_tmp - floor((i_tmp-1)/length(color))*length(color);
    end
    %plot(x,ray,'Color',color(i_tmp,:),'DisplayName',num2str(i));
-   %hold all;
+   hold all;
 
 end
 
@@ -77,7 +86,7 @@ end
 PDP = PDP/(max_x*max_y*max_z);
 PDP_t = sum(PDP);
 
-%stem(PDP);
+stem(PDP(1:60).*1e8);
 
 %% Delay Spread
 t = 0:1/bandwidth_measure:(step-1)/bandwidth_measure;

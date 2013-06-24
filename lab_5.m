@@ -1,4 +1,4 @@
-load('Loc1.mat');
+load('loss.mat');
 
 bandwidth = 20e6;
 bandwidth_measure = 200e6;
